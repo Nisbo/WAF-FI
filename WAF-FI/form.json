@@ -1,1 +1,27 @@
+{
+    "elements":
+    [
+	{ "type": "Label", "label": "Farbige Tasten" },
+	{ "type": "ValidationTextBox", "name": "colorButtonBlue",	"caption": "Code: Blaue Taste" },
+	{ "type": "ValidationTextBox", "name": "colorButtonYellow",	"caption": "Code: Gelbe Taste" },
+	{ "type": "ValidationTextBox", "name": "colorButtonGreen",	"caption": "Code: Grüne Taste" },
+	{ "type": "ValidationTextBox", "name": "colorButtonRed",	"caption": "Code: Rote Taste" },
 
+	{ "type": "Label", "label": "Lautstärkeregelung" },
+	{ "type": "SelectObject", "name": "volumeDeviceObjectID", "caption": "Gerät zur Lautstärkeregelung (Object - grünes Icon auswählen)" }
+	{ "type": "ValidationTextBox", "name": "volumeDown",	"caption": "Code: Leiser Taste" },
+	{ "type": "ValidationTextBox", "name": "volumeUp",	"caption": "Code: Lauter Taste" },
+	{ "type": "ValidationTextBox", "name": "volumeMute",	"caption": "Code: Lautlos Taste" },
+
+
+	{ "type": "Label", "label": "Bestätigung der Eingabe beim Kanalwechsel" },
+	{ "type": "CheckBox", "name": "sendENTERkey", "caption": "ENTER bzw SELECT Taste drücken um den Wechsel zu beschleunigen" },
+	{ "type": "ValidationTextBox", "name": "sendENTERkeyCode",	"caption": "Code: SELECT bzw ENTER Taste" },
+
+
+    ],
+    "actions":
+    [
+	  { "type": "Button", "label": "HTML Code generieren", "onClick": "generateHTMLcontent($id);" }
+    ]
+}
