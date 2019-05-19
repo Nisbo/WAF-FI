@@ -1,4 +1,4 @@
-Herkunftsvermerk für die verschiedenen Icons ofern nicht selbst erstellt
+Herkunftsvermerk für die verschiedenen Icons sofern nicht selbst erstellt
 
    https://www.iconfinder.com/iconsets/simplicio
    
