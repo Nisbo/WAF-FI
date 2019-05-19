@@ -1,22 +1,48 @@
 {
     "elements":
     [
+	{ "type": "Label", "label": "Dateien und Verzeichnisse" },
+	{ "type": "ValidationTextBox", "name": "channelListFileName",	"caption": "Name der CSV Datei mit der Kanalliste" },
+	{ "type": "ValidationTextBox", "name": "pathToCSV",	"caption": "Path zur Kanalliste.csv" },
+	{ "type": "ValidationTextBox", "name": "pathToImages",	"caption": "Image-Verzeichnis" },
+
+
+	{ "type": "Label", "label": "EIN/AUS schalten" },
+	{ "type": "SelectObject", "name": "harmonyHubObjectID",	"caption": "Harmony Hub - Splitter Instanz (Object - grünes Icon auswählen)" },
+	{ "type": "ValidationTextBox", "name": "harmonyHubStartActivityOn",	"caption": "Einschalten - startActivity ON ID" },
+	{ "type": "ValidationTextBox", "name": "harmonyHubStartActivityOff",	"caption": "Ausschalten - startActivity OFF ID" },
+
+
+	{ "type": "Label", "label": "Kanalwechsel" },
+	{ "type": "SelectObject", "name": "channelDeviceObjectID",	"caption": "Gerät zum Kanalwechsel (Object - grünes Icon auswählen)" },
+	{ "type": "ValidationTextBox", "name": "channelDown",		"caption": "Code: Kanal RUNTER Taste" },
+	{ "type": "ValidationTextBox", "name": "channelUp",		"caption": "Code: Kanal HOCH Taste" },
+	{ "type": "CheckBox", "name": "sendSingleDigits",		"caption": "Tastencode einzeln schicken (empfohlen)" },
+	{ "type": "CheckBox", "name": "sendENTERkey",			"caption": "ENTER bzw SELECT Taste drücken um den Wechsel zu beschleunigen" },
+	{ "type": "ValidationTextBox", "name": "sendENTERkeyCode",	"caption": "Code: SELECT bzw ENTER oder OK Taste" },
+
+
+	{ "type": "Label", "label": "Navigations/Pfeiltasten" },
+	{ "type": "ValidationTextBox", "name": "directionDown",		"caption": "Code: Nach UNTEN Taste" },
+	{ "type": "ValidationTextBox", "name": "directionLeft",		"caption": "Code: Nach LINKS Taste" },
+	{ "type": "ValidationTextBox", "name": "directionRight",	"caption": "Code: Nach RECHTS Taste" },
+	{ "type": "ValidationTextBox", "name": "directionUp",		"caption": "Code: Nach OBEN Taste" },
+	{ "type": "ValidationTextBox", "name": "okButton",		"caption": "Code: OK Taste (die in der Mitte vom Steuerkreuz)" },
+	{ "type": "ValidationTextBox", "name": "backButton",		"caption": "Code: ZURÜCK Taste" },
+
+
 	{ "type": "Label", "label": "Farbige Tasten" },
 	{ "type": "ValidationTextBox", "name": "colorButtonBlue",	"caption": "Code: Blaue Taste" },
 	{ "type": "ValidationTextBox", "name": "colorButtonYellow",	"caption": "Code: Gelbe Taste" },
 	{ "type": "ValidationTextBox", "name": "colorButtonGreen",	"caption": "Code: Grüne Taste" },
 	{ "type": "ValidationTextBox", "name": "colorButtonRed",	"caption": "Code: Rote Taste" },
 
+
 	{ "type": "Label", "label": "Lautstärkeregelung" },
-	{ "type": "SelectObject", "name": "volumeDeviceObjectID", "caption": "Gerät zur Lautstärkeregelung (Object - grünes Icon auswählen)" },
-	{ "type": "ValidationTextBox", "name": "volumeDown",	"caption": "Code: Leiser Taste" },
-	{ "type": "ValidationTextBox", "name": "volumeUp",	"caption": "Code: Lauter Taste" },
-	{ "type": "ValidationTextBox", "name": "volumeMute",	"caption": "Code: Lautlos Taste" },
-
-
-	{ "type": "Label", "label": "Bestätigung der Eingabe beim Kanalwechsel" },
-	{ "type": "CheckBox", "name": "sendENTERkey", "caption": "ENTER bzw SELECT Taste drücken um den Wechsel zu beschleunigen" },
-	{ "type": "ValidationTextBox", "name": "sendENTERkeyCode",	"caption": "Code: SELECT bzw ENTER Taste" }
+	{ "type": "SelectObject", "name": "volumeDeviceObjectID",	"caption": "Gerät zur Lautstärkeregelung (Object - grünes Icon auswählen)" },
+	{ "type": "ValidationTextBox", "name": "volumeDown",		"caption": "Code: Leiser Taste" },
+	{ "type": "ValidationTextBox", "name": "volumeUp",		"caption": "Code: Lauter Taste" },
+	{ "type": "ValidationTextBox", "name": "volumeMute",		"caption": "Code: Lautlos Taste" }
 
 
     ],
