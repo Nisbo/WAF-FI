@@ -4,7 +4,7 @@
 	{ "type": "Label", "label": "Dateien und Verzeichnisse" },
 	{ "type": "ValidationTextBox", "name": "channelListFileName",	"caption": "Name der CSV Datei mit der Kanalliste" },
 	{ "type": "ValidationTextBox", "name": "pathToCSV",	"caption": "Path zur Kanalliste.csv" },
-	{ "type": "ValidationTextBox", "name": "pathToImages",	"caption": "Image-Verzeichnis" },
+	{ "type": "ValidationTextBox", "name": "pathToImages",	"caption": "Image-Verzeichnis für die Senderlogos" },
 
 
 	{ "type": "Label", "label": "EIN/AUS schalten" },
