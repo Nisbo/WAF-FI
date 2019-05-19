@@ -58,6 +58,9 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 	}
 
 
+	/**
+	* The Hook Functions are from the Symcon Demo Code
+	*/
 	private function RegisterHook($WebHook) {
 		$ids = IPS_GetInstanceListByModuleID("{015A6EB8-D6E5-4B93-B496-0D3F77AE9FE1}");
 		if(sizeof($ids) > 0) {
@@ -140,25 +143,6 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 	}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	public function generateHTMLcontent() {
 		$channelDeviceObjectID  = $this->ReadPropertyInteger("channelDeviceObjectID");
 		$sendSingleDigits       = $this->ReadPropertyBoolean("sendSingleDigits");
@@ -229,7 +213,6 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$css = '
 		<link type="text/css" href="hook/waffi/css/waffi.css" rel="stylesheet">
 		<script type="text/javascript" src="hook/waffi/js/jquery.js"></script>
-		<!--<script type="text/javascript" src="hook/waffi/js/jquery.mobile-1.4.5.min.js"></script>-->
 		<script type="text/javascript" src="hook/waffi/js/jquery.ajax-ips-kanalliste.js"></script>
 		';
 
