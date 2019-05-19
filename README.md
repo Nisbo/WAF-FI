@@ -18,4 +18,14 @@ Im Konfigurator ist dann dieser Path einzugeben:
 
 user/waffi/images
 
-so das die Logos im Browder geladen werden können
+so das die Logos im Browser geladen werden können
+
+
+CSV Kanalliste
+--------------
+
+Die Kanalliste.csv muss in diesen Ordner geladen werden
+
+/var/lib/symcon/webfront/user/waffi
+
+welcher allerdings auch im Konfigurator geändert werden kann
