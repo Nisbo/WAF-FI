@@ -8,7 +8,7 @@ https://www.symcon.de/forum/threads/40811-WAF-FI-Kanallisten-Modul-f%C3%BCr-das-
 Sender Logos
 ------------
 Bisher habe ich noch keinen freie Quelle gefunden welches es auch erlaubt die Senderlogos hier anzubieten.
-Die Logos müssen also selbst besort werden und in einen User Ordner geladen werden, das Verzeichnis zu diesem Ordner kann man im Konfigurator einstellen.
+Die Logos müssen also selbst besorgt werden und in einen User Ordner geladen werden, das Verzeichnis zu diesem Ordner kann man im Konfigurator einstellen. Die Größe darf 80 x 80 Pixel nicht überschreiten.
 
 In diesen Ordner müssen die Logos geladen werden:
 
