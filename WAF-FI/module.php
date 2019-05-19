@@ -69,9 +69,9 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 	public function generateHTMLcontent() {
 		//echo $this->InstanceID;
 
-		$channelDeviceObjectID  = $this->ReadPropertyString("channelDeviceObjectID");
-		$sendSingleDigits       = $this->ReadPropertyString("sendSingleDigits");
-		$sendENTERkey           = $this->ReadPropertyString("sendENTERkey");
+		$channelDeviceObjectID  = $this->ReadPropertyInteger("channelDeviceObjectID");
+		$sendSingleDigits       = $this->ReadPropertyBoolean("sendSingleDigits");
+		$sendENTERkey           = $this->ReadPropertyBoolean("sendENTERkey");
 		$sendENTERkeyCode       = $this->ReadPropertyString("sendENTERkeyCode");
 		$channelListFileName    = $this->ReadPropertyString("channelListFileName");
 						
@@ -84,7 +84,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$directionRight         = $this->ReadPropertyString("directionRight");
 		$directionUp            = $this->ReadPropertyString("directionUp");
 
-		$volumeDeviceObjectID   = $this->ReadPropertyString("volumeDeviceObjectID");// 0 = same than Receiver (idea for next version)
+		$volumeDeviceObjectID   = $this->ReadPropertyInteger("volumeDeviceObjectID");// 0 = same than Receiver (idea for next version)
 		$volumeDown             = $this->ReadPropertyString("volumeDown");
 		$volumeMute             = $this->ReadPropertyString("volumeMute");
 		$volumeUp               = $this->ReadPropertyString("volumeUp");
@@ -97,9 +97,9 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$backButton             = $this->ReadPropertyString("backButton");
 		$okButton               = $this->ReadPropertyString("okButton");
 
-		$harmonyHubObjectID         = $this->ReadPropertyString("harmonyHubObjectID");
-		$harmonyHubStartActivityOn  = $this->ReadPropertyString("harmonyHubStartActivityOn");
-		$harmonyHubStartActivityOff = $this->ReadPropertyString("harmonyHubStartActivityOff");
+		$harmonyHubObjectID         = $this->ReadPropertyInteger("harmonyHubObjectID");
+		$harmonyHubStartActivityOn  = $this->ReadPropertyInteger("harmonyHubStartActivityOn");
+		$harmonyHubStartActivityOff = $this->ReadPropertyInteger("harmonyHubStartActivityOff");
 
 
 		if(substr($pathToImages, -1, 1) != "/") $pathToImages          .= "/"; // to make sure there is a slash at the end
@@ -107,6 +107,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		if($sendENTERkey == "")                 $sendENTERkey           = 0;
 		if($sendSingleDigits == "")             $sendSingleDigits       = 0;
 		if($volumeDeviceObjectID == 0)          $volumeDeviceObjectID   = $channelDeviceObjectID;
+		$channelListHTML = "";
 
 		/*
 		// /var/lib/symcon/scripts
