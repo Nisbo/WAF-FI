@@ -9,8 +9,7 @@
 #################################################################################################################################
 */
 
-$(document).ready(function(){
-	"use strict";
+
 	
 	$('.zapbuttons').on('click', 'img', function (){
 		//alert('click!' + $(event.target).attr('id'));
@@ -50,4 +49,4 @@ $(document).ready(function(){
 			}
 		});
 	}
-});
+
