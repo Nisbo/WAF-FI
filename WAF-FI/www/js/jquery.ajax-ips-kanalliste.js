@@ -30,7 +30,7 @@ $(document).ready(function(){
 	function sendToReceiver(channel){
 		$.ajax({
 			type: "GET",
-			url: "hook/waffi/WafFiRequest.php",
+			url: "hook/waffi/php/WafFiRequest.php",
 			data: "kanal=" + channel,
 			success: function () {
 				//alert("Test " + channel);
@@ -41,7 +41,7 @@ $(document).ready(function(){
 	function sendToReceiverButton(buttonCode){
 		$.ajax({
 			type: "GET",
-			url: "hook/waffi/WafFiRequest.php",
+			url: "hook/waffi/php/WafFiRequest.php",
 			data: "button=" + buttonCode,
 			success: function () {
 				//alert("Test " + buttonCode);
