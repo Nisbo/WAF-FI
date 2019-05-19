@@ -37,7 +37,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$this->RegisterPropertyInteger("harmonyHubStartActivityOn",		0);
 		$this->RegisterPropertyInteger("harmonyHubStartActivityOff",	0);
 		$this->RegisterPropertyString("okButton",						"Select");
-		$this->RegisterPropertyString("pathToCSV",						"../webfront/user/waffi");
+		$this->RegisterPropertyString("pathToCSV",						"/var/lib/symcon/webfront/user/waffi");
 		$this->RegisterPropertyString("pathToImages",					"user/waffi/images");
 		$this->RegisterPropertyBoolean("sendENTERkey",					true);
 		$this->RegisterPropertyString("sendENTERkeyCode",				"Select");
