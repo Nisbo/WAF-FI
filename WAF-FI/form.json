@@ -16,7 +16,7 @@
 
 	{ "type": "Label", "label": "Bestätigung der Eingabe beim Kanalwechsel" },
 	{ "type": "CheckBox", "name": "sendENTERkey", "caption": "ENTER bzw SELECT Taste drücken um den Wechsel zu beschleunigen" },
-	{ "type": "ValidationTextBox", "name": "sendENTERkeyCode",	"caption": "Code: SELECT bzw ENTER Taste" },
+	{ "type": "ValidationTextBox", "name": "sendENTERkeyCode",	"caption": "Code: SELECT bzw ENTER Taste" }
 
 
     ],
