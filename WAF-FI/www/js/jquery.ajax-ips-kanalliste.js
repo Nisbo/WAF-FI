@@ -9,7 +9,7 @@
 #################################################################################################################################
 */
 
-$(document).ready(function(){
+//$(document).ready(function(){
 	$('.zapbuttons').on('click', 'img', function (){
 		//alert('click!' + $(event.target).attr('id'));
 		//alert('click!');
@@ -48,4 +48,4 @@ $(document).ready(function(){
 			}
 		});
 	}
-});
+//});
