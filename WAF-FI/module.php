@@ -246,26 +246,26 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 			</div>
 			<div class="navright">
 				<section class="navigationbuttons">
-					<div class="zapbutton buttonMouseOver zaptab" id="volumeUp"><img class="zapimage"       src="' . $pathToImages . 'volumeUp.png"    id="Button_'.$volumeUp.'_'.$volumeDeviceObjectID.'"       alt="volumeUp"></div>
-					<div class="zapbutton buttonMouseOver zaptab" id="volumeMute"><img class="zapimage"     src="' . $pathToImages . 'volumeMute.png"  id="Button_'.$volumeMute.'_'.$volumeDeviceObjectID.'"     alt="volumeMute"></div>
-					<div class="zapbutton buttonMouseOver zaptab" id="volumeDown"><img class="zapimage"     src="' . $pathToImages . 'volumeDown.png"  id="Button_'.$volumeDown.'_'.$volumeDeviceObjectID.'"     alt="volumeDown"></div>
-					<div class="zapbutton buttonMouseOver zaptab" id="channelUp"><img class="zapimage"      src="' . $pathToImages . 'channelUp.png"   id="Button_'.$channelUp.'_'.$channelDeviceObjectID.'"     alt="channelUp"></div>
-					<div class="zapbutton buttonMouseOver zaptab" id="channelDown"><img class="zapimage"    src="' . $pathToImages . 'channelDown.png" id="Button_'.$channelDown.'_'.$channelDeviceObjectID.'"   alt="channelDown"></div>
-					<div class="zapbutton buttonMouseOver zaptab" id="buttonBack"><img class="zapimage"     src="' . $pathToImages . 'ButtonBack.png"  id="Button_'.$backButton.'_'.$channelDeviceObjectID.'"    alt="ButtonBack"></div>
+					<div class="zapbutton buttonMouseOver zaptab" id="volumeUp"><img class="zapimage"       src="hook/waffi/images/volumeUp.png"    id="Button_'.$volumeUp.'_'.$volumeDeviceObjectID.'"       alt="volumeUp"></div>
+					<div class="zapbutton buttonMouseOver zaptab" id="volumeMute"><img class="zapimage"     src="hook/waffi/images/volumeMute.png"  id="Button_'.$volumeMute.'_'.$volumeDeviceObjectID.'"     alt="volumeMute"></div>
+					<div class="zapbutton buttonMouseOver zaptab" id="volumeDown"><img class="zapimage"     src="hook/waffi/images/volumeDown.png"  id="Button_'.$volumeDown.'_'.$volumeDeviceObjectID.'"     alt="volumeDown"></div>
+					<div class="zapbutton buttonMouseOver zaptab" id="channelUp"><img class="zapimage"      src="hook/waffi/images/channelUp.png"   id="Button_'.$channelUp.'_'.$channelDeviceObjectID.'"     alt="channelUp"></div>
+					<div class="zapbutton buttonMouseOver zaptab" id="channelDown"><img class="zapimage"    src="hook/waffi/images/channelDown.png" id="Button_'.$channelDown.'_'.$channelDeviceObjectID.'"   alt="channelDown"></div>
+					<div class="zapbutton buttonMouseOver zaptab" id="buttonBack"><img class="zapimage"     src="hook/waffi/images/ButtonBack.png"  id="Button_'.$backButton.'_'.$channelDeviceObjectID.'"    alt="ButtonBack"></div>
 
-					<div class="zapbutton buttonMouseOver zaptab" id="buttonLeft"><img class="zapimage"     src="' . $pathToImages . 'ButtonLeft.png"   id="Button_'.$directionLeft.'_'.$channelDeviceObjectID.'"    alt="left"/></div>
-					<div class="zapbutton buttonMouseOver zaptab" id="buttonUp"><img class="zapimage"       src="' . $pathToImages . 'ButtonUp.png"     id="Button_'.$directionUp.'_'.$channelDeviceObjectID.'"      alt="up"/></div>
-					<div class="zapbutton buttonMouseOver zaptab" id="buttonRight"><img class="zapimage"    src="' . $pathToImages . 'ButtonRight.png"  id="Button_'.$directionRight.'_'.$channelDeviceObjectID.'"   alt="right"/></div>
-					<div class="zapbutton buttonMouseOver zaptab" id="buttonOK"><img class="zapimage"       src="' . $pathToImages . 'ButtonOK.png"     id="Button_'.$okButton.'_'.$channelDeviceObjectID.'"         alt="enter"/></div>
-					<div class="zapbutton buttonMouseOver zaptab" id="buttonDown"><img class="zapimage"     src="' . $pathToImages . 'ButtonDown.png"   id="Button_'.$directionDown.'_'.$channelDeviceObjectID.'"    alt="down"/></div>
+					<div class="zapbutton buttonMouseOver zaptab" id="buttonLeft"><img class="zapimage"     src="hook/waffi/images/ButtonLeft.png"   id="Button_'.$directionLeft.'_'.$channelDeviceObjectID.'"    alt="left"/></div>
+					<div class="zapbutton buttonMouseOver zaptab" id="buttonUp"><img class="zapimage"       src="hook/waffi/images/ButtonUp.png"     id="Button_'.$directionUp.'_'.$channelDeviceObjectID.'"      alt="up"/></div>
+					<div class="zapbutton buttonMouseOver zaptab" id="buttonRight"><img class="zapimage"    src="hook/waffi/images/ButtonRight.png"  id="Button_'.$directionRight.'_'.$channelDeviceObjectID.'"   alt="right"/></div>
+					<div class="zapbutton buttonMouseOver zaptab" id="buttonOK"><img class="zapimage"       src="hook/waffi/images/ButtonOK.png"     id="Button_'.$okButton.'_'.$channelDeviceObjectID.'"         alt="enter"/></div>
+					<div class="zapbutton buttonMouseOver zaptab" id="buttonDown"><img class="zapimage"     src="hook/waffi/images/ButtonDown.png"   id="Button_'.$directionDown.'_'.$channelDeviceObjectID.'"    alt="down"/></div>
 
-					<div class="zapbutton buttonMouseOver zaptab" id="buttonRed"><img class="zapimage"      src="' . $pathToImages . 'ButtonRed.png"    id="Button_'.$colorButtonRed.'_'.$channelDeviceObjectID.'"       alt="red"/></div>
-					<div class="zapbutton buttonMouseOver zaptab" id="buttonYellow"><img class="zapimage"   src="' . $pathToImages . 'ButtonYellow.png" id="Button_'.$colorButtonYellow.'_'.$channelDeviceObjectID.'"    alt="yellow"/></div>
-					<div class="zapbutton buttonMouseOver zaptab" id="buttonGreen"><img class="zapimage"    src="' . $pathToImages . 'ButtonGreen.png"  id="Button_'.$colorButtonGreen.'_'.$channelDeviceObjectID.'"     alt="green"/></div>
-					<div class="zapbutton buttonMouseOver zaptab" id="buttonBlue"><img class="zapimage"     src="' . $pathToImages . 'ButtonBlue.png"   id="Button_'.$colorButtonBlue.'_'.$channelDeviceObjectID.'"      alt="blue"/></div>
+					<div class="zapbutton buttonMouseOver zaptab" id="buttonRed"><img class="zapimage"      src="hook/waffi/images/ButtonRed.png"    id="Button_'.$colorButtonRed.'_'.$channelDeviceObjectID.'"       alt="red"/></div>
+					<div class="zapbutton buttonMouseOver zaptab" id="buttonYellow"><img class="zapimage"   src="hook/waffi/images/ButtonYellow.png" id="Button_'.$colorButtonYellow.'_'.$channelDeviceObjectID.'"    alt="yellow"/></div>
+					<div class="zapbutton buttonMouseOver zaptab" id="buttonGreen"><img class="zapimage"    src="hook/waffi/images/ButtonGreen.png"  id="Button_'.$colorButtonGreen.'_'.$channelDeviceObjectID.'"     alt="green"/></div>
+					<div class="zapbutton buttonMouseOver zaptab" id="buttonBlue"><img class="zapimage"     src="hook/waffi/images/ButtonBlue.png"   id="Button_'.$colorButtonBlue.'_'.$channelDeviceObjectID.'"      alt="blue"/></div>
 
-					<div class="zapbutton buttonMouseOver zaptab" id="buttonOn"><img class="zapimage"       src="' . $pathToImages . 'ButtonOn.png"     id="ButtonOO_'.$harmonyHubStartActivityOn.'_'.$harmonyHubObjectID.'"  alt="On"/></div>
-					<div class="zapbutton buttonMouseOver zaptab" id="buttonOff"><img class="zapimage"      src="' . $pathToImages . 'ButtonOff.png"    id="ButtonOO_'.$harmonyHubStartActivityOff.'_'.$harmonyHubObjectID.'" alt="Off"/></div>
+					<div class="zapbutton buttonMouseOver zaptab" id="buttonOn"><img class="zapimage"       src="hook/waffi/images/ButtonOn.png"     id="ButtonOO_'.$harmonyHubStartActivityOn.'_'.$harmonyHubObjectID.'"  alt="On"/></div>
+					<div class="zapbutton buttonMouseOver zaptab" id="buttonOff"><img class="zapimage"      src="hook/waffi/images/ButtonOff.png"    id="ButtonOO_'.$harmonyHubStartActivityOff.'_'.$harmonyHubObjectID.'" alt="Off"/></div>
 				</section>
 			</div>
 		</div>
