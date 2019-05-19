@@ -48,6 +48,6 @@
     ],
     "actions":
     [
-	  { "type": "Button", "label": "HTML Code generieren", "onClick": "generateHTMLcontent($id);" }
+	  { "type": "Button", "label": "HTML Code generieren", "onClick": "IPS_Waf_FernsehInterface_generateHTMLcontent($id);" }
     ]
 }
