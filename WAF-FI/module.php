@@ -16,8 +16,6 @@ require_once __DIR__ . '/../libs/WafFiHelper.php';
 // Klassendefinition
 class IPS_Waf_FernsehInterface extends IPSModule {
 
-
-
 	public function Create() {
 		//Never delete this line!
 		parent::Create();
@@ -57,18 +55,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		parent::ApplyChanges();
 	}
 
-
-
-	/**
-	* Die folgenden Funktionen stehen automatisch zur Verfügung, wenn das Modul über die "Module Control" eingefügt wurden.
-	* Die Funktionen werden, mit dem selbst eingerichteten Prefix, in PHP und JSON-RPC wiefolgt zur Verfügung gestellt:
-	*
-	* ABC_MeineErsteEigeneFunktion($id);
-	*
-	*/
 	public function generateHTMLcontent() {
-		//echo $this->InstanceID;
-
 		$channelDeviceObjectID  = $this->ReadPropertyInteger("channelDeviceObjectID");
 		$sendSingleDigits       = $this->ReadPropertyBoolean("sendSingleDigits");
 		$sendENTERkey           = $this->ReadPropertyBoolean("sendENTERkey");
@@ -136,19 +123,16 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		//print_r($data); 
 
 		$css = '
-
 		<link type="text/css" href="user/waffi/css/waffi.css" rel="stylesheet">
 		<script type="text/javascript" src="user/waffi/js/jquery.js"></script>
 		<script type="text/javascript" src="user/waffi/js/jquery.mobile-1.4.5.min.js"></script>
 		<script type="text/javascript" src="user/waffi/js/jquery.ajax-ips-kanalliste.js"></script>
-
 		';
 
 		// Button_123_Sender
 		// Button_123_' . $volumeDeviceObjectID
 
 		$channelListHTML = $css . '
-
 		<div id="wrapper">
 			<div class="navleft">
 				<section class="zapbuttons">
@@ -181,17 +165,10 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 				</section>
 			</div>
 		</div>
-
 		';
 
-		//SetValue($channelListHTMLid, $channelListHTML);
-
 		SetValue($this->GetIDForIdent("channelListHTML"), $channelListHTML);
-
 		//echo $channelListHTML;
-
-
-
 	}
 
 }
