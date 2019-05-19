@@ -30,7 +30,7 @@
 	{ "type": "ValidationTextBox", "name": "okButton",		"caption": "Code: OK Taste (die in der Mitte vom Steuerkreuz)" },
 	{ "type": "ValidationTextBox", "name": "backButton",		"caption": "Code: ZURÜCK Taste" },
 
-	    
+
 	{ "type": "Label", "label": "Farbige Tasten" },
 	{ "type": "ValidationTextBox", "name": "colorButtonBlue",	"caption": "Code: Blaue Taste" },
 	{ "type": "ValidationTextBox", "name": "colorButtonYellow",	"caption": "Code: Gelbe Taste" },
@@ -48,6 +48,6 @@
     ],
     "actions":
     [
-	  { "type": "Button", "label": "HTML Code generieren", "onClick": "IPS_Waf_FernsehInterface_generateHTMLcontent($id);" }
+	  { "type": "Button", "label": "HTML Code generieren", "onClick": "WAFFI_generateHTMLcontent($id);" }
     ]
 }
