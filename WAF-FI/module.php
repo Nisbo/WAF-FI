@@ -214,7 +214,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		<link type="text/css" href="/hook/waffi/css/waffi.css" rel="stylesheet">
 		';
 		
-		$jsInclude .= "
+		$jsInclude = "
 		<script>		
 		[
 		  '/hook/waffi/js/jquery.js',
