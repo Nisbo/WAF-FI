@@ -212,8 +212,21 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 
 		$css = '
 		<link type="text/css" href="/hook/waffi/css/waffi.css" rel="stylesheet">
-		<script type="text/javascript" src="/hook/waffi/js/jquery.js"></script>
-		<script type="text/javascript" src="/hook/waffi/js/jquery.ajax-ips-kanalliste.js"></script>
+		<!--<script type="text/javascript" src="/hook/waffi/js/jquery.js"></script>
+		<script type="text/javascript" src="/hook/waffi/js/jquery.ajax-ips-kanalliste.js"></script>-->
+		
+<script>		
+[
+  '/hook/waffi/js/jquery.js',
+  '/hook/waffi/js/jquery.ajax-ips-kanalliste.js'
+].forEach(function(src) {
+  var script = document.createElement('script');
+  script.src = src;
+  script.async = false;
+  document.head.appendChild(script);
+});		
+</script>		
+		
 		';
 
 		// Button_123_Sender
