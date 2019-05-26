@@ -8,11 +8,14 @@
 # https://www.symcon.de/forum/threads/31582-Tastenfeld-Navigationswippe-dynamische-Webseiten-im-Webfront-darstellen
 #################################################################################################################################
 
-header('Content-Type: text/xml; charset=utf-8');
+header('Content-type: text/xml');
 header('Cache-Control: must-revalidate, pre-check=0, no-store, no-cache, max-age=0, post-check=0');
 
 // WAF-FI --> WAF Fernseh Interface
 // Kanal_123_SignleDigits_Enter_EnterCode_Sender
+
+$xml  = '<?xml version="1.0" encoding="UTF-8"?>';
+$xml .= '<xml_content>';
 
 if (isset($_GET["kanal"]))	{
 	$config = explode("_", $_GET["kanal"]);
@@ -31,6 +34,8 @@ if (isset($_GET["kanal"]))	{
 
 	// ENTER Button and ENTER Code
 	if($config[3] == "1") LHD_Send($config[5], $config[4]);
+
+	$xml .= "<action>kanal</action>";
 }
 
 // Button_123_Sender
@@ -43,6 +48,12 @@ if (isset($_GET["button"]))	{
 	}else{
 		LHD_Send($config[2], $config[1]);
 	}
+
+	$xml .= "<action>button</action>";
 }
+
+$xml .= '</xml_content>';
+
+echo $xml;
 
 ?>
