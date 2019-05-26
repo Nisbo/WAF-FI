@@ -213,9 +213,9 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$css = '
 		<link type="text/css" href="/hook/waffi/css/waffi.css" rel="stylesheet">
 		<!--<script type="text/javascript" src="/hook/waffi/js/jquery.js"></script>
-		<script type="text/javascript" src="/hook/waffi/js/jquery.ajax-ips-kanalliste.js"></script>-->
+		<script type="text/javascript" src="/hook/waffi/js/jquery.ajax-ips-kanalliste.js"></script>-->';
 		
-<script>		
+$css .= "<script>		
 [
   '/hook/waffi/js/jquery.js',
   '/hook/waffi/js/jquery.ajax-ips-kanalliste.js'
@@ -227,7 +227,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 });		
 </script>		
 		
-		';
+		";
 
 		// Button_123_Sender
 		// Button_123_' . $volumeDeviceObjectID
