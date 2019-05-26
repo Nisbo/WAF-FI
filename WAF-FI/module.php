@@ -2,7 +2,7 @@
 #################################################################################################################################
 # Addon:	WAF-FI --> WAF Fernseh Interface
 # Version:	1.0
-# Date:		16.05.2019
+# Date:		26.05.2019
 # Autor:	Nisbo
 # Based on an idea by: Fonzo
 # https://www.symcon.de/forum/threads/31582-Tastenfeld-Navigationswippe-dynamische-Webseiten-im-Webfront-darstellen
@@ -210,29 +210,28 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 
 		//print_r($data); 
 
-		$css = '
+		$cssInclude = '
 		<link type="text/css" href="/hook/waffi/css/waffi.css" rel="stylesheet">
-		<!--<script type="text/javascript" src="/hook/waffi/js/jquery.js"></script>
-		<script type="text/javascript" src="/hook/waffi/js/jquery.ajax-ips-kanalliste.js"></script>-->';
+		';
 		
-$css .= "<script>		
-[
-  '/hook/waffi/js/jquery.js',
-  '/hook/waffi/js/jquery.ajax-ips-kanalliste.js'
-].forEach(function(src) {
-  var script = document.createElement('script');
-  script.src = src;
-  script.async = false;
-  document.head.appendChild(script);
-});		
-</script>		
-		
+		$jsInclude .= "
+		<script>		
+		[
+		  '/hook/waffi/js/jquery.js',
+		  '/hook/waffi/js/jquery.ajax-ips-kanalliste.js'
+		].forEach(function(src) {
+		  var script = document.createElement('script');
+		  script.src = src;
+		  script.async = false;
+		  document.head.appendChild(script);
+		});		
+		</script>
 		";
 
 		// Button_123_Sender
 		// Button_123_' . $volumeDeviceObjectID
 
-		$channelListHTML = $css . '
+		$channelListHTML = $cssInclude . $jsInclude . '
 		<div id="wrapper">
 			<div class="navleft">
 				<section class="zapbuttons">
@@ -242,12 +241,12 @@ $css .= "<script>
 			</div>
 			<div class="navright">
 				<section class="navigationbuttons">
-					<div class="zapbutton buttonMouseOver zaptab" id="volumeUp"><img class="zapimage"       src="hook/waffi/images/volumeUp.png"    id="Button_'.$volumeUp.'_'.$volumeDeviceObjectID.'"       alt="volumeUp"></div>
-					<div class="zapbutton buttonMouseOver zaptab" id="volumeMute"><img class="zapimage"     src="hook/waffi/images/volumeMute.png"  id="Button_'.$volumeMute.'_'.$volumeDeviceObjectID.'"     alt="volumeMute"></div>
-					<div class="zapbutton buttonMouseOver zaptab" id="volumeDown"><img class="zapimage"     src="hook/waffi/images/volumeDown.png"  id="Button_'.$volumeDown.'_'.$volumeDeviceObjectID.'"     alt="volumeDown"></div>
-					<div class="zapbutton buttonMouseOver zaptab" id="channelUp"><img class="zapimage"      src="hook/waffi/images/channelUp.png"   id="Button_'.$channelUp.'_'.$channelDeviceObjectID.'"     alt="channelUp"></div>
-					<div class="zapbutton buttonMouseOver zaptab" id="channelDown"><img class="zapimage"    src="hook/waffi/images/channelDown.png" id="Button_'.$channelDown.'_'.$channelDeviceObjectID.'"   alt="channelDown"></div>
-					<div class="zapbutton buttonMouseOver zaptab" id="buttonBack"><img class="zapimage"     src="hook/waffi/images/ButtonBack.png"  id="Button_'.$backButton.'_'.$channelDeviceObjectID.'"    alt="ButtonBack"></div>
+					<div class="zapbutton buttonMouseOver zaptab" id="volumeUp"><img class="zapimage"       src="hook/waffi/images/volumeUp.png"     id="Button_'.$volumeUp.'_'.$volumeDeviceObjectID.'"       alt="volumeUp"></div>
+					<div class="zapbutton buttonMouseOver zaptab" id="volumeMute"><img class="zapimage"     src="hook/waffi/images/volumeMute.png"   id="Button_'.$volumeMute.'_'.$volumeDeviceObjectID.'"     alt="volumeMute"></div>
+					<div class="zapbutton buttonMouseOver zaptab" id="volumeDown"><img class="zapimage"     src="hook/waffi/images/volumeDown.png"   id="Button_'.$volumeDown.'_'.$volumeDeviceObjectID.'"     alt="volumeDown"></div>
+					<div class="zapbutton buttonMouseOver zaptab" id="channelUp"><img class="zapimage"      src="hook/waffi/images/channelUp.png"    id="Button_'.$channelUp.'_'.$channelDeviceObjectID.'"     alt="channelUp"></div>
+					<div class="zapbutton buttonMouseOver zaptab" id="channelDown"><img class="zapimage"    src="hook/waffi/images/channelDown.png"  id="Button_'.$channelDown.'_'.$channelDeviceObjectID.'"   alt="channelDown"></div>
+					<div class="zapbutton buttonMouseOver zaptab" id="buttonBack"><img class="zapimage"     src="hook/waffi/images/ButtonBack.png"   id="Button_'.$backButton.'_'.$channelDeviceObjectID.'"    alt="ButtonBack"></div>
 
 					<div class="zapbutton buttonMouseOver zaptab" id="buttonLeft"><img class="zapimage"     src="hook/waffi/images/ButtonLeft.png"   id="Button_'.$directionLeft.'_'.$channelDeviceObjectID.'"    alt="left"/></div>
 					<div class="zapbutton buttonMouseOver zaptab" id="buttonUp"><img class="zapimage"       src="hook/waffi/images/ButtonUp.png"     id="Button_'.$directionUp.'_'.$channelDeviceObjectID.'"      alt="up"/></div>
