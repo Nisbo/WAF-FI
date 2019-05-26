@@ -211,9 +211,9 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		//print_r($data); 
 
 		$css = '
-		<link type="text/css" href="hook/waffi/css/waffi.css" rel="stylesheet">
-		<script type="text/javascript" src="hook/waffi/js/jquery.ajax-ips-kanalliste.js"></script>
-		<script type="text/javascript" src="hook/waffi/js/jquery.js"></script>		
+		<link type="text/css" href="/hook/waffi/css/waffi.css" rel="stylesheet">
+		<script type="text/javascript" src="/hook/waffi/js/jquery.ajax-ips-kanalliste.js"></script>
+		<script type="text/javascript" src="/hook/waffi/js/jquery.js"></script>		
 		';
 
 		// Button_123_Sender
