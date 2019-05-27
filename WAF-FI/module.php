@@ -257,8 +257,8 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 	width: 505px;
 	border-radius: 13px;
 	display: block;
-	-webkit-box-shadow: 2px 2px 2px;
-	box-shadow: 2px 2px 2px;
+	-webkit-box-shadow: 0px 0px 2px 3px;
+	box-shadow: 0px 0px 2px 3px;
 }
 
 
@@ -277,8 +277,8 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 	height: 515px;
 	border-radius: 13px;
 	display: block;
-	-webkit-box-shadow: 2px 2px 2px;
-	box-shadow: 2px 2px 2px;
+	-webkit-box-shadow: 0px 0px 2px 3px;
+	box-shadow: 0px 0px 2px 3px;
 }
 
 
