@@ -304,7 +304,7 @@ $designButtonMarginLeft = $this->ReadPropertyInteger("designButtonMarginLeft");
 	-webkit-box-shadow: 4px 4px 7px #272424;
 	-moz-box-shadow:    4px 4px 7px #272424;
 	box-shadow:         4px 4px 7px #272424;
-display:table-cell;
+
 	text-align: center;
 	vertical-align: middle;
 	align-items:center;
@@ -362,6 +362,7 @@ box-shadow: 4px 4px 7px #272424;
 }
 
 .zapimage {
+	vertical-align: middle;
 	margin-top:    0px;
 	margin-left:   0px;
 	margin-bottom: 0px;
