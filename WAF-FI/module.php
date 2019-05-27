@@ -48,9 +48,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$this->RegisterPropertyString("volumeUp",						"VolumeUp");
 		$this->RegisterPropertyBoolean("useBouquet",					false);
 		
-
-		$this->RegisterPropertyInteger("designButtonBackGroundColor", 0);
-
+		$this->RegisterPropertyInteger("designButtonBackGroundColor", 13884121);
 
 		$this->RegisterVariableString("channelListHTML",				"Diese Variabel ins FrontEnd einbinden, zum Ändern bitte Config ausführen", "~HTMLBox", 1);
 	}
@@ -225,7 +223,7 @@ $designButtonBackGroundColor = $this->ReadPropertyInteger("designButtonBackGroun
 				$channelListHTML .= '<div class="zapbutton buttonMouseOver zaptab" id="Kanal' . $channelCount . 'Zap">' . $image . '</div>';
                 //echo '<div class="zapbutton buttonMouseOver zaptab" id="Kanal' . $channelCount . 'Zap">' . $image . '</div>' . PHP_EOL;
 			}
-			echo "Bouquet importiert." . $designButtonBackGroundColor;
+			echo "Bouquet importiert." . dechex($designButtonBackGroundColor);
 		}else{
 			$importer  = new CsvImporter($pathToCSV . $channelListFileName, true);
 			$data      = $importer->get();
