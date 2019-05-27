@@ -52,6 +52,8 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$this->RegisterPropertyInteger("designButtonWidth", 120); // 120
 		$this->RegisterPropertyInteger("designButtonHeight", 80); // 80
 		$this->RegisterPropertyInteger("designButtonEdge", 13); // 13
+		$this->RegisterPropertyInteger("designButtonMarginTop", 5); // 5
+		$this->RegisterPropertyInteger("designButtonMarginLeft", 5); // 5
 
 
 		$this->RegisterVariableString("channelListHTML",				"Diese Variabel ins FrontEnd einbinden, zum Ändern bitte Config ausführen", "~HTMLBox", 1);
@@ -189,6 +191,8 @@ $designButtonBackGroundColor = $this->ReadPropertyInteger("designButtonBackGroun
 $designButtonWidth = $this->ReadPropertyInteger("designButtonWidth");
 $designButtonHeight = $this->ReadPropertyInteger("designButtonHeight");
 $designButtonEdge = $this->ReadPropertyInteger("designButtonEdge");
+$designButtonMarginTop = $this->ReadPropertyInteger("designButtonMarginTop");
+$designButtonMarginLeft = $this->ReadPropertyInteger("designButtonMarginLeft");
 		
 		if(substr($pathToImages, -1, 1) != "/") $pathToImages          .= "/"; // to make sure there is a slash at the end
 		if(substr($pathToCSV, -1, 1) != "/")    $pathToCSV             .= "/"; // to make sure there is a slash at the end
@@ -295,17 +299,11 @@ $designButtonEdge = $this->ReadPropertyInteger("designButtonEdge");
 
 .zapbutton {
 	border-radius: '.$designButtonEdge.'px;
+	' . ($designButtonBackGroundColor != -1 ? ("background-color: #".dechex($designButtonBackGroundColor).";") : "") . '
 
-	/*
 	-webkit-box-shadow: 4px 4px 7px #272424;
-	box-shadow: 4px 4px 7px #272424;
-	*/
-
-' . ($designButtonBackGroundColor != -1 ? ("background-color: #".dechex($designButtonBackGroundColor).";") : "") . '
-
--webkit-box-shadow: 4px 4px 7px #272424;
--moz-box-shadow: 4px 4px 7px #272424;
-box-shadow: 4px 4px 7px #272424;
+	-moz-box-shadow:    4px 4px 7px #272424;
+	box-shadow:         4px 4px 7px #272424;
 
 	text-align: center;
 	vertical-align: middle;
@@ -358,8 +356,8 @@ box-shadow: 4px 4px 7px #272424;
 
 
 .zaptab {
-	margin-top:     5px;
-	margin-left:    5px;
+	margin-top:     '.$designButtonMarginTop.'px;
+	margin-left:    '.$designButtonMarginLeft.'px;
 	margin-bottom:  0px;
 }
 
