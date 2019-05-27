@@ -317,6 +317,8 @@ $designButtonMarginLeft = $this->ReadPropertyInteger("designButtonMarginLeft");
 	font-size:		large;
 	text-shadow:	2px 2px 4px #252323;
 
+line-height: '.$designButtonHeight.'px;
+
 	width:  '.$designButtonWidth.'px;
 	height: '.$designButtonHeight.'px;
 
@@ -325,6 +327,11 @@ $designButtonMarginLeft = $this->ReadPropertyInteger("designButtonMarginLeft");
 }
 
 
+.zapimage {
+	margin-top:    0px;
+	margin-left:   0px;
+	margin-bottom: 0px;
+}
 
 
 .zapbuttonR {
@@ -360,11 +367,7 @@ box-shadow: 4px 4px 7px #272424;
 }
 
 
-.zapimage {
-	margin-top:    0px;
-	margin-left:   0px;
-	margin-bottom: 0px;
-}
+
 
 .zaptabbottom {
 	height: '.$designButtonMarginTop.'px;
