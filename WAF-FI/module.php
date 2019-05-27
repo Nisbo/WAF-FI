@@ -247,10 +247,12 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 
 .zapbuttons {
 	float: left;
+	/*
 	background-image: -webkit-linear-gradient(305deg,rgba(255,255,255,1.00) 0%,rgba(69,57,57,1.00) 100%);
 	background-image: -moz-linear-gradient(305deg,rgba(255,255,255,1.00) 0%,rgba(69,57,57,1.00) 100%);
 	background-image: -o-linear-gradient(305deg,rgba(255,255,255,1.00) 0%,rgba(69,57,57,1.00) 100%);
 	background-image: linear-gradient(145deg,rgba(255,255,255,1.00) 0%,rgba(69,57,57,1.00) 100%);
+	*/
 	width: 505px;
 	border-radius: 13px;
 	display: block;
