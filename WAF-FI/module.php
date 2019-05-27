@@ -269,7 +269,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 }
 
 .zapimage {
-	margin-top:    0px;
+	margin-top:    5px;
 	margin-bottom: 0px;
 }
 </style>
