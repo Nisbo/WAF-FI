@@ -244,6 +244,20 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		<link type="text/css" href="/hook/waffi/css/waffi.css" rel="stylesheet">
 
 <style>
+
+.zapbuttons {
+	float: left;
+	background-image: -webkit-linear-gradient(305deg,rgba(255,255,255,1.00) 0%,rgba(69,57,57,1.00) 100%);
+	background-image: -moz-linear-gradient(305deg,rgba(255,255,255,1.00) 0%,rgba(69,57,57,1.00) 100%);
+	background-image: -o-linear-gradient(305deg,rgba(255,255,255,1.00) 0%,rgba(69,57,57,1.00) 100%);
+	background-image: linear-gradient(145deg,rgba(255,255,255,1.00) 0%,rgba(69,57,57,1.00) 100%);
+	width: 500px;
+	border-radius: 30px;
+	display: block;
+	-webkit-box-shadow: 2px 2px 5px;
+	box-shadow: 2px 2px 5px;
+}
+
 .zapbutton {
 	border-radius: 13px;
 	-webkit-box-shadow: 4px 4px 7px #272424;
@@ -274,6 +288,10 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 	margin-top:    10px;
 	margin-left:   0px;
 	margin-bottom: 0px;
+}
+
+.zaptabbottom {
+	height: 10px;
 }
 </style>
 		';
