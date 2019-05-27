@@ -193,22 +193,49 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		print_r($ipsObject);
 		*/
 
-		$importer  = new CsvImporter($pathToCSV . $channelListFileName, true);
-		$data      = $importer->get();
-		asort ($data);
+		#NAME Favourites (TV)
+		#SERVICE 1:0:19:283d:3fb:1:c00000:0:0:0:
+		#SERVICE 1:0:19:2b66:3f3:1:c00000:0:0:0:
+		#SERVICE 1:0:19:ef10:421:1:c00000:0:0:0:
+		#SERVICE 1:0:19:ef74:3f9:1:c00000:0:0:0:
+		#SERVICE 1:0:19:ef75:3f9:1:c00000:0:0:0:
 
-		foreach($data as $key => $val){
-			// Kanal_123_SignleDigits_Enter_EnterCode_channelDeviceObjectID
-			$imageID = 'Kanal_' . $val['channelNumber'] . '_' . $sendSingleDigits . '_' . $sendENTERkey . '_' . $sendENTERkeyCode . '_' . $channelDeviceObjectID;
+		if($useBouquet){
+			$channelCount = 0;
+			$importer  = new CsvImporter($pathToCSV . $channelListFileName, false, " "); // Space
+			$data      = $importer->get();
 
-			if($val['channelImage'] == "") {
-				$image = '<div class="noImageAvailable"><br /><a id="' . $imageID . '" >' . $val['channelName'] . '</a></div>';
-			} else { 
-				$image = '<img class="zapimage" src="' . $pathToImages . $val['channelImage'] . '" id="' . $imageID . '" alt="' . $val['channelName'] . '">';
+			foreach($data as $key => $val){
+				// Kanal_123_SignleDigits_Enter_EnterCode_channelDeviceObjectID
+                if($val[0] != "#SERVICE") continue;
+				$channelCount++;
+
+				$imageID = 'Kanal_' . $channelCount . '_' . $sendSingleDigits . '_' . $sendENTERkey . '_' . $sendENTERkeyCode . '_' . $channelDeviceObjectID;
+                $image = strtoupper(str_replace(":", "_", substr($val[1], 0, -1))) . ".png";
+                
+                $image = '<img class="zapimage" src="' . $pathToImages . $image . '" id="' . $imageID . '" alt="Kanal' . $channelCount . '">';
+
+				$channelListHTML .= '<div class="zapbutton buttonMouseOver zaptab" id="Kanal' . $channelCount . 'Zap">' . $image . '</div>';
+                echo '<div class="zapbutton buttonMouseOver zaptab" id="Kanal' . $channelCount . 'Zap">' . $image . '</div>' . PHP_EOL;
 			}
+		}else{
+			$importer  = new CsvImporter($pathToCSV . $channelListFileName, true);
+			$data      = $importer->get();
+			asort ($data);
 
-			$channelListHTML .= '<div class="zapbutton buttonMouseOver zaptab" id="' . $val['channelName'] . 'Zap">' . $image . '</div>';
-		} 
+			foreach($data as $key => $val){
+				// Kanal_123_SignleDigits_Enter_EnterCode_channelDeviceObjectID
+				$imageID = 'Kanal_' . $val['channelNumber'] . '_' . $sendSingleDigits . '_' . $sendENTERkey . '_' . $sendENTERkeyCode . '_' . $channelDeviceObjectID;
+
+				if($val['channelImage'] == "") {
+					$image = '<div class="noImageAvailable"><br /><a id="' . $imageID . '" >' . $val['channelName'] . '</a></div>';
+				} else { 
+					$image = '<img class="zapimage" src="' . $pathToImages . $val['channelImage'] . '" id="' . $imageID . '" alt="' . $val['channelName'] . '">';
+				}
+
+				$channelListHTML .= '<div class="zapbutton buttonMouseOver zaptab" id="' . $val['channelName'] . 'Zap">' . $image . '</div>';
+			} 
+		}
 
 		//print_r($data); 
 
