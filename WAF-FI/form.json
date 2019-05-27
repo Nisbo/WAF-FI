@@ -52,12 +52,13 @@
 		"caption": "Design (klicken zum öffnen)",
 		"items": [
 			{ "type": "Label", "label": "Design vom Buttonhintergrund" },
-			{ "type": "SelectColor",	"name": "designButtonBackGroundColor",	"caption": "Farbe" },
-			{ "type": "NumberSpinner",	"name": "designButtonWidth",		"caption": "Breite vom Buttonhintergrund",		"suffix": "px"},
-			{ "type": "NumberSpinner",	"name": "designButtonHeight",		"caption": "Höhe vom Buttonhintergrund",		"suffix": "px"},
-			{ "type": "NumberSpinner",	"name": "designButtonEdge",		"caption": "Radius der Ecken",				"suffix": "px"},
-			{ "type": "NumberSpinner",	"name": "designButtonMarginTop",	"caption": "Abstand nach Oben zu anderen Buttons",	"suffix": "px"},
-			{ "type": "NumberSpinner",	"name": "designButtonMarginLeft",	"caption": "Abstand nach Links zu anderen Buttons",	"suffix": "px"}
+			{ "type": "SelectColor",	"name": "designButtonBackGroundColor",	"caption": "Farbe vom Buttonhintergrund" },
+			{ "type": "SelectColor",	"name": "designButtonBackGroundColorH",	"caption": "Farbe vom Buttonhintergrund bei MouseOver" },
+			{ "type": "NumberSpinner",	"name": "designButtonWidth",		"caption": "Breite vom Buttonhintergrund",			"suffix": "px"},
+			{ "type": "NumberSpinner",	"name": "designButtonHeight",		"caption": "Höhe vom Buttonhintergrund",			"suffix": "px"},
+			{ "type": "NumberSpinner",	"name": "designButtonEdge",		"caption": "Radius der Ecken",					"suffix": "px"},
+			{ "type": "NumberSpinner",	"name": "designButtonMarginTop",	"caption": "Abstand nach Oben zu anderen Buttons / Rand",	"suffix": "px"},
+			{ "type": "NumberSpinner",	"name": "designButtonMarginLeft",	"caption": "Abstand nach Links zu anderen Buttons / Rand",	"suffix": "px"}
 		]
 	}
 
