@@ -305,10 +305,10 @@ $designButtonMarginLeft = $this->ReadPropertyInteger("designButtonMarginLeft");
 	-moz-box-shadow:    4px 4px 7px #272424;
 	box-shadow:         4px 4px 7px #272424;
 
-	text-align: center;
-	vertical-align: middle;
-	align-items:center;
-	justify-content: center;
+	text-align:			center;
+	vertical-align:		middle;
+	align-items:		center;
+	justify-content:	center;
 
 	color: #D6D8CF;
 	font-family: acme;
@@ -316,8 +316,7 @@ $designButtonMarginLeft = $this->ReadPropertyInteger("designButtonMarginLeft");
 	font-weight: 400;
 	font-size: large;
 	text-shadow: 2px 2px 4px #252323;
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
+
 	width:  '.$designButtonWidth.'px;
 	height: '.$designButtonHeight.'px;
 }
@@ -362,7 +361,6 @@ box-shadow: 4px 4px 7px #272424;
 }
 
 .zapimage {
-	vertical-align: middle;
 	margin-top:    0px;
 	margin-left:   0px;
 	margin-bottom: 0px;
