@@ -216,7 +216,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
                 $image = '<img class="zapimage" src="' . $pathToImages . $image . '" id="' . $imageID . '" alt="Kanal' . $channelCount . '">';
 
 				$channelListHTML .= '<div class="zapbutton buttonMouseOver zaptab" id="Kanal' . $channelCount . 'Zap">' . $image . '</div>';
-                echo '<div class="zapbutton buttonMouseOver zaptab" id="Kanal' . $channelCount . 'Zap">' . $image . '</div>' . PHP_EOL;
+                //echo '<div class="zapbutton buttonMouseOver zaptab" id="Kanal' . $channelCount . 'Zap">' . $image . '</div>' . PHP_EOL;
 			}
 		}else{
 			$importer  = new CsvImporter($pathToCSV . $channelListFileName, true);
