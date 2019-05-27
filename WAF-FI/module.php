@@ -51,6 +51,8 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$this->RegisterPropertyInteger("designButtonBackGroundColor", 13884121); // #D3DAD9
 		$this->RegisterPropertyInteger("designButtonWidth", 120); // 120
 		$this->RegisterPropertyInteger("designButtonHeight", 80); // 80
+		$this->RegisterPropertyInteger("designButtonEdge", 13); // 13
+
 
 		$this->RegisterVariableString("channelListHTML",				"Diese Variabel ins FrontEnd einbinden, zum Ändern bitte Config ausführen", "~HTMLBox", 1);
 	}
@@ -186,6 +188,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 $designButtonBackGroundColor = $this->ReadPropertyInteger("designButtonBackGroundColor");
 $designButtonWidth = $this->ReadPropertyInteger("designButtonWidth");
 $designButtonHeight = $this->ReadPropertyInteger("designButtonHeight");
+$designButtonEdge = $this->ReadPropertyInteger("designButtonEdge");
 		
 		if(substr($pathToImages, -1, 1) != "/") $pathToImages          .= "/"; // to make sure there is a slash at the end
 		if(substr($pathToCSV, -1, 1) != "/")    $pathToCSV             .= "/"; // to make sure there is a slash at the end
@@ -291,7 +294,7 @@ $designButtonHeight = $this->ReadPropertyInteger("designButtonHeight");
 
 
 .zapbutton {
-	border-radius: 13px;
+	border-radius: '.$designButtonEdge.'px;
 
 	/*
 	-webkit-box-shadow: 4px 4px 7px #272424;
