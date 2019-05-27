@@ -261,6 +261,12 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 	width:  100px;
 	height: 60px;
 }
+
+.zaptab {
+	margin-top:    0px;
+	margin-left:   20px;
+	margin-bottom:  0px;
+}
 </style>
 		';
 		
