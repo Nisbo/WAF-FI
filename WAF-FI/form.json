@@ -3,6 +3,7 @@
     [
 	{ "type": "Label", "label": "Dateien und Verzeichnisse" },
 	{ "type": "ValidationTextBox", "name": "channelListFileName",	"caption": "Name der CSV Datei mit der Kanalliste" },
+	{ "type": "CheckBox", "name": "useBouquet",			"caption": "Datei ist ein Bouquet" },
 	{ "type": "ValidationTextBox", "name": "pathToCSV",	"caption": "Path zur Kanalliste.csv" },
 	{ "type": "ValidationTextBox", "name": "pathToImages",	"caption": "Image-Verzeichnis für die Senderlogos" },
 
