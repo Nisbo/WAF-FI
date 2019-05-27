@@ -209,15 +209,16 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 				// Kanal_123_SignleDigits_Enter_EnterCode_channelDeviceObjectID
                 if($val[0] != "#SERVICE") continue;
 				$channelCount++;
+				if(isset($val[2]) && $val[2] != "") $channelCount = $val[2];
 
 				$imageID = 'Kanal_' . $channelCount . '_' . $sendSingleDigits . '_' . $sendENTERkey . '_' . $sendENTERkeyCode . '_' . $channelDeviceObjectID;
                 $image = strtoupper(str_replace(":", "_", substr($val[1], 0, -1))) . ".png";
-                
                 $image = '<img class="zapimage" src="' . $pathToImages . $image . '" id="' . $imageID . '" alt="Kanal' . $channelCount . '">';
 
 				$channelListHTML .= '<div class="zapbutton buttonMouseOver zaptab" id="Kanal' . $channelCount . 'Zap">' . $image . '</div>';
                 //echo '<div class="zapbutton buttonMouseOver zaptab" id="Kanal' . $channelCount . 'Zap">' . $image . '</div>' . PHP_EOL;
 			}
+			echo "Bouquet importiert.";
 		}else{
 			$importer  = new CsvImporter($pathToCSV . $channelListFileName, true);
 			$data      = $importer->get();
