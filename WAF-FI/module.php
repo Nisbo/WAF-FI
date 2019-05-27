@@ -250,7 +250,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 	box-shadow: 4px 4px 7px #272424;
 	text-align: center;
 	vertical-align: middle;
-	color: #D6D8CF;
+	/*color: #D6D8CF;*/
 	font-family: acme;
 	font-style: normal;
 	font-weight: 400;
