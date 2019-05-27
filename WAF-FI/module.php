@@ -295,7 +295,7 @@ $divWidth = ($designButtonPerRow * ($designButtonWidth + $designButtonMarginLeft
 	background-image: linear-gradient(145deg,rgba(255,255,255,1.00) 0%,rgba(69,57,57,1.00) 100%);
 	*/
 	background-image:none !important;
-	width:  490px;
+	width:  520px;
 	height: 515px;
 	border-radius: 13px;
 	display: block;
