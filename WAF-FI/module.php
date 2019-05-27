@@ -230,7 +230,7 @@ $designButtonMarginLeft = $this->ReadPropertyInteger("designButtonMarginLeft");
                 $image = strtoupper(str_replace(":", "_", substr($val[1], 0, -1))) . ".png";
                 $image = '<img class="zapimage" src="' . $pathToImages . $image . '" id="' . $imageID . '" alt="Kanal' . $channelCount . '">';
 
-				$channelListHTML .= '<div class="zapbutton buttonMouseOver" id="Kanal' . $channelCount . 'Zap">' . $image . '</div>';
+				$channelListHTML .= '<div class="buttonMouseOver zapbutton" id="Kanal' . $channelCount . 'Zap">' . $image . '</div>';
                 //echo '<div class="zapbutton buttonMouseOver zaptab" id="Kanal' . $channelCount . 'Zap">' . $image . '</div>' . PHP_EOL;
 			}
 			echo "Bouquet importiert." . dechex($designButtonBackGroundColor);
@@ -249,7 +249,7 @@ $designButtonMarginLeft = $this->ReadPropertyInteger("designButtonMarginLeft");
 					$image = '<img class="zapimage" src="' . $pathToImages . $val['channelImage'] . '" id="' . $imageID . '" alt="' . $val['channelName'] . '">';
 				}
 
-				$channelListHTML .= '<div class="zapbutton buttonMouseOver" id="' . $val['channelName'] . 'Zap">' . $image . '</div>';
+				$channelListHTML .= '<div class="buttonMouseOver zapbutton" id="' . $val['channelName'] . 'Zap">' . $image . '</div>';
 			} 
 		}
 
@@ -359,11 +359,6 @@ box-shadow: 4px 4px 7px #272424;
 	margin-left:   20px;
 }
 
-
-
-.zaptab {
-
-}
 
 .zapimage {
 	margin-top:    0px;
