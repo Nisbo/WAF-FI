@@ -43,7 +43,13 @@
 	{ "type": "SelectObject", "name": "volumeDeviceObjectID",	"caption": "Gerät zur Lautstärkeregelung (Object - grünes Icon auswählen)" },
 	{ "type": "ValidationTextBox", "name": "volumeDown",		"caption": "Code: Leiser Taste" },
 	{ "type": "ValidationTextBox", "name": "volumeUp",		"caption": "Code: Lauter Taste" },
-	{ "type": "ValidationTextBox", "name": "volumeMute",		"caption": "Code: Lautlos Taste" }
+	{ "type": "ValidationTextBox", "name": "volumeMute",		"caption": "Code: Lautlos Taste" },
+
+
+
+
+	{ "type": "Label", "label": "Design vom Buttonhintergrund" },
+	{ "type": "SelectColor", "name": "designButtonBackGroundColor", "caption": "Farbe" }
 
 
     ],
