@@ -52,6 +52,20 @@
 		"caption": "Design (klicken zum öffnen)",
 		"items": [
 			{ "type": "Label", "label": "Design vom Buttonhintergrund" },
+			{ "type": "Select", "name": "designButtonPerRow", "caption": "Anzahl an Buttons pro Zeile",
+			    "options": [
+				{ "caption": "1 Button", "value": 1 },
+				{ "caption": "2 Buttons", "value": 2 },
+				{ "caption": "3 Buttons", "value": 3 },
+				{ "caption": "4 Buttons", "value": 4 },
+				{ "caption": "5 Buttons", "value": 5 },
+				{ "caption": "6 Buttons", "value": 6 }
+				{ "caption": "7 Buttons", "value": 7 },
+				{ "caption": "8 Buttons", "value": 8 },
+				{ "caption": "9 Buttons", "value": 9 },
+				{ "caption": "10 Buttons", "value": 10 }
+			    ]
+			};
 			{ "type": "SelectColor",	"name": "designButtonBackGroundColor",	"caption": "Farbe vom Buttonhintergrund" },
 			{ "type": "SelectColor",	"name": "designButtonBackGroundColorH",	"caption": "Farbe vom Buttonhintergrund bei MouseOver" },
 			{ "type": "NumberSpinner",	"name": "designButtonWidth",		"caption": "Breite vom Buttonhintergrund",			"suffix": "px"},
