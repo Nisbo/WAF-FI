@@ -49,8 +49,8 @@
 
 
 	{ "type": "Label", "label": "Design vom Buttonhintergrund" },
-	{ "type": "SelectColor",	"name": "designButtonBackGroundColor", "caption": "Farbe" }
-	{ "type": "NumberSpinner",	"name": "designButtonWidth",	"caption": "Breite vom Buttonhintergrund",	"suffix": "px"}
+	{ "type": "SelectColor",	"name": "designButtonBackGroundColor", "caption": "Farbe" },
+	{ "type": "NumberSpinner",	"name": "designButtonWidth",	"caption": "Breite vom Buttonhintergrund",	"suffix": "px"},
 	{ "type": "NumberSpinner",	"name": "designButtonHeight",	"caption": "Höhe vom Buttonhintergrund",	"suffix": "px"}
 
 
