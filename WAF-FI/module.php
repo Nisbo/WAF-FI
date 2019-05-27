@@ -358,17 +358,16 @@ box-shadow: 4px 4px 7px #272424;
 .zaptab {
 	margin-top:     '.$designButtonMarginTop.'px;
 	margin-left:    '.$designButtonMarginLeft.'px;
-	/*margin-bottom:  0px;*/
 }
 
 .zapimage {
-	margin-top:    10px;
+	margin-top:    0px;
 	margin-left:   0px;
 	margin-bottom: 0px;
 }
 
 .zaptabbottom {
-	height: 5px;
+	height: '.$designButtonMarginTop.'px;
 }
 </style>
 		';
