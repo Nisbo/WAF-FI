@@ -258,8 +258,8 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 	text-shadow: 2px 2px 4px #252323;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
-	width:  100px;
-	height: 60px;
+	width:  105px;
+	height: 65px;
 }
 
 .zaptab {
