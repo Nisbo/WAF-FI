@@ -225,7 +225,7 @@ $designButtonBackGroundColor = $this->ReadPropertyString("designButtonBackGround
 				$channelListHTML .= '<div class="zapbutton buttonMouseOver zaptab" id="Kanal' . $channelCount . 'Zap">' . $image . '</div>';
                 //echo '<div class="zapbutton buttonMouseOver zaptab" id="Kanal' . $channelCount . 'Zap">' . $image . '</div>' . PHP_EOL;
 			}
-			echo "Bouquet importiert.";
+			echo "Bouquet importiert." . $designButtonBackGroundColor;
 		}else{
 			$importer  = new CsvImporter($pathToCSV . $channelListFileName, true);
 			$data      = $importer->get();
