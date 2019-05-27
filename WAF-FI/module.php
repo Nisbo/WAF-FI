@@ -326,12 +326,14 @@ $designButtonMarginLeft = $this->ReadPropertyInteger("designButtonMarginLeft");
 
 
 .zapimage {
-	bottom:		0;
-	left:		0;
 	margin:		auto;
 	position:	absolute;
+	/*
 	right:		0;
 	top:		0;
+	bottom:		0;
+	left:		0;
+	*/
 }
 
 
