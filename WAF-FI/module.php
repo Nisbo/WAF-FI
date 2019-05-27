@@ -264,7 +264,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 
 .zaptab {
 	margin-top:    0px;
-	margin-left:   20px;
+	margin-left:   0px;
 	margin-bottom:  0px;
 }
 </style>
