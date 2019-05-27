@@ -49,7 +49,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$this->RegisterPropertyBoolean("useBouquet",					false);
 		
 
-		$this->RegisterPropertyString("designButtonBackGroundColor", "#D3DAD9");
+		$this->RegisterPropertyString("designButtonBackGroundColor", "D3DAD9");
 
 
 		$this->RegisterVariableString("channelListHTML",				"Diese Variabel ins FrontEnd einbinden, zum Ändern bitte Config ausführen", "~HTMLBox", 1);
