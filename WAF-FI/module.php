@@ -295,7 +295,7 @@ $designButtonBackGroundColor = $this->ReadPropertyInteger("designButtonBackGroun
 	box-shadow: 4px 4px 7px #272424;
 	*/
 
-background-color: #D3DAD9;
+' . $designButtonBackGroundColor != -1 ? 'background-color: #'.dechex($designButtonBackGroundColor).';' : '' . '
 -webkit-box-shadow: 4px 4px 7px #272424;
 -moz-box-shadow: 4px 4px 7px #272424;
 box-shadow: 4px 4px 7px #272424;
