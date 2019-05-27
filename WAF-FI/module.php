@@ -251,6 +251,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 	text-align: center;
 	vertical-align: middle;
 	align-items:center;
+	justify-content: center;
 	color: #D6D8CF;
 	font-family: acme;
 	font-style: normal;
@@ -271,7 +272,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 
 .zapimage {
 	margin-top:    10px;
-	margin-left:   5px;
+	margin-left:   0px;
 	margin-bottom: 0px;
 }
 </style>
