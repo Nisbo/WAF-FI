@@ -242,6 +242,26 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 
 		$cssInclude = '
 		<link type="text/css" href="/hook/waffi/css/waffi.css" rel="stylesheet">
+
+<style>
+.zapbutton {
+	border-radius: 13px;
+	-webkit-box-shadow: 4px 4px 7px #272424;
+	box-shadow: 4px 4px 7px #272424;
+	text-align: center;
+	vertical-align: middle;
+	color: #D6D8CF;
+	font-family: acme;
+	font-style: normal;
+	font-weight: 400;
+	font-size: large;
+	text-shadow: 2px 2px 4px #252323;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width:  100px;
+	height: 60px;
+}
+</style>
 		';
 		
 		$jsInclude = "
