@@ -263,13 +263,21 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 
 .zapbutton {
 	border-radius: 13px;
+
+	/*
 	-webkit-box-shadow: 4px 4px 7px #272424;
 	box-shadow: 4px 4px 7px #272424;
+	*/
+background-color: rgb(39, 194, 103);
+-webkit-box-shadow: 6px 11px 5px 3px rgba(125,119,125,1);
+-moz-box-shadow: 6px 11px 5px 3px rgba(125,119,125,1);
+box-shadow: 6px 11px 5px 3px rgba(125,119,125,1);
+
 	text-align: center;
 	vertical-align: middle;
 	align-items:center;
 	justify-content: center;
-	color: #ebede8;/*#D6D8CF;*/
+	color: #D6D8CF;
 	font-family: acme;
 	font-style: normal;
 	font-weight: 400;
