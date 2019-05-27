@@ -257,6 +257,9 @@ $designButtonBackGroundColorH = $this->ReadPropertyInteger("designButtonBackGrou
 
 		//print_r($data); 
 
+// calculate size
+$divWidth = ($designButtonPerRow * ($designButtonWidth + $designButtonMarginLeft)) + $designButtonMarginLeft;
+
 		$cssInclude = '
 		<link type="text/css" href="/hook/waffi/css/waffi.css" rel="stylesheet">
 
@@ -271,7 +274,7 @@ $designButtonBackGroundColorH = $this->ReadPropertyInteger("designButtonBackGrou
 	background-image: linear-gradient(145deg,rgba(255,255,255,1.00) 0%,rgba(69,57,57,1.00) 100%);
 	*/
 	background-image:none !important;
-	width: 505px;
+	width: '.$divWidth.'px;
 	border-radius: 13px;
 	display: block;
 	-webkit-box-shadow: 0px 0px 2px 3px;
