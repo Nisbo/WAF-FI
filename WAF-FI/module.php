@@ -273,7 +273,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 	background-image: linear-gradient(145deg,rgba(255,255,255,1.00) 0%,rgba(69,57,57,1.00) 100%);
 	*/
 	background-image:none !important;
-	width:  505px;
+	width:  490px;
 	height: 515px;
 	border-radius: 13px;
 	display: block;
