@@ -373,7 +373,7 @@ box-shadow: 4px 4px 7px #272424;
 
 .buttonMouseOver:hover, .buttonMouseOver:focus, .buttonMouseOver:active {
 	box-shadow: 4px 4px 33px 17px #272424;
-	background-color: yellow;
+	' . ($designButtonBackGroundColorH != -1 ? ("background-color: #".dechex($designButtonBackGroundColorH).";") : "") . '
 }
 
 .zaptabbottom {
