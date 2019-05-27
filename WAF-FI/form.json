@@ -65,7 +65,7 @@
 				{ "caption": "9 Buttons", "value": 9 },
 				{ "caption": "10 Buttons", "value": 10 }
 			    ]
-			};
+			},
 			{ "type": "SelectColor",	"name": "designButtonBackGroundColor",	"caption": "Farbe vom Buttonhintergrund" },
 			{ "type": "SelectColor",	"name": "designButtonBackGroundColorH",	"caption": "Farbe vom Buttonhintergrund bei MouseOver" },
 			{ "type": "NumberSpinner",	"name": "designButtonWidth",		"caption": "Breite vom Buttonhintergrund",			"suffix": "px"},
