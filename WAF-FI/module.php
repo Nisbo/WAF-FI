@@ -48,7 +48,9 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$this->RegisterPropertyString("volumeUp",						"VolumeUp");
 		$this->RegisterPropertyBoolean("useBouquet",					false);
 		
-		$this->RegisterPropertyInteger("designButtonBackGroundColor", 13884121);
+		$this->RegisterPropertyInteger("designButtonBackGroundColor", 13884121); // #D3DAD9
+		$this->RegisterPropertyInteger("designButtonWidth", 120); // 120
+		$this->RegisterPropertyInteger("designButtonHeight", 80); // 80
 
 		$this->RegisterVariableString("channelListHTML",				"Diese Variabel ins FrontEnd einbinden, zum Ändern bitte Config ausführen", "~HTMLBox", 1);
 	}
@@ -182,7 +184,8 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$useBouquet				= $this->ReadPropertyBoolean("useBouquet");
 
 $designButtonBackGroundColor = $this->ReadPropertyInteger("designButtonBackGroundColor");
-		
+$designButtonWidth = $this->ReadPropertyInteger("designButtonWidth");
+$designButtonHeight = $this->ReadPropertyInteger("designButtonHeight");
 		
 		if(substr($pathToImages, -1, 1) != "/") $pathToImages          .= "/"; // to make sure there is a slash at the end
 		if(substr($pathToCSV, -1, 1) != "/")    $pathToCSV             .= "/"; // to make sure there is a slash at the end
@@ -296,6 +299,7 @@ $designButtonBackGroundColor = $this->ReadPropertyInteger("designButtonBackGroun
 	*/
 
 ' . ($designButtonBackGroundColor != -1 ? ("background-color: #".dechex($designButtonBackGroundColor).";") : "") . '
+
 -webkit-box-shadow: 4px 4px 7px #272424;
 -moz-box-shadow: 4px 4px 7px #272424;
 box-shadow: 4px 4px 7px #272424;
@@ -312,8 +316,8 @@ box-shadow: 4px 4px 7px #272424;
 	text-shadow: 2px 2px 4px #252323;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
-	width:  120px;
-	height: 80px;
+	width:  '.$designButtonWidth.'px;
+	height: '.$designButtonHeight.'px;
 }
 
 
