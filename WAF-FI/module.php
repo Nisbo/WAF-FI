@@ -2,7 +2,7 @@
 #################################################################################################################################
 # Addon:	WAF-FI --> WAF Fernseh Interface
 # Version:	1.0
-# Date:		26.05.2019
+# Date:		27.05.2019
 # Autor:	Nisbo
 # Based on an idea by: Fonzo
 # https://www.symcon.de/forum/threads/31582-Tastenfeld-Navigationswippe-dynamische-Webseiten-im-Webfront-darstellen
@@ -46,7 +46,8 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$this->RegisterPropertyString("volumeDown",						"VolumeDown");
 		$this->RegisterPropertyString("volumeMute",						"Mute");
 		$this->RegisterPropertyString("volumeUp",						"VolumeUp");
-
+		$this->RegisterPropertyBoolean("useBouquet",					false);
+		
 		$this->RegisterVariableString("channelListHTML",				"Diese Variabel ins FrontEnd einbinden, zum Ändern bitte Config ausführen", "~HTMLBox", 1);
 	}
 
@@ -176,7 +177,8 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$harmonyHubStartActivityOn  = $this->ReadPropertyInteger("harmonyHubStartActivityOn");
 		$harmonyHubStartActivityOff = $this->ReadPropertyInteger("harmonyHubStartActivityOff");
 
-
+		$useBouquet				= $this->ReadPropertyBoolean("useBouquet");
+		
 		if(substr($pathToImages, -1, 1) != "/") $pathToImages          .= "/"; // to make sure there is a slash at the end
 		if(substr($pathToCSV, -1, 1) != "/")    $pathToCSV             .= "/"; // to make sure there is a slash at the end
 		if($sendENTERkey == "")                 $sendENTERkey           = 0;
