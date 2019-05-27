@@ -54,7 +54,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$this->RegisterPropertyInteger("designButtonEdge", 13); // 13
 		$this->RegisterPropertyInteger("designButtonMarginTop", 5); // 5
 		$this->RegisterPropertyInteger("designButtonMarginLeft", 5); // 5
-
+		$this->RegisterPropertyInteger("designButtonBackGroundColorH", 16776960); // #FFFF00
 
 		$this->RegisterVariableString("channelListHTML",				"Diese Variabel ins FrontEnd einbinden, zum Ändern bitte Config ausführen", "~HTMLBox", 1);
 	}
@@ -193,6 +193,8 @@ $designButtonHeight = $this->ReadPropertyInteger("designButtonHeight");
 $designButtonEdge = $this->ReadPropertyInteger("designButtonEdge");
 $designButtonMarginTop = $this->ReadPropertyInteger("designButtonMarginTop");
 $designButtonMarginLeft = $this->ReadPropertyInteger("designButtonMarginLeft");
+$designButtonBackGroundColorH = $this->ReadPropertyInteger("designButtonBackGroundColorH");
+
 		
 		if(substr($pathToImages, -1, 1) != "/") $pathToImages          .= "/"; // to make sure there is a slash at the end
 		if(substr($pathToCSV, -1, 1) != "/")    $pathToCSV             .= "/"; // to make sure there is a slash at the end
