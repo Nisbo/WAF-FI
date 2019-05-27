@@ -269,7 +269,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 	box-shadow: 4px 4px 7px #272424;
 	*/
 
-background-color: #e5dede;
+background-color: #D3DAD9;
 -webkit-box-shadow: 4px 4px 7px #272424;
 -moz-box-shadow: 4px 4px 7px #272424;
 box-shadow: 4px 4px 7px #272424;
