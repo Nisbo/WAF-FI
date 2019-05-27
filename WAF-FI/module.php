@@ -317,8 +317,6 @@ $designButtonMarginLeft = $this->ReadPropertyInteger("designButtonMarginLeft");
 	font-size:		large;
 	text-shadow:	2px 2px 4px #252323;
 
-line-height: '.$designButtonHeight.'px;
-
 	width:  '.$designButtonWidth.'px;
 	height: '.$designButtonHeight.'px;
 
@@ -331,6 +329,13 @@ line-height: '.$designButtonHeight.'px;
 	margin-top:    0px;
 	margin-left:   0px;
 	margin-bottom: 0px;
+
+	        bottom: 0;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
 }
 
 
