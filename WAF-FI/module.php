@@ -301,9 +301,9 @@ $designButtonMarginLeft = $this->ReadPropertyInteger("designButtonMarginLeft");
 	border-radius: '.$designButtonEdge.'px;
 	' . ($designButtonBackGroundColor != -1 ? ("background-color: #".dechex($designButtonBackGroundColor).";") : "") . '
 
-	-webkit-box-shadow: 4px 4px 7px #272424;
-	-moz-box-shadow:    4px 4px 7px #272424;
-	box-shadow:         4px 4px 7px #272424;
+	-webkit-box-shadow: 4px 4px 7px 3px #272424;
+	-moz-box-shadow:    4px 4px 7px 3px #272424;
+	box-shadow:         4px 4px 7px 3px #272424;
 
 	text-align:			center;
 	vertical-align:		middle;
@@ -328,6 +328,7 @@ $designButtonMarginLeft = $this->ReadPropertyInteger("designButtonMarginLeft");
 .zapimage {
 	margin:		auto;
 	position:	absolute;
+	/* yes it makes no sense but it vertically center the image */
 	right:		0;
 	top:		0;
 	bottom:		0;
