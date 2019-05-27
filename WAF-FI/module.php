@@ -304,7 +304,7 @@ $designButtonMarginLeft = $this->ReadPropertyInteger("designButtonMarginLeft");
 	-webkit-box-shadow: 4px 4px 7px #272424;
 	-moz-box-shadow:    4px 4px 7px #272424;
 	box-shadow:         4px 4px 7px #272424;
-display: inline-block;
+display:table-cell;
 	text-align: center;
 	vertical-align: middle;
 	align-items:center;
