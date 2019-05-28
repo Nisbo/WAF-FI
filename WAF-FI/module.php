@@ -57,6 +57,8 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$this->RegisterPropertyInteger("designButtonBackGroundColorH", 16776960); // #FFFF00
 		$this->RegisterPropertyInteger("designButtonPerRow", 4); // 4
 
+		$this->RegisterPropertyString("channelListUploadFile", "");
+
 		$this->RegisterVariableString("channelListHTML",				"Diese Variabel ins FrontEnd einbinden, zum Ändern bitte Config ausführen", "~HTMLBox", 1);
 	}
 
@@ -186,17 +188,17 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$harmonyHubStartActivityOn  = $this->ReadPropertyInteger("harmonyHubStartActivityOn");
 		$harmonyHubStartActivityOff = $this->ReadPropertyInteger("harmonyHubStartActivityOff");
 
-		$useBouquet				= $this->ReadPropertyBoolean("useBouquet");
+		$useBouquet						= $this->ReadPropertyBoolean("useBouquet");
 
-$designButtonBackGroundColor = $this->ReadPropertyInteger("designButtonBackGroundColor");
-$designButtonWidth = $this->ReadPropertyInteger("designButtonWidth");
-$designButtonHeight = $this->ReadPropertyInteger("designButtonHeight");
-$designButtonEdge = $this->ReadPropertyInteger("designButtonEdge");
-$designButtonMarginTop = $this->ReadPropertyInteger("designButtonMarginTop");
-$designButtonMarginLeft = $this->ReadPropertyInteger("designButtonMarginLeft");
-$designButtonBackGroundColorH = $this->ReadPropertyInteger("designButtonBackGroundColorH");
-$designButtonPerRow = $this->ReadPropertyInteger("designButtonPerRow");
-
+		$designButtonBackGroundColor	= $this->ReadPropertyInteger("designButtonBackGroundColor");
+		$designButtonWidth				= $this->ReadPropertyInteger("designButtonWidth");
+		$designButtonHeight				= $this->ReadPropertyInteger("designButtonHeight");
+		$designButtonEdge				= $this->ReadPropertyInteger("designButtonEdge");
+		$designButtonMarginTop			= $this->ReadPropertyInteger("designButtonMarginTop");
+		$designButtonMarginLeft			= $this->ReadPropertyInteger("designButtonMarginLeft");
+		$designButtonBackGroundColorH	= $this->ReadPropertyInteger("designButtonBackGroundColorH");
+		$designButtonPerRow				= $this->ReadPropertyInteger("designButtonPerRow");
+		$channelListUploadFile			= $this->ReadPropertyString("FileData");
 		
 		if(substr($pathToImages, -1, 1) != "/") $pathToImages          .= "/"; // to make sure there is a slash at the end
 		if(substr($pathToCSV, -1, 1) != "/")    $pathToCSV             .= "/"; // to make sure there is a slash at the end
@@ -221,8 +223,13 @@ $designButtonPerRow = $this->ReadPropertyInteger("designButtonPerRow");
 
 		if($useBouquet){
 			$channelCount = 0;
-			$importer  = new CsvImporter($pathToCSV . $channelListFileName, false, " "); // Space
-			$data      = $importer->get();
+			
+			if($channelListUploadFile == ""){
+				$importer  = new CsvImporter($pathToCSV . $channelListFileName, false, " "); // File on Disk
+			}else{
+				$importer  = new CsvImporterB64($channelListUploadFile, false, " "); // File in IPS
+			}
+			$data = $importer->get();
 
 			foreach($data as $key => $val){
 				// Kanal_123_SignleDigits_Enter_EnterCode_channelDeviceObjectID
@@ -239,8 +246,13 @@ $designButtonPerRow = $this->ReadPropertyInteger("designButtonPerRow");
 			}
 			echo "Bouquet importiert." . dechex($designButtonBackGroundColor);
 		}else{
-			$importer  = new CsvImporter($pathToCSV . $channelListFileName, true);
-			$data      = $importer->get();
+			if($channelListUploadFile == ""){
+				$importer  = new CsvImporter($pathToCSV . $channelListFileName, true); // File on Disk
+			}else{
+				$importer  = new CsvImporterB64($channelListUploadFile, true); // File in IPS
+			}
+
+			$data = $importer->get();
 			asort ($data);
 
 			foreach($data as $key => $val){
