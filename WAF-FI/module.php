@@ -479,7 +479,7 @@ asort($jsd);
 
 $rechteBox = "";
 foreach($jsd as $key => $value) {
-    $rechteBox .= $this->getTheBox($value->column1) . " - " . $this->getTheBox($value->column2) . " - " . $this->getTheBox($value->column3) . " - " . $this->getTheBox($value->column4) . " - " . $this->getTheBox($value->column5) . " - " . $this->getTheBox($value->column6) . " - " . $this->getTheBox($value->column7);
+    $rechteBox .= $this->getTheBox($value->column1) . $this->getTheBox($value->column2) . $this->getTheBox($value->column3) . $this->getTheBox($value->column4) . $this->getTheBox($value->column5) . $this->getTheBox($value->column6) . $this->getTheBox($value->column7);
 }
 
 
