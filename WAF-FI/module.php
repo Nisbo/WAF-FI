@@ -56,6 +56,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$this->RegisterPropertyInteger("designButtonMarginLeft", 5); // 5
 		$this->RegisterPropertyInteger("designButtonBackGroundColorH", 16776960); // #FFFF00
 		$this->RegisterPropertyInteger("designButtonPerRow", 4); // 4
+		$this->RegisterPropertyString("configStandardButtons",						"");
 
 		$this->RegisterPropertyString("channelListUploadFile", "");
 
@@ -200,6 +201,8 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$designButtonPerRow				= $this->ReadPropertyInteger("designButtonPerRow");
 		$channelListUploadFile			= $this->ReadPropertyString("channelListUploadFile");
 		
+		$configStandardButtons	= $this->ReadPropertyString("configStandardButtons");
+
 		if(substr($pathToImages, -1, 1) != "/") $pathToImages          .= "/"; // to make sure there is a slash at the end
 		if(substr($pathToCSV, -1, 1) != "/")    $pathToCSV             .= "/"; // to make sure there is a slash at the end
 		if($sendENTERkey == "")                 $sendENTERkey           = 0;
