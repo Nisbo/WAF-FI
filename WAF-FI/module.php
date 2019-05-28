@@ -528,24 +528,30 @@ $divWidthR = ($designCBcols * ($designButtonWidthCB + $designButtonMarginLeftCB)
 				$this->getTheBox($value->column1, $volumeUp, $volumeDeviceObjectID, $volumeDown, $volumeMute, $channelUp, $channelDeviceObjectID, $channelDown, $directionLeft,
 				$directionRight, $directionUp, $directionDown, $okButton, $backButton, $harmonyHubStartActivityOn, $harmonyHubStartActivityOff, $harmonyHubObjectID,
 				$colorButtonRed, $colorButtonBlue, $colorButtonYellow, $colorButtonGreen) . 
+
 				$this->getTheBox($value->column2, $volumeUp, $volumeDeviceObjectID, $volumeDown, $volumeMute, $channelUp, $channelDeviceObjectID, $channelDown, $directionLeft,
 				$directionRight, $directionUp, $directionDown, $okButton, $backButton, $harmonyHubStartActivityOn, $harmonyHubStartActivityOff, $harmonyHubObjectID,
 				$colorButtonRed, $colorButtonBlue, $colorButtonYellow, $colorButtonGreen) . 
+
 				$this->getTheBox($value->column3, $volumeUp, $volumeDeviceObjectID, $volumeDown, $volumeMute, $channelUp, $channelDeviceObjectID, $channelDown, $directionLeft,
 				$directionRight, $directionUp, $directionDown, $okButton, $backButton, $harmonyHubStartActivityOn, $harmonyHubStartActivityOff, $harmonyHubObjectID,
 				$colorButtonRed, $colorButtonBlue, $colorButtonYellow, $colorButtonGreen) . 
+
 				$this->getTheBox($value->column4, $volumeUp, $volumeDeviceObjectID, $volumeDown, $volumeMute, $channelUp, $channelDeviceObjectID, $channelDown, $directionLeft,
 				$directionRight, $directionUp, $directionDown, $okButton, $backButton, $harmonyHubStartActivityOn, $harmonyHubStartActivityOff, $harmonyHubObjectID,
 				$colorButtonRed, $colorButtonBlue, $colorButtonYellow, $colorButtonGreen) . 
+
 				$this->getTheBox($value->column5, $volumeUp, $volumeDeviceObjectID, $volumeDown, $volumeMute, $channelUp, $channelDeviceObjectID, $channelDown, $directionLeft,
 				$directionRight, $directionUp, $directionDown, $okButton, $backButton, $harmonyHubStartActivityOn, $harmonyHubStartActivityOff, $harmonyHubObjectID,
 				$colorButtonRed, $colorButtonBlue, $colorButtonYellow, $colorButtonGreen) . 
+
 				$this->getTheBox($value->column6, $volumeUp, $volumeDeviceObjectID, $volumeDown, $volumeMute, $channelUp, $channelDeviceObjectID, $channelDown, $directionLeft,
 				$directionRight, $directionUp, $directionDown, $okButton, $backButton, $harmonyHubStartActivityOn, $harmonyHubStartActivityOff, $harmonyHubObjectID,
 				$colorButtonRed, $colorButtonBlue, $colorButtonYellow, $colorButtonGreen) . 
-				$this->getTheBox($value->column7, $volumeUp, $volumeDeviceObjectID, $volumeDown, $volumeMute, $channelUp, $channelDeviceObjectID, $channelDown, $directionLeft,
+
+				($designCBrows >= 7 ? $this->getTheBox($value->column7, $volumeUp, $volumeDeviceObjectID, $volumeDown, $volumeMute, $channelUp, $channelDeviceObjectID, $channelDown, $directionLeft,
 				$directionRight, $directionUp, $directionDown, $okButton, $backButton, $harmonyHubStartActivityOn, $harmonyHubStartActivityOff, $harmonyHubObjectID,
-				$colorButtonRed, $colorButtonBlue, $colorButtonYellow, $colorButtonGreen);
+				$colorButtonRed, $colorButtonBlue, $colorButtonYellow, $colorButtonGreen));
 		}
 
 
