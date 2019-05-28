@@ -156,6 +156,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 	}
 
 	public function getTheBox($boxId){
+		/*
 		global $volumeUp, $volumeDeviceObjectID, $volumeDown, $volumeMute, $channelUp, $channelDeviceObjectID, $channelDown, $directionLeft,
 		$directionRight, $directionUp, $directionDown, $okButton, $backButton, $harmonyHubStartActivityOn, $harmonyHubStartActivityOff, $harmonyHubObjectID,
 		$colorButtonRed, $colorButtonBlue, $colorButtonYellow, $colorButtonGreen;
@@ -217,6 +218,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		if($boxId == 17)    $box = '<div class="ä buttonMouseOver" id="buttonGreen"><img class="zapimage"    src="hook/waffi/images/ButtonGreen.png"  id="Button_'.$colorButtonGreen.'_'.$channelDeviceObjectID.'"     alt="green"/></div>';
 
 		return $box;
+		*/
 	}
 
 	public function generateHTMLcontent() {
