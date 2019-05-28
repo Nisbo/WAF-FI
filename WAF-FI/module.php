@@ -198,7 +198,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$designButtonMarginLeft			= $this->ReadPropertyInteger("designButtonMarginLeft");
 		$designButtonBackGroundColorH	= $this->ReadPropertyInteger("designButtonBackGroundColorH");
 		$designButtonPerRow				= $this->ReadPropertyInteger("designButtonPerRow");
-		$channelListUploadFile			= $this->ReadPropertyString("FileData");
+		$channelListUploadFile			= $this->ReadPropertyString("channelListUploadFile");
 		
 		if(substr($pathToImages, -1, 1) != "/") $pathToImages          .= "/"; // to make sure there is a slash at the end
 		if(substr($pathToCSV, -1, 1) != "/")    $pathToCSV             .= "/"; // to make sure there is a slash at the end
