@@ -472,6 +472,23 @@ $divWidth = ($designButtonPerRow * ($designButtonWidth + $designButtonMarginLeft
 	' . ($designButtonBackGroundColorH != -1 ? ("background-color: #".dechex($designButtonBackGroundColorH).";") : "") . '
 }
 
+
+.buttonMouseOverR {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-property: box-shadow;
+	transition-property: box-shadow;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
 .buttonMouseOverR:hover, .buttonMouseOverR:focus, .buttonMouseOverR:active {
 	box-shadow: 4px 4px 33px 17px #272424;
 	' . ($designButtonBackGroundColorHCB != -1 ? ("background-color: #".dechex($designButtonBackGroundColorHCB).";") : "") . '
