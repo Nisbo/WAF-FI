@@ -512,7 +512,7 @@ $divWidthR = ($designCBcols * ($designButtonWidthCB + $designButtonMarginLeftCB)
 }
 
 .buttonMouseOverRE {
-
+	display: inline-block;
 }
 
 .buttonMouseOverRE:hover, .buttonMouseOverRE:focus, .buttonMouseOverRE:active {
