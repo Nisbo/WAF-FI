@@ -50,7 +50,7 @@
 
 	{
 		"type": "ExpansionPanel",
-		"caption": "Design (klicken zum öffnen)",
+		"caption": "Design Senderbuttons (klicken zum öffnen)",
 		"items": [
 			{ "type": "Label", "label": "Design vom Buttonhintergrund" },
 			{ "type": "Select", "name": "designButtonPerRow", "caption": "Anzahl an Buttons pro Zeile",
@@ -83,13 +83,46 @@
 
 
 
+
+
+
+
+
+
+
+
+	{
+		"type": "ExpansionPanel",
+		"caption": "Design Allgemeine Buttons (klicken zum öffnen)",
+		"items": [
+			{ "type": "Label", "label": "Design vom Buttonhintergrund" },
+
+			{ "type": "SelectColor",	"name": "designButtonBackGroundColorCB",	"caption": "Farbe vom Buttonhintergrund" },
+			{ "type": "SelectColor",	"name": "designButtonBackGroundColorHCB",	"caption": "Farbe vom Buttonhintergrund bei MouseOver" },
+			{ "type": "NumberSpinner",	"name": "designButtonWidthCB",			"caption": "Breite vom Buttonhintergrund",			"suffix": "px"},
+			{ "type": "NumberSpinner",	"name": "designButtonHeightCB",			"caption": "Höhe vom Buttonhintergrund",			"suffix": "px"},
+			{ "type": "NumberSpinner",	"name": "designButtonEdgeCB",			"caption": "Radius der Ecken",					"suffix": "px"},
+			{ "type": "NumberSpinner",	"name": "designButtonMarginTopCB",		"caption": "Abstand nach Oben zu anderen Buttons / Rand",	"suffix": "px"},
+			{ "type": "NumberSpinner",	"name": "designButtonMarginLeftCB",		"caption": "Abstand nach Links zu anderen Buttons / Rand",	"suffix": "px"}
+		]
+	},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     { 
         "type": "RowLayout",
         "items": [
-
-
-
-
 		{
 			"type": "List",	"name": "configStandardButtons",	"caption": "Anordnung der Buttons für Lautstärke usw",	"rowCount": 10,	"add": true,	"delete": true,
 			"sort": {	"column": "sortOrder",	"direction": "ascending"   },
