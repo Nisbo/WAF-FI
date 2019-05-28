@@ -214,7 +214,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		if($boxId == 16)    $box = '<div class="zapbuttonR buttonMouseOver" id="buttonYellow"><img class="zapimage"   src="hook/waffi/images/ButtonYellow.png" id="Button_'.$colorButtonYellow.'_'.$channelDeviceObjectID.'"    alt="yellow"/></div>';
 		
 		// Grün
-		if($boxId == 17)    $box = '<div class="ä buttonMouseOver" id="buttonGreen"><img class="zapimage"    src="hook/waffi/images/ButtonGreen.png"  id="Button_'.$colorButtonGreen.'_'.$channelDeviceObjectID.'"     alt="green"/></div>';
+		if($boxId == 17)    $box = '<div class="zapbuttonR buttonMouseOver" id="buttonGreen"><img class="zapimage"    src="hook/waffi/images/ButtonGreen.png"  id="Button_'.$colorButtonGreen.'_'.$channelDeviceObjectID.'"     alt="green"/></div>';
 
 		return $box;
 	}
