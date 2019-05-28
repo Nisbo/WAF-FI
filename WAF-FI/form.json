@@ -91,7 +91,7 @@
 
 
 		{
-			"type": "List",	"name": "Zeile1",	"caption": "Zeile 1",	"rowCount": 5,	"add": true,	"delete": true,
+			"type": "List",	"name": "Zeile1",	"caption": "Anordnung der Buttons für Lautstärke usw",	"rowCount": 10,	"add": true,	"delete": true,
 			"columns": [
 				{
 					"label": "Spalte 1",	"name": "select1", "width": "100px",
@@ -100,10 +100,24 @@
 						"type": "Select",
 						"caption": "Mode",
 						"options": [
-							{	"label": "Volume Up",		"value": 0	},
-							{	"label": "Volume Down",		"value": 1	},
-							{	"label": "Channel Up",		"value": 2	},
-							{	"label": "CHannel Down",	"value": 3	}
+							{	"label": "",			"value": 0	},
+							{	"label": "Lauter",		"value": 1	},
+							{	"label": "Leiser",		"value": 2	},
+							{	"label": "Lautlos",		"value": 3	},
+							{	"label": "Kanal rauf",		"value": 4	},
+							{	"label": "Kanal runter",	"value": 5	},
+							{	"label": "Links",		"value": 6	},
+							{	"label": "Rechts",		"value": 7	},
+							{	"label": "Hoch",		"value": 8	},
+							{	"label": "Runter",		"value": 9	},
+							{	"label": "OK/ENTER",		"value": 10	},
+							{	"label": "Zurück",		"value": 11	},
+							{	"label": "Einschalten",		"value": 12	},
+							{	"label": "Ausschalten",		"value": 13	},
+							{	"label": "Rot",			"value": 14	},
+							{	"label": "Blau",		"value": 15	},
+							{	"label": "Gelb",		"value": 16	},
+							{	"label": "Grün",		"value": 17	}
 						]
 					}
 				},
@@ -115,10 +129,24 @@
 						"type": "Select",
 						"caption": "Mode",
 						"options": [
-							{	"label": "Volume Up",		"value": 0	},
-							{	"label": "Volume Down",		"value": 1	},
-							{	"label": "Channel Up",		"value": 2	},
-							{	"label": "CHannel Down",	"value": 3	}
+							{	"label": "",			"value": 0	},
+							{	"label": "Lauter",		"value": 1	},
+							{	"label": "Leiser",		"value": 2	},
+							{	"label": "Lautlos",		"value": 3	},
+							{	"label": "Kanal rauf",		"value": 4	},
+							{	"label": "Kanal runter",	"value": 5	},
+							{	"label": "Links",		"value": 6	},
+							{	"label": "Rechts",		"value": 7	},
+							{	"label": "Hoch",		"value": 8	},
+							{	"label": "Runter",		"value": 9	},
+							{	"label": "OK/ENTER",		"value": 10	},
+							{	"label": "Zurück",		"value": 11	},
+							{	"label": "Einschalten",		"value": 12	},
+							{	"label": "Ausschalten",		"value": 13	},
+							{	"label": "Rot",			"value": 14	},
+							{	"label": "Blau",		"value": 15	},
+							{	"label": "Gelb",		"value": 16	},
+							{	"label": "Grün",		"value": 17	}
 						]
 					}
 				},
@@ -130,10 +158,24 @@
 						"type": "Select",
 						"caption": "Mode",
 						"options": [
-							{	"label": "Volume Up",		"value": 0	},
-							{	"label": "Volume Down",		"value": 1	},
-							{	"label": "Channel Up",		"value": 2	},
-							{	"label": "CHannel Down",	"value": 3	}
+							{	"label": "",			"value": 0	},
+							{	"label": "Lauter",		"value": 1	},
+							{	"label": "Leiser",		"value": 2	},
+							{	"label": "Lautlos",		"value": 3	},
+							{	"label": "Kanal rauf",		"value": 4	},
+							{	"label": "Kanal runter",	"value": 5	},
+							{	"label": "Links",		"value": 6	},
+							{	"label": "Rechts",		"value": 7	},
+							{	"label": "Hoch",		"value": 8	},
+							{	"label": "Runter",		"value": 9	},
+							{	"label": "OK/ENTER",		"value": 10	},
+							{	"label": "Zurück",		"value": 11	},
+							{	"label": "Einschalten",		"value": 12	},
+							{	"label": "Ausschalten",		"value": 13	},
+							{	"label": "Rot",			"value": 14	},
+							{	"label": "Blau",		"value": 15	},
+							{	"label": "Gelb",		"value": 16	},
+							{	"label": "Grün",		"value": 17	}
 						]
 					}
 				},
@@ -145,10 +187,24 @@
 						"type": "Select",
 						"caption": "Mode",
 						"options": [
-							{	"label": "Volume Up",		"value": 0	},
-							{	"label": "Volume Down",		"value": 1	},
-							{	"label": "Channel Up",		"value": 2	},
-							{	"label": "CHannel Down",	"value": 3	}
+							{	"label": "",			"value": 0	},
+							{	"label": "Lauter",		"value": 1	},
+							{	"label": "Leiser",		"value": 2	},
+							{	"label": "Lautlos",		"value": 3	},
+							{	"label": "Kanal rauf",		"value": 4	},
+							{	"label": "Kanal runter",	"value": 5	},
+							{	"label": "Links",		"value": 6	},
+							{	"label": "Rechts",		"value": 7	},
+							{	"label": "Hoch",		"value": 8	},
+							{	"label": "Runter",		"value": 9	},
+							{	"label": "OK/ENTER",		"value": 10	},
+							{	"label": "Zurück",		"value": 11	},
+							{	"label": "Einschalten",		"value": 12	},
+							{	"label": "Ausschalten",		"value": 13	},
+							{	"label": "Rot",			"value": 14	},
+							{	"label": "Blau",		"value": 15	},
+							{	"label": "Gelb",		"value": 16	},
+							{	"label": "Grün",		"value": 17	}
 						]
 					}
 				},
@@ -160,10 +216,24 @@
 						"type": "Select",
 						"caption": "Mode",
 						"options": [
-							{	"label": "Volume Up",		"value": 0	},
-							{	"label": "Volume Down",		"value": 1	},
-							{	"label": "Channel Up",		"value": 2	},
-							{	"label": "CHannel Down",	"value": 3	}
+							{	"label": "",			"value": 0	},
+							{	"label": "Lauter",		"value": 1	},
+							{	"label": "Leiser",		"value": 2	},
+							{	"label": "Lautlos",		"value": 3	},
+							{	"label": "Kanal rauf",		"value": 4	},
+							{	"label": "Kanal runter",	"value": 5	},
+							{	"label": "Links",		"value": 6	},
+							{	"label": "Rechts",		"value": 7	},
+							{	"label": "Hoch",		"value": 8	},
+							{	"label": "Runter",		"value": 9	},
+							{	"label": "OK/ENTER",		"value": 10	},
+							{	"label": "Zurück",		"value": 11	},
+							{	"label": "Einschalten",		"value": 12	},
+							{	"label": "Ausschalten",		"value": 13	},
+							{	"label": "Rot",			"value": 14	},
+							{	"label": "Blau",		"value": 15	},
+							{	"label": "Gelb",		"value": 16	},
+							{	"label": "Grün",		"value": 17	}
 						]
 					}
 				}
