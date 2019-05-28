@@ -74,7 +74,7 @@ class CsvImporterB64 {
 
 	function __destruct() {
 		if ($this->fp) {
-			fclose($this->fp);
+			//fclose($this->fp);
 		}
 	}
 
