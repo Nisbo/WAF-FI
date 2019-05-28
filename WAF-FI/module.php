@@ -155,10 +155,9 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		return "text/plain";
 	}
 
-	public function getTheBox($boxId){
-		global $volumeUp, $volumeDeviceObjectID, $volumeDown, $volumeMute, $channelUp, $channelDeviceObjectID, $channelDown, $directionLeft,
+	public function getTheBox($boxId, $volumeUp, $volumeDeviceObjectID, $volumeDown, $volumeMute, $channelUp, $channelDeviceObjectID, $channelDown, $directionLeft,
 		$directionRight, $directionUp, $directionDown, $okButton, $backButton, $harmonyHubStartActivityOn, $harmonyHubStartActivityOff, $harmonyHubObjectID,
-		$colorButtonRed, $colorButtonBlue, $colorButtonYellow, $colorButtonGreen;
+		$colorButtonRed, $colorButtonBlue, $colorButtonYellow, $colorButtonGreen){
 
 		$box = "BoxID " . $boxId. " n.a.";
 
@@ -479,7 +478,21 @@ asort($jsd);
 
 $rechteBox = "";
 foreach($jsd as $key => $value) {
-    $rechteBox .= $this->getTheBox($value->column1) . $this->getTheBox($value->column2) . $this->getTheBox($value->column3) . $this->getTheBox($value->column4) . $this->getTheBox($value->column5) . $this->getTheBox($value->column6) . $this->getTheBox($value->column7);
+    $rechteBox .= $this->getTheBox($value->column1, $volumeUp, $volumeDeviceObjectID, $volumeDown, $volumeMute, $channelUp, $channelDeviceObjectID, $channelDown, $directionLeft,
+		$directionRight, $directionUp, $directionDown, $okButton, $backButton, $harmonyHubStartActivityOn, $harmonyHubStartActivityOff, $harmonyHubObjectID,
+		$colorButtonRed, $colorButtonBlue, $colorButtonYellow, $colorButtonGreen) . $this->getTheBox($value->column2, $volumeUp, $volumeDeviceObjectID, $volumeDown, $volumeMute, $channelUp, $channelDeviceObjectID, $channelDown, $directionLeft,
+		$directionRight, $directionUp, $directionDown, $okButton, $backButton, $harmonyHubStartActivityOn, $harmonyHubStartActivityOff, $harmonyHubObjectID,
+		$colorButtonRed, $colorButtonBlue, $colorButtonYellow, $colorButtonGreen) . $this->getTheBox($value->column3, $volumeUp, $volumeDeviceObjectID, $volumeDown, $volumeMute, $channelUp, $channelDeviceObjectID, $channelDown, $directionLeft,
+		$directionRight, $directionUp, $directionDown, $okButton, $backButton, $harmonyHubStartActivityOn, $harmonyHubStartActivityOff, $harmonyHubObjectID,
+		$colorButtonRed, $colorButtonBlue, $colorButtonYellow, $colorButtonGreen) . $this->getTheBox($value->column4, $volumeUp, $volumeDeviceObjectID, $volumeDown, $volumeMute, $channelUp, $channelDeviceObjectID, $channelDown, $directionLeft,
+		$directionRight, $directionUp, $directionDown, $okButton, $backButton, $harmonyHubStartActivityOn, $harmonyHubStartActivityOff, $harmonyHubObjectID,
+		$colorButtonRed, $colorButtonBlue, $colorButtonYellow, $colorButtonGreen) . $this->getTheBox($value->column5, $volumeUp, $volumeDeviceObjectID, $volumeDown, $volumeMute, $channelUp, $channelDeviceObjectID, $channelDown, $directionLeft,
+		$directionRight, $directionUp, $directionDown, $okButton, $backButton, $harmonyHubStartActivityOn, $harmonyHubStartActivityOff, $harmonyHubObjectID,
+		$colorButtonRed, $colorButtonBlue, $colorButtonYellow, $colorButtonGreen) . $this->getTheBox($value->column6, $volumeUp, $volumeDeviceObjectID, $volumeDown, $volumeMute, $channelUp, $channelDeviceObjectID, $channelDown, $directionLeft,
+		$directionRight, $directionUp, $directionDown, $okButton, $backButton, $harmonyHubStartActivityOn, $harmonyHubStartActivityOff, $harmonyHubObjectID,
+		$colorButtonRed, $colorButtonBlue, $colorButtonYellow, $colorButtonGreen) . $this->getTheBox($value->column7, $volumeUp, $volumeDeviceObjectID, $volumeDown, $volumeMute, $channelUp, $channelDeviceObjectID, $channelDown, $directionLeft,
+		$directionRight, $directionUp, $directionDown, $okButton, $backButton, $harmonyHubStartActivityOn, $harmonyHubStartActivityOff, $harmonyHubObjectID,
+		$colorButtonRed, $colorButtonBlue, $colorButtonYellow, $colorButtonGreen);
 }
 
 
