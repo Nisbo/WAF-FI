@@ -96,6 +96,33 @@
 		"caption": "Design Allgemeine Buttons (klicken zum öffnen)",
 		"items": [
 			{ "type": "Label", "label": "Design vom Buttonhintergrund" },
+			{ "type": "Select", "name": "designCBrows", "caption": "Anzahl an Zeilen die angezeigt werden",
+			    "options": [
+				{ "caption": "1 Zeile", "value": 1 },
+				{ "caption": "2 Zeilen", "value": 2 },
+				{ "caption": "3 Zeilen", "value": 3 },
+				{ "caption": "4 Zeilen", "value": 4 },
+				{ "caption": "5 Zeilen", "value": 5 },
+				{ "caption": "6 Zeilen", "value": 6 },
+				{ "caption": "7 Zeilen", "value": 7 },
+				{ "caption": "8 Zeilen", "value": 8 },
+				{ "caption": "9 Zeilen", "value": 9 },
+				{ "caption": "10 Zeilen", "value": 10 },
+				{ "caption": "Alle Zeilen", "value": 0 }
+			    ]
+			},
+			{ "type": "Select", "name": "designCBcols", "caption": "Anzahl an Spalten die angezeigt werden",
+			    "options": [
+				{ "caption": "1 Spalte", "value": 1 },
+				{ "caption": "2 Spalten", "value": 2 },
+				{ "caption": "3 Spalten", "value": 3 },
+				{ "caption": "4 Spalten", "value": 4 },
+				{ "caption": "5 Spalten", "value": 5 },
+				{ "caption": "6 Spalten", "value": 6 },
+				{ "caption": "7 Spalten", "value": 7 }
+			    ]
+			},
+
 
 			{ "type": "SelectColor",	"name": "designButtonBackGroundColorCB",	"caption": "Farbe vom Buttonhintergrund" },
 			{ "type": "SelectColor",	"name": "designButtonBackGroundColorHCB",	"caption": "Farbe vom Buttonhintergrund bei MouseOver" },
