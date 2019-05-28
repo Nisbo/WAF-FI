@@ -66,6 +66,9 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$this->RegisterPropertyInteger("designButtonMarginTopCB", 5); // 5
 		$this->RegisterPropertyInteger("designButtonMarginLeftCB", 5); // 5
 		
+		$this->RegisterPropertyInteger("designCBrows", 5); // 5
+		$this->RegisterPropertyInteger("designCBcols", 5); // 5
+
 		$this->RegisterPropertyString("channelListUploadFile", "");
 
 		$this->RegisterVariableString("channelListHTML",				"Diese Variabel ins FrontEnd einbinden, zum Ändern bitte Config ausführen", "~HTMLBox", 1);
@@ -278,6 +281,9 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$designButtonEdgeCB				= $this->ReadPropertyInteger("designButtonEdgeCB");
 		$designButtonMarginTopCB		= $this->ReadPropertyInteger("designButtonMarginTopCB");
 		$designButtonMarginLeftCB		= $this->ReadPropertyInteger("designButtonMarginLeftCB");
+
+		$designCBrows					= $this->ReadPropertyInteger("designCBrows");
+		$designCBcols					= $this->ReadPropertyInteger("designCBcols");
 		
 		$configStandardButtons	= $this->ReadPropertyString("configStandardButtons");
 
@@ -360,7 +366,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 $divWidth = ($designButtonPerRow * ($designButtonWidth + $designButtonMarginLeft)) + $designButtonMarginLeft;
 
 // calculate size Rechts
-$divWidthR = (7 * ($designButtonWidthCB + $designButtonMarginLeftCB)) + $designButtonMarginLeftCB;
+$divWidthR = ($designCBcols * ($designButtonWidthCB + $designButtonMarginLeftCB)) + $designButtonMarginLeftCB;
 
 		$cssInclude = '
 		<link type="text/css" href="/hook/waffi/css/waffi.css" rel="stylesheet">
@@ -516,6 +522,8 @@ $divWidthR = (7 * ($designButtonWidthCB + $designButtonMarginLeftCB)) + $designB
 
 		$rechteBox = "";
 		foreach($jsd as $key => $value) {
+			if($key > ($designCBrows + 1)) continue;
+
 			$rechteBox .= $this->getTheBox($value->column1, $volumeUp, $volumeDeviceObjectID, $volumeDown, $volumeMute, $channelUp, $channelDeviceObjectID, $channelDown, $directionLeft,
 				$directionRight, $directionUp, $directionDown, $okButton, $backButton, $harmonyHubStartActivityOn, $harmonyHubStartActivityOff, $harmonyHubObjectID,
 				$colorButtonRed, $colorButtonBlue, $colorButtonYellow, $colorButtonGreen) . $this->getTheBox($value->column2, $volumeUp, $volumeDeviceObjectID, $volumeDown, $volumeMute, $channelUp, $channelDeviceObjectID, $channelDown, $directionLeft,
