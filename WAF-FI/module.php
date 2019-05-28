@@ -377,7 +377,6 @@ $divWidth = ($designButtonPerRow * ($designButtonWidth + $designButtonMarginLeft
 	*/
 	background-image:none !important;
 	width:  720px;
-	height: 515px;
 	border-radius: 13px;
 	display: block;
 	-webkit-box-shadow: 0px 0px 2px 3px;
