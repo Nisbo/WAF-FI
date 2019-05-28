@@ -173,7 +173,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$box = "BoxID " . $boxId. " n.a.";
 
 		// Leerbox
-		if($boxId == 0)     $box = '<div class="buttonMouseOverR zapbuttonR" id="leer"> </div>';
+		if($boxId == 0)     $box = '<div  id="leer"> </div>';
 
 		// Lauter
 		if($boxId == 1)     $box = '<div class="buttonMouseOverR zapbuttonR" id="volumeUp"><img class="zapimage"       src="hook/waffi/images/volumeUp.png"     id="Button_'.$volumeUp.'_'.$volumeDeviceObjectID.'"       alt="volumeUp"></div>';
