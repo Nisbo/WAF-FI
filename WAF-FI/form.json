@@ -92,7 +92,28 @@
 
 		{
 			"type": "List",	"name": "configStandardButtons",	"caption": "Anordnung der Buttons für Lautstärke usw",	"rowCount": 10,	"add": true,	"delete": true,
+			"sort": {	"column": "sortOrder",	"direction": "ascending"   },
 			"columns": [
+				{
+					"label": "Zeile",	"name": "sortOrder", "width": "100px",
+					"add": 0,
+					"edit": {
+						"type": "Select",
+						"caption": "Mode",
+						"options": [
+							{	"label": "Zeile 1",		"value": 1	},
+							{	"label": "Zeile 2",		"value": 2	},
+							{	"label": "Zeile 3",		"value": 3	},
+							{	"label": "Zeile 4",		"value": 4	},
+							{	"label": "Zeile 5",		"value": 5	},
+							{	"label": "Zeile 6",		"value": 6	},
+							{	"label": "Zeile 7",		"value": 7	},
+							{	"label": "Zeile 8",		"value": 8	},
+							{	"label": "Zeile 9",		"value": 9	},
+							{	"label": "Zeile 10",		"value": 10	}
+						]
+					}
+				},
 				{
 					"label": "Spalte 1",	"name": "column1", "width": "100px",
 					"add": 0,
