@@ -481,7 +481,7 @@ asort($jsd);
 
 $rechteBox = "";
 foreach($jsd as $key => $value) {
-    $rechteBox .= getTheBox($value->column1) . " - " . getTheBox($value->column2) . " - " . getTheBox($value->column3) . " - " . getTheBox($value->column4) . " - " . getTheBox($value->column5) . " - " . getTheBox($value->column6) . " - " . getTheBox($value->column7);
+    $rechteBox .= $this->getTheBox($value->column1) . " - " . $this->getTheBox($value->column2) . " - " . $this->getTheBox($value->column3) . " - " . $this->getTheBox($value->column4) . " - " . $this->getTheBox($value->column5) . " - " . $this->getTheBox($value->column6) . " - " . $this->getTheBox($value->column7);
 }
 
 
