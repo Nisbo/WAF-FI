@@ -91,10 +91,10 @@
 
 
 		{
-			"type": "List",	"name": "Zeile1",	"caption": "Anordnung der Buttons für Lautstärke usw",	"rowCount": 10,	"add": true,	"delete": true,
+			"type": "List",	"name": "configStandardButtons",	"caption": "Anordnung der Buttons für Lautstärke usw",	"rowCount": 10,	"add": true,	"delete": true,
 			"columns": [
 				{
-					"label": "Spalte 1",	"name": "select1", "width": "100px",
+					"label": "Spalte 1",	"name": "column1", "width": "100px",
 					"add": 0,
 					"edit": {
 						"type": "Select",
@@ -123,7 +123,7 @@
 				},
 
 				{
-					"label": "Spalte 2",	"name": "select2", "width": "100px",
+					"label": "Spalte 2",	"name": "column2", "width": "100px",
 					"add": 0,
 					"edit": {
 						"type": "Select",
@@ -152,7 +152,7 @@
 				},
 
 				{
-					"label": "Spalte 3",	"name": "select3", "width": "100px",
+					"label": "Spalte 3",	"name": "column3", "width": "100px",
 					"add": 0,
 					"edit": {
 						"type": "Select",
@@ -181,7 +181,7 @@
 				},
 
 				{
-					"label": "Spalte 4",	"name": "select4", "width": "100px",
+					"label": "Spalte 4",	"name": "column4", "width": "100px",
 					"add": 0,
 					"edit": {
 						"type": "Select",
@@ -210,7 +210,65 @@
 				},
 
 				{
-					"label": "Spalte 5",	"name": "select5", "width": "100px",
+					"label": "Spalte 5",	"name": "column5", "width": "100px",
+					"add": 0,
+					"edit": {
+						"type": "Select",
+						"caption": "Mode",
+						"options": [
+							{	"label": "",			"value": 0	},
+							{	"label": "Lauter",		"value": 1	},
+							{	"label": "Leiser",		"value": 2	},
+							{	"label": "Lautlos",		"value": 3	},
+							{	"label": "Kanal rauf",		"value": 4	},
+							{	"label": "Kanal runter",	"value": 5	},
+							{	"label": "Links",		"value": 6	},
+							{	"label": "Rechts",		"value": 7	},
+							{	"label": "Hoch",		"value": 8	},
+							{	"label": "Runter",		"value": 9	},
+							{	"label": "OK/ENTER",		"value": 10	},
+							{	"label": "Zurück",		"value": 11	},
+							{	"label": "Einschalten",		"value": 12	},
+							{	"label": "Ausschalten",		"value": 13	},
+							{	"label": "Rot",			"value": 14	},
+							{	"label": "Blau",		"value": 15	},
+							{	"label": "Gelb",		"value": 16	},
+							{	"label": "Grün",		"value": 17	}
+						]
+					}
+				},
+
+				{
+					"label": "Spalte 6",	"name": "column6", "width": "100px",
+					"add": 0,
+					"edit": {
+						"type": "Select",
+						"caption": "Mode",
+						"options": [
+							{	"label": "",			"value": 0	},
+							{	"label": "Lauter",		"value": 1	},
+							{	"label": "Leiser",		"value": 2	},
+							{	"label": "Lautlos",		"value": 3	},
+							{	"label": "Kanal rauf",		"value": 4	},
+							{	"label": "Kanal runter",	"value": 5	},
+							{	"label": "Links",		"value": 6	},
+							{	"label": "Rechts",		"value": 7	},
+							{	"label": "Hoch",		"value": 8	},
+							{	"label": "Runter",		"value": 9	},
+							{	"label": "OK/ENTER",		"value": 10	},
+							{	"label": "Zurück",		"value": 11	},
+							{	"label": "Einschalten",		"value": 12	},
+							{	"label": "Ausschalten",		"value": 13	},
+							{	"label": "Rot",			"value": 14	},
+							{	"label": "Blau",		"value": 15	},
+							{	"label": "Gelb",		"value": 16	},
+							{	"label": "Grün",		"value": 17	}
+						]
+					}
+				},
+
+				{
+					"label": "Spalte 7",	"name": "column7", "width": "100px",
 					"add": 0,
 					"edit": {
 						"type": "Select",
