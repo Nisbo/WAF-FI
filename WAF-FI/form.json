@@ -94,7 +94,67 @@
 			"type": "List",	"name": "Zeile1",	"caption": "Zeile 1",	"rowCount": 5,	"add": true,	"delete": true,
 			"columns": [
 				{
-					"label": "Spalte1",	"name": "select", "width": "75px",
+					"label": "Spalte 1",	"name": "select", "width": "100px",
+					"add": 0,
+					"edit": {
+						"type": "Select",
+						"caption": "Mode",
+						"options": [
+							{	"label": "Volume Up",		"value": 0	},
+							{	"label": "Volume Down",		"value": 1	},
+							{	"label": "Channel Up",		"value": 2	},
+							{	"label": "CHannel Down",	"value": 3	}
+						]
+					}
+				},
+
+				{
+					"label": "Spalte 2",	"name": "select", "width": "100px",
+					"add": 0,
+					"edit": {
+						"type": "Select",
+						"caption": "Mode",
+						"options": [
+							{	"label": "Volume Up",		"value": 0	},
+							{	"label": "Volume Down",		"value": 1	},
+							{	"label": "Channel Up",		"value": 2	},
+							{	"label": "CHannel Down",	"value": 3	}
+						]
+					}
+				},
+
+				{
+					"label": "Spalte 3",	"name": "select", "width": "100px",
+					"add": 0,
+					"edit": {
+						"type": "Select",
+						"caption": "Mode",
+						"options": [
+							{	"label": "Volume Up",		"value": 0	},
+							{	"label": "Volume Down",		"value": 1	},
+							{	"label": "Channel Up",		"value": 2	},
+							{	"label": "CHannel Down",	"value": 3	}
+						]
+					}
+				},
+
+				{
+					"label": "Spalte 4",	"name": "select", "width": "100px",
+					"add": 0,
+					"edit": {
+						"type": "Select",
+						"caption": "Mode",
+						"options": [
+							{	"label": "Volume Up",		"value": 0	},
+							{	"label": "Volume Down",		"value": 1	},
+							{	"label": "Channel Up",		"value": 2	},
+							{	"label": "CHannel Down",	"value": 3	}
+						]
+					}
+				},
+
+				{
+					"label": "Spalte 5",	"name": "select", "width": "100px",
 					"add": 0,
 					"edit": {
 						"type": "Select",
