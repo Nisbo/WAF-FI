@@ -395,7 +395,7 @@ $divWidthR = (7 * ($designButtonWidthCB + $designButtonMarginLeftCB)) + $designB
 	background-image: linear-gradient(145deg,rgba(255,255,255,1.00) 0%,rgba(69,57,57,1.00) 100%);
 	*/
 	background-image:none !important;
-	width: '.$divWidth.'px;/*width:  720px;*/
+	width: '.$divWidthR.'px;
 	border-radius: 13px;
 	display: block;
 	-webkit-box-shadow: 0px 0px 2px 3px;
