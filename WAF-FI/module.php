@@ -173,7 +173,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$box = "BoxID " . $boxId. " n.a.";
 
 		// Leerbox
-		if($boxId == 0)     $box = '<div  id="leer"> </div>';
+		if($boxId == 0)     $box = '<div class="buttonMouseOverRE zapbuttonRE" id="leer"> </div>';
 
 		// Lauter
 		if($boxId == 1)     $box = '<div class="buttonMouseOverR zapbuttonR" id="volumeUp"><img class="zapimage"       src="hook/waffi/images/volumeUp.png"     id="Button_'.$volumeUp.'_'.$volumeDeviceObjectID.'"       alt="volumeUp"></div>';
@@ -475,6 +475,14 @@ $divWidthR = ($designCBcols * ($designButtonWidthCB + $designButtonMarginLeftCB)
 	margin-left: '.$designButtonMarginLeftCB.'px;
 }
 
+.zapbuttonRE {
+	width:  '.$designButtonWidthCB.'px;
+	height: '.$designButtonHeightCB.'px;
+
+	margin-top:  '.$designButtonMarginTopCB.'px;
+	margin-left: '.$designButtonMarginLeftCB.'px;
+}
+
 
 .buttonMouseOver:hover, .buttonMouseOver:focus, .buttonMouseOver:active {
 	box-shadow: 4px 4px 33px 17px #272424;
@@ -501,6 +509,14 @@ $divWidthR = ($designCBcols * ($designButtonWidthCB + $designButtonMarginLeftCB)
 .buttonMouseOverR:hover, .buttonMouseOverR:focus, .buttonMouseOverR:active {
 	box-shadow: 4px 4px 33px 17px #272424;
 	' . ($designButtonBackGroundColorHCB != -1 ? ("background-color: #".dechex($designButtonBackGroundColorHCB).";") : "") . '
+}
+
+.buttonMouseOverRE {
+
+}
+
+.buttonMouseOverRE:hover, .buttonMouseOverRE:focus, .buttonMouseOverRE:active {
+
 }
 
 .zaptabbottom {
