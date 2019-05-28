@@ -1,10 +1,11 @@
 {
     "elements":
     [
+	{ "type": "Label", "label": "Bei Änderungen IMMER auf HTML Code generieren klicken." },
 	{ "type": "Label", "label": "Dateien und Verzeichnisse" },
 	{ "type": "ValidationTextBox",	"name": "channelListFileName",	"caption": "Name der CSV Datei mit der Kanalliste" },
 	{ "type": "ValidationTextBox",	"name": "pathToCSV",		"caption": "Path zur Kanalliste.csv" },
-	{ "type": "SelectFile",		"name": "channelListUploadFile","caption": "ODER Datei hochladen"},
+	{ "type": "SelectFile",		"name": "channelListUploadFile","caption": "ODER Datei hochladen (wenn Datei hochgeladen dann wird IMMER die Datei genutzt"},
 	{ "type": "CheckBox",		"name": "useBouquet",		"caption": "Datei ist ein Bouquet" },
 	{ "type": "ValidationTextBox",	"name": "pathToImages",		"caption": "Image-Verzeichnis für die Senderlogos" },
 
@@ -45,7 +46,6 @@
 	{ "type": "ValidationTextBox", "name": "volumeDown",		"caption": "Code: Leiser Taste" },
 	{ "type": "ValidationTextBox", "name": "volumeUp",		"caption": "Code: Lauter Taste" },
 	{ "type": "ValidationTextBox", "name": "volumeMute",		"caption": "Code: Lautlos Taste" },
-
 
 
 	{
