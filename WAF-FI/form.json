@@ -94,7 +94,7 @@
 			"type": "List",	"name": "Zeile1",	"caption": "Zeile 1",	"rowCount": 5,	"add": true,	"delete": true,
 			"columns": [
 				{
-					"label": "Spalte 1",	"name": "select", "width": "100px",
+					"label": "Spalte 1",	"name": "select1", "width": "100px",
 					"add": 0,
 					"edit": {
 						"type": "Select",
@@ -109,7 +109,7 @@
 				},
 
 				{
-					"label": "Spalte 2",	"name": "select", "width": "100px",
+					"label": "Spalte 2",	"name": "select2", "width": "100px",
 					"add": 0,
 					"edit": {
 						"type": "Select",
@@ -124,7 +124,7 @@
 				},
 
 				{
-					"label": "Spalte 3",	"name": "select", "width": "100px",
+					"label": "Spalte 3",	"name": "select3", "width": "100px",
 					"add": 0,
 					"edit": {
 						"type": "Select",
@@ -139,7 +139,7 @@
 				},
 
 				{
-					"label": "Spalte 4",	"name": "select", "width": "100px",
+					"label": "Spalte 4",	"name": "select4", "width": "100px",
 					"add": 0,
 					"edit": {
 						"type": "Select",
@@ -154,7 +154,7 @@
 				},
 
 				{
-					"label": "Spalte 5",	"name": "select", "width": "100px",
+					"label": "Spalte 5",	"name": "select5", "width": "100px",
 					"add": 0,
 					"edit": {
 						"type": "Select",
