@@ -266,7 +266,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$designButtonPerRow				= $this->ReadPropertyInteger("designButtonPerRow");
 		$channelListUploadFile			= $this->ReadPropertyString("channelListUploadFile");
 		
-		$configStandardButtons	= $this->ReadPropertyString("configStandardButtons");ää
+		$configStandardButtons	= $this->ReadPropertyString("configStandardButtons");
 
 		IPS_LogMessage($_IPS['SELF'], "RechteSeite: ". $configStandardButtons. "");
 
@@ -481,7 +481,7 @@ asort($jsd);
 
 $rechteBox = "";
 foreach($jsd as $key => $value) {
-    //$rechteBox .= WAFFI_getTheBox($value->column1) . " - " . WAFFI_getTheBox($value->column2) . " - " . WAFFI_getTheBox($value->column3) . " - " . WAFFI_getTheBox($value->column4) . " - " . WAFFI_getTheBox($value->column5) . " - " . WAFFI_getTheBox($value->column6) . " - " . WAFFI_getTheBox($value->column7);
+    $rechteBox .= WAFFI_getTheBox($value->column1) . " - " . WAFFI_getTheBox($value->column2) . " - " . WAFFI_getTheBox($value->column3) . " - " . WAFFI_getTheBox($value->column4) . " - " . WAFFI_getTheBox($value->column5) . " - " . WAFFI_getTheBox($value->column6) . " - " . WAFFI_getTheBox($value->column7);
 }
 
 
