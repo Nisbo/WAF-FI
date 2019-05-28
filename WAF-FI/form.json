@@ -75,7 +75,66 @@
 			{ "type": "NumberSpinner",	"name": "designButtonMarginTop",	"caption": "Abstand nach Oben zu anderen Buttons / Rand",	"suffix": "px"},
 			{ "type": "NumberSpinner",	"name": "designButtonMarginLeft",	"caption": "Abstand nach Links zu anderen Buttons / Rand",	"suffix": "px"}
 		]
-	}
+	},
+
+
+
+
+
+
+
+    { 
+        "type": "RowLayout",
+        "items": [
+
+
+
+
+		{
+			"type": "List",	"name": "Zeile1",	"caption": "Zeile 1",	"rowCount": 5,	"add": true,	"delete": true,
+			"columns": [
+				{
+					"label": "Spalte1",	"name": "select", "width": "75px",
+					"add": 0,
+					"edit": {
+						"type": "Select",
+						"caption": "Mode",
+						"options": [
+							{	"label": "Volume Up",		"value": 0	},
+							{	"label": "Volume Down",		"value": 1	},
+							{	"label": "Channel Up",		"value": 2	},
+							{	"label": "CHannel Down",	"value": 3	}
+						]
+					}
+				}
+			],
+			"values": [
+			]
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        ]
+    }
+
+
 
 
 
