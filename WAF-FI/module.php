@@ -264,7 +264,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$designButtonPerRow				= $this->ReadPropertyInteger("designButtonPerRow");
 		$channelListUploadFile			= $this->ReadPropertyString("channelListUploadFile");
 		
-		$ä	= $this->ReadPropertyString("configStandardButtons");
+		$configStandardButtons	= $this->ReadPropertyString("configStandardButtons");
 
 		IPS_LogMessage($_IPS['SELF'], "RechteSeite: ". $configStandardButtons. "");
 
