@@ -481,7 +481,7 @@ asort($jsd);
 
 $rechteBox = "";
 foreach($jsd as $key => $value) {
-    $rechteBox .= WAFFI_getTheBox($value->column1) . " - " . WAFFI_getTheBox($value->column2) . " - " . WAFFI_getTheBox($value->column3) . " - " . WAFFI_getTheBox($value->column4) . " - " . WAFFI_getTheBox($value->column5) . " - " . WAFFI_getTheBox($value->column6) . " - " . WAFFI_getTheBox($value->column7);
+    $rechteBox .= getTheBox($value->column1) . " - " . getTheBox($value->column2) . " - " . getTheBox($value->column3) . " - " . getTheBox($value->column4) . " - " . getTheBox($value->column5) . " - " . getTheBox($value->column6) . " - " . getTheBox($value->column7);
 }
 
 
