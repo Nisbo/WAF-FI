@@ -203,6 +203,10 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		
 		$configStandardButtons	= $this->ReadPropertyString("configStandardButtons");
 
+		IPS_LogMessage($_IPS['SELF'], "RechteSeite: ". $configStandardButtons. "");
+
+
+
 		if(substr($pathToImages, -1, 1) != "/") $pathToImages          .= "/"; // to make sure there is a slash at the end
 		if(substr($pathToCSV, -1, 1) != "/")    $pathToCSV             .= "/"; // to make sure there is a slash at the end
 		if($sendENTERkey == "")                 $sendENTERkey           = 0;
