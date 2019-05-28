@@ -522,7 +522,7 @@ $divWidthR = ($designCBcols * ($designButtonWidthCB + $designButtonMarginLeftCB)
 
 		$rechteBox = "";
 		foreach($jsd as $key => $value) {
-			if($key >= ($designCBrows-1)) continue;
+			if($key > ($designCBrows-1)) continue;
 
 			$rechteBox .= 
 				$this->getTheBox($value->column1, $volumeUp, $volumeDeviceObjectID, $volumeDown, $volumeMute, $channelUp, $channelDeviceObjectID, $channelDown, $directionLeft,
