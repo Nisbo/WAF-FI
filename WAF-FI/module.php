@@ -549,9 +549,9 @@ $divWidthR = ($designCBcols * ($designButtonWidthCB + $designButtonMarginLeftCB)
 				$directionRight, $directionUp, $directionDown, $okButton, $backButton, $harmonyHubStartActivityOn, $harmonyHubStartActivityOff, $harmonyHubObjectID,
 				$colorButtonRed, $colorButtonBlue, $colorButtonYellow, $colorButtonGreen) . 
 
-				($designCBrows >= 7 ? $this->getTheBox($value->column7, $volumeUp, $volumeDeviceObjectID, $volumeDown, $volumeMute, $channelUp, $channelDeviceObjectID, $channelDown, $directionLeft,
+				($designCBrows >= 7 ? ($this->getTheBox($value->column7, $volumeUp, $volumeDeviceObjectID, $volumeDown, $volumeMute, $channelUp, $channelDeviceObjectID, $channelDown, $directionLeft,
 				$directionRight, $directionUp, $directionDown, $okButton, $backButton, $harmonyHubStartActivityOn, $harmonyHubStartActivityOff, $harmonyHubObjectID,
-				$colorButtonRed, $colorButtonBlue, $colorButtonYellow, $colorButtonGreen));
+				$colorButtonRed, $colorButtonBlue, $colorButtonYellow, $colorButtonGreen)) : '');
 		}
 
 
