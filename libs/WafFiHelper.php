@@ -61,7 +61,7 @@ class CsvImporterB64 {
 	private $length;
 
 	function __construct($fileContent, $parse_header=false, $delimiter=";", $length=8000) {
-		$this->fp			= base64_decode($fileContent);
+		$this->fp			= fopen('data://text/plain;base64,'.$fileContent, 'r');//base64_decode($fileContent);
 		$this->parse_header = $parse_header;
 		$this->delimiter    = $delimiter;
 		$this->length       = $length;
@@ -74,7 +74,7 @@ class CsvImporterB64 {
 
 	function __destruct() {
 		if ($this->fp) {
-			//fclose($this->fp);
+			fclose($this->fp);
 		}
 	}
 
