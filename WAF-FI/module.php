@@ -48,26 +48,28 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$this->RegisterPropertyString("volumeUp",						"VolumeUp");
 		$this->RegisterPropertyBoolean("useBouquet",					false);
 		
-		$this->RegisterPropertyInteger("designButtonBackGroundColor", 13884121); // #D3DAD9
-		$this->RegisterPropertyInteger("designButtonWidth", 120); // 120
-		$this->RegisterPropertyInteger("designButtonHeight", 80); // 80
-		$this->RegisterPropertyInteger("designButtonEdge", 13); // 13
-		$this->RegisterPropertyInteger("designButtonMarginTop", 5); // 5
-		$this->RegisterPropertyInteger("designButtonMarginLeft", 5); // 5
-		$this->RegisterPropertyInteger("designButtonBackGroundColorH", 16776960); // #FFFF00
-		$this->RegisterPropertyInteger("designButtonPerRow", 4); // 4
-		$this->RegisterPropertyString("configStandardButtons",						"");
+		$this->RegisterPropertyInteger("designButtonBackGroundColor",	13884121); // #D3DAD9
+		$this->RegisterPropertyInteger("designButtonWidth",				120); // 120
+		$this->RegisterPropertyInteger("designButtonHeight",			80); // 80
+		$this->RegisterPropertyInteger("designButtonEdge",				13); // 13
+		$this->RegisterPropertyInteger("designButtonMarginTop",			5); // 5
+		$this->RegisterPropertyInteger("designButtonMarginLeft",		5); // 5
+		$this->RegisterPropertyInteger("designButtonBackGroundColorH",	16776960); // #FFFF00
+		$this->RegisterPropertyInteger("designButtonPerRow",			4); // 4
+		$this->RegisterPropertyString("configStandardButtons",			"");
 
-		$this->RegisterPropertyInteger("designButtonBackGroundColorCB", 13884121); // #D3DAD9
-		$this->RegisterPropertyInteger("designButtonBackGroundColorHCB", 16776960); // #FFFF00
-		$this->RegisterPropertyInteger("designButtonWidthCB", 100); // 120
-		$this->RegisterPropertyInteger("designButtonHeightCB", 100); // 80
-		$this->RegisterPropertyInteger("designButtonEdgeCB", 13); // 13
-		$this->RegisterPropertyInteger("designButtonMarginTopCB", 5); // 5
-		$this->RegisterPropertyInteger("designButtonMarginLeftCB", 5); // 5
+		$this->RegisterPropertyInteger("designButtonBackGroundColorCB",	13884121); // #D3DAD9
+		$this->RegisterPropertyInteger("designButtonBackGroundColorHCB",16776960); // #FFFF00
+		$this->RegisterPropertyInteger("designButtonWidthCB",			100); // 120
+		$this->RegisterPropertyInteger("designButtonHeightCB",			100); // 80
+		$this->RegisterPropertyInteger("designButtonEdgeCB",			13); // 13
+		$this->RegisterPropertyInteger("designButtonMarginTopCB",		5); // 5
+		$this->RegisterPropertyInteger("designButtonMarginLeftCB",		5); // 5
 		
-		$this->RegisterPropertyInteger("designCBrows", 5); // 5
-		$this->RegisterPropertyInteger("designCBcols", 5); // 5
+		$this->RegisterPropertyInteger("designCBrows",					5); // 5
+		$this->RegisterPropertyInteger("designCBcols",					5); // 5
+
+		$this->RegisterPropertyBoolean("designButtonCBshowEmptyBtn",	false);
 
 		$this->RegisterPropertyString("channelListUploadFile", "");
 
@@ -173,7 +175,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$box = "BoxID " . $boxId. " n.a.";
 
 		// Leerbox
-		if($boxId == 0)     $box = '<div class="buttonMouseOverRE zapbuttonRE" id="leer"> </div>';
+		if($boxId == 0)     $box = '<div class="buttonMouseOverRE ' . ($designButtonCBshowEmptyBtn == true ? ('zapbuttonR') : ('zapbuttonRE')) . '" id="leer"> </div>';
 
 		// Lauter
 		if($boxId == 1)     $box = '<div class="buttonMouseOverR zapbuttonR" id="volumeUp"><img class="zapimage"       src="hook/waffi/images/volumeUp.png"     id="Button_'.$volumeUp.'_'.$volumeDeviceObjectID.'"       alt="volumeUp"></div>';
@@ -284,6 +286,8 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 
 		$designCBrows					= $this->ReadPropertyInteger("designCBrows");
 		$designCBcols					= $this->ReadPropertyInteger("designCBcols");
+
+		$designButtonCBshowEmptyBtn		= $this->ReadPropertyInteger("designButtonCBshowEmptyBtn");
 		
 		$configStandardButtons	= $this->ReadPropertyString("configStandardButtons");
 
@@ -544,31 +548,31 @@ $divWidthR = ($designCBcols * ($designButtonWidthCB + $designButtonMarginLeftCB)
 			$rechteBox .= 
 				$this->getTheBox($value->column1, $volumeUp, $volumeDeviceObjectID, $volumeDown, $volumeMute, $channelUp, $channelDeviceObjectID, $channelDown, $directionLeft,
 				$directionRight, $directionUp, $directionDown, $okButton, $backButton, $harmonyHubStartActivityOn, $harmonyHubStartActivityOff, $harmonyHubObjectID,
-				$colorButtonRed, $colorButtonBlue, $colorButtonYellow, $colorButtonGreen) . 
+				$colorButtonRed, $colorButtonBlue, $colorButtonYellow, $colorButtonGreen, $designButtonCBshowEmptyBtn) . 
 
 				($designCBcols >= 2 ? ($this->getTheBox($value->column2, $volumeUp, $volumeDeviceObjectID, $volumeDown, $volumeMute, $channelUp, $channelDeviceObjectID, $channelDown, $directionLeft,
 				$directionRight, $directionUp, $directionDown, $okButton, $backButton, $harmonyHubStartActivityOn, $harmonyHubStartActivityOff, $harmonyHubObjectID,
-				$colorButtonRed, $colorButtonBlue, $colorButtonYellow, $colorButtonGreen)) : '') . 
+				$colorButtonRed, $colorButtonBlue, $colorButtonYellow, $colorButtonGreen, $designButtonCBshowEmptyBtn)) : '') . 
 
 				($designCBcols >= 3 ? ($this->getTheBox($value->column3, $volumeUp, $volumeDeviceObjectID, $volumeDown, $volumeMute, $channelUp, $channelDeviceObjectID, $channelDown, $directionLeft,
 				$directionRight, $directionUp, $directionDown, $okButton, $backButton, $harmonyHubStartActivityOn, $harmonyHubStartActivityOff, $harmonyHubObjectID,
-				$colorButtonRed, $colorButtonBlue, $colorButtonYellow, $colorButtonGreen)) : '') . 
+				$colorButtonRed, $colorButtonBlue, $colorButtonYellow, $colorButtonGreen, $designButtonCBshowEmptyBtn)) : '') . 
 
 				($designCBcols >= 4 ? ($this->getTheBox($value->column4, $volumeUp, $volumeDeviceObjectID, $volumeDown, $volumeMute, $channelUp, $channelDeviceObjectID, $channelDown, $directionLeft,
 				$directionRight, $directionUp, $directionDown, $okButton, $backButton, $harmonyHubStartActivityOn, $harmonyHubStartActivityOff, $harmonyHubObjectID,
-				$colorButtonRed, $colorButtonBlue, $colorButtonYellow, $colorButtonGreen)) : '') . 
+				$colorButtonRed, $colorButtonBlue, $colorButtonYellow, $colorButtonGreen, $designButtonCBshowEmptyBtn)) : '') . 
 
 				($designCBcols >= 5 ? ($this->getTheBox($value->column5, $volumeUp, $volumeDeviceObjectID, $volumeDown, $volumeMute, $channelUp, $channelDeviceObjectID, $channelDown, $directionLeft,
 				$directionRight, $directionUp, $directionDown, $okButton, $backButton, $harmonyHubStartActivityOn, $harmonyHubStartActivityOff, $harmonyHubObjectID,
-				$colorButtonRed, $colorButtonBlue, $colorButtonYellow, $colorButtonGreen)) : '') . 
+				$colorButtonRed, $colorButtonBlue, $colorButtonYellow, $colorButtonGreen, $designButtonCBshowEmptyBtn)) : '') . 
 
 				($designCBcols >= 6 ? ($this->getTheBox($value->column6, $volumeUp, $volumeDeviceObjectID, $volumeDown, $volumeMute, $channelUp, $channelDeviceObjectID, $channelDown, $directionLeft,
 				$directionRight, $directionUp, $directionDown, $okButton, $backButton, $harmonyHubStartActivityOn, $harmonyHubStartActivityOff, $harmonyHubObjectID,
-				$colorButtonRed, $colorButtonBlue, $colorButtonYellow, $colorButtonGreen)) : '') . 
+				$colorButtonRed, $colorButtonBlue, $colorButtonYellow, $colorButtonGreen, $designButtonCBshowEmptyBtn)) : '') . 
 
 				($designCBcols >= 7 ? ($this->getTheBox($value->column7, $volumeUp, $volumeDeviceObjectID, $volumeDown, $volumeMute, $channelUp, $channelDeviceObjectID, $channelDown, $directionLeft,
 				$directionRight, $directionUp, $directionDown, $okButton, $backButton, $harmonyHubStartActivityOn, $harmonyHubStartActivityOff, $harmonyHubObjectID,
-				$colorButtonRed, $colorButtonBlue, $colorButtonYellow, $colorButtonGreen)) : '');
+				$colorButtonRed, $colorButtonBlue, $colorButtonYellow, $colorButtonGreen, $designButtonCBshowEmptyBtn)) : '');
 		}
 
 
