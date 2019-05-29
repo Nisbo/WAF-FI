@@ -411,9 +411,14 @@
 		]
 	},
 
-
-	{ "type": "ValidationTextBox",	"name": "designOwnCSScode", "caption": "Eigener CSS Code, dieser wird am Ende eingefügt." }
-
+	{
+		"type": "ExpansionPanel",
+		"caption": "Design, sonstiges (klicken zum öffnen)",
+		"items": [
+			{ "type": "ValidationTextBox",	"name": "designOwnCSScode",	"caption": "Eigener CSS Code" },
+			{ "type": "Label",						"label":   "Info: Der Code wird nach dem generierten CSS Code eingefügt." }
+		]
+	}
 
 
     ],
