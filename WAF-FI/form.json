@@ -357,7 +357,7 @@
 	},
 
 
-	{ "type": "ValidationTextBox",	"name": "designOwnCSScode", "caption": "Eigener CSS Code, dieser wird am Ende eingefügt." },
+	{ "type": "ValidationTextBox",	"name": "designOwnCSScode", "caption": "Eigener CSS Code, dieser wird am Ende eingefügt." }
 
 
 
