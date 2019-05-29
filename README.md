@@ -5,7 +5,7 @@ Thema im IP Symcon Forum
 
 https://www.symcon.de/forum/threads/40811-WAF-FI-Kanallisten-Modul-f%C3%BCr-das-Harmony-Modul-Testversion
 
-Sender Logos
+# Sender Logos
 ------------
 Bisher habe ich noch keine freie Quelle gefunden welches es auch erlaubt die Senderlogos hier anzubieten.
 Die Logos müssen also selbst besorgt werden und in einen User Ordner geladen werden.
@@ -35,8 +35,7 @@ https://www.opena.tv/forum111/
 Als Größe empfehle ich 100x60
 
 
-
-CSV Kanalliste
+# CSV Kanalliste
 --------------
 
 Die Kanalliste.csv muss in diesen Ordner geladen werden
@@ -68,7 +67,7 @@ für das Addons brauchen wir aber nur die Funktion um sich eine Favoriten Liste 
 Wenn man dann keinen Satreceiver nutzt wo die Kanalnummern in der Reihenfolge vergeben werden wie sie in der ExportDatei sequentiell vorhanden sind so kann man die Kanalnummern in der Exportdatei ergänzen. Hierzu muss man hinter dem jeweils kryptischen Eintrag die Kanalnummer hinzufügen getrennt durch EIN Leerleichen. Die Angabe muss dann bei allen Einträgen erfolgen.
 
 
-Format der normalen CSV Datei
+#### Format der normalen CSV Datei
 ```
 sortOrder;channelNumber;channelName;channelImage
 1;1;ARD;1_HD.png
@@ -97,7 +96,7 @@ sortOrder;channelNumber;channelName;channelImage
 24;99;MTV;MTV.png
 ```
 
-Format einer normalen Bouquet Datei (ohne Kanalangabe)
+#### Format einer normalen Bouquet Datei (ohne Kanalangabe)
 
 ```
 #NAME Favourites (TV)
@@ -127,7 +126,7 @@ Format einer normalen Bouquet Datei (ohne Kanalangabe)
 #SERVICE 1:0:19:2777:409:1:C00000:0:0:0:
 ```
 
-Format einer Bouquet mit Kanalangabe
+#### Format einer Bouquet mit Kanalangabe
 ```
 #NAME Favourites (TV)
 #SERVICE 1:0:19:283D:3FB:1:C00000:0:0:0: 1
