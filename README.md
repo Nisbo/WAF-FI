@@ -1,7 +1,7 @@
 # WAF-FI
-IP Symcon Kanallisten-Addon für das Harmony Addon von Fonzo
+IP Symcon (IPS 5.1) Kanallisten-Addon für das Harmony Addon von Fonzo
 
-Thema im IP Symcon Forum
+Thema im IP-Symcon Forum
 
 https://www.symcon.de/forum/threads/40811-WAF-FI-Kanallisten-Modul-f%C3%BCr-das-Harmony-Modul-Testversion
 
@@ -22,6 +22,14 @@ https://github.com/Nisbo/WAF-FI.git
 ```
 und auf __OK__ klicken.
 ![Screenshot_1538](https://user-images.githubusercontent.com/26260572/58562903-771ae780-822a-11e9-9b78-faf8795e6d02.jpg)
+
+Im Object-Baum vom __NEUEN__ Web Editor (geht nicht im alten Editor) zu der Stelle navigieren wo man das Modul einbinden möchte. 
+
+Hier jetzt einen Rechtsklick auf den Ordner in dem das Modul erstellt werden soll und im Menü dann auf __Objekt hinzufügen --> Instanz__ klicken.
+
+![Screenshot_1539](https://user-images.githubusercontent.com/26260572/58563387-4edfb880-822b-11e9-9063-8a14e3cb7aca.jpg)
+
+
 
 
 
