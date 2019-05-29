@@ -81,16 +81,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 	{
 		"type": "ExpansionPanel",
 		"caption": "Design Allgemeine Buttons (klicken zum öffnen)",
@@ -122,9 +112,6 @@
 				{ "caption": "7 Spalten", "value": 7 }
 			    ]
 			},
-
-
-
 
 			{ 
 				"type": "RowLayout",
@@ -367,14 +354,10 @@
 			{ "type": "NumberSpinner",	"name": "designButtonMarginTopCB",		"caption": "Abstand nach Oben zu anderen Buttons / Rand",	"suffix": "px"},
 			{ "type": "NumberSpinner",	"name": "designButtonMarginLeftCB",		"caption": "Abstand nach Links zu anderen Buttons / Rand",	"suffix": "px"}
 		]
-	}
+	},
 
 
-
-
-
-
-
+	{ "type": "ValidationTextBox",	"name": "designOwnCSScode", "caption": "Eigener CSS Code, dieser wird am Ende eingefügt." },
 
 
 
