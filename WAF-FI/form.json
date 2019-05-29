@@ -7,21 +7,26 @@
 		"type": "ExpansionPanel",
 		"caption": "Dateien und Verzeichnisse (klicken zum öffnen)",
 		"items": [
-			
 			{ "type": "ValidationTextBox",	"name": "channelListFileName",	"caption": "Name der CSV Datei mit der Kanalliste" },
 			{ "type": "ValidationTextBox",	"name": "pathToCSV",		"caption": "Path zur Kanalliste.csv" },
 			{ "type": "SelectFile",		"name": "channelListUploadFile","caption": "ODER Datei hochladen"},
 			{ "type": "Label",						"label":   "Info: wenn eine Datei hochgeladen wird dann wird IMMER die Datei genutzt" },
 			{ "type": "CheckBox",		"name": "useBouquet",		"caption": "Datei ist ein Bouquet" },
-			{ "type": "ValidationTextBox",	"name": "pathToImages",		"caption": "Image-Verzeichnis für die Senderlogos" }
+			{ "type": "ValidationTextBox",	"name": "pathToImages",		"caption": "Image-Verzeichnis für die Senderlogos" },
+			{ "type": "Label",						"label":   "Info: relativ zum WebFront Verzeichnis oder als komplette URL falls die Bilder extern liegen." }
 		]
 	},
 
-	{ "type": "Label", "label": "EIN/AUS schalten" },
-	{ "type": "SelectObject", "name": "harmonyHubObjectID",	"caption": "Harmony Hub - Splitter Instanz (Object - grünes Icon auswählen)" },
-	{ "type": "ValidationTextBox", "name": "harmonyHubStartActivityOn",	"caption": "Einschalten - startActivity ON ID" },
-	{ "type": "ValidationTextBox", "name": "harmonyHubStartActivityOff",	"caption": "Ausschalten - startActivity OFF ID" },
-
+	{
+		"type": "ExpansionPanel",
+		"caption": "EIN/AUS schalten (klicken zum öffnen)",
+		"items": [
+			{ "type": "SelectObject", "name": "harmonyHubObjectID",			"caption": "Harmony Hub - Splitter Instanz" },
+			{ "type": "Label",							"label":   "Info: Die Splitter Instanz vom HarmonyHub welcher die Befehle senden soll  (Object - grünes Icon auswählen)" }
+			{ "type": "ValidationTextBox", "name": "harmonyHubStartActivityOn",	"caption": "Einschalten - startActivity ON ID" },
+			{ "type": "ValidationTextBox", "name": "harmonyHubStartActivityOff",	"caption": "Ausschalten - startActivity OFF ID" }
+		]
+	},
 
 	{ "type": "Label", "label": "Kanalwechsel" },
 	{ "type": "SelectObject", "name": "channelDeviceObjectID",	"caption": "Gerät zum Kanalwechsel (Object - grünes Icon auswählen)" },
