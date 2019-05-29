@@ -34,6 +34,12 @@ Diesen Eintrag auswählen, ggf den Namen anpassen und auf OK klicken.
 
 ![Screenshot_1540](https://user-images.githubusercontent.com/26260572/58563621-c1e92f00-822b-11e9-9735-4d3ec55f47b0.jpg)
 
+Jetzt öffnet sich das __Konfigurationsformular__ vom WAF-FI Modul
+
+![Screenshot_1541](https://user-images.githubusercontent.com/26260572/58563817-1a203100-822c-11e9-9076-60a5e7df2dce.jpg)
+
+Die Konfiguration ist in verschiedene Bereiche untergliedert welche sich einzeln aufklappen lassen.
+Soweit möglich befinden sich die Erklärungen zu den einzelnen Punkten direkt im Konfigurationsformular.
 
 
 # Sender Logos
