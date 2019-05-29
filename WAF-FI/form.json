@@ -142,16 +142,12 @@
 		]
 	},
 
-
-
-
-
 	{
 		"type": "ExpansionPanel",
 		"caption": "Design Allgemeine Buttons (klicken zum öffnen)",
 		"items": [
 			{ "type": "Label", "label": "Design vom Buttonhintergrund" },
-			{ "type": "Select", "name": "designCBrows", "caption": "Anzahl an Zeilen die angezeigt werden",
+			{ "type": "Select", "name": "designCBrows", "caption": "Anzahl an Zeilen die angezeigt werden (Links -> Rechts)",
 			    "options": [
 				{ "caption": "1 Zeile", "value": 1 },
 				{ "caption": "2 Zeilen", "value": 2 },
@@ -166,7 +162,7 @@
 				{ "caption": "Alle Zeilen", "value": 0 }
 			    ]
 			},
-			{ "type": "Select", "name": "designCBcols", "caption": "Anzahl an Spalten die angezeigt werden",
+			{ "type": "Select", "name": "designCBcols", "caption": "Anzahl an Spalten die angezeigt werden (Oben -> Unten)",
 			    "options": [
 				{ "caption": "1 Spalte", "value": 1 },
 				{ "caption": "2 Spalten", "value": 2 },
