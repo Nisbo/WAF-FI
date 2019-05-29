@@ -77,6 +77,18 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		echo dirname(__FILE__);
 	}
 
+	public function checkPath() {
+		$channelListFileName    = $this->ReadPropertyString("channelListFileName");
+		$pathToCSV              = $this->ReadPropertyString("pathToCSV");
+		if(substr($pathToCSV, -1, 1) != "/") $pathToCSV .= "/"; // to make sure there is a slash at the end
+
+		if(file_exists($pathToCSV . $channelListFileName)){
+			echo "Die Datei " . $channelListFileName . " wurde gefunden.";
+		}else{
+			echo "Die Datei " . $channelListFileName . " wurde NICHT im Verzeichnis " . $pathToCSV . " gefunden.";
+		}
+	}
+
 	/**
 	* This 3 Hook Functions are from the Symcon Demo Code
 	*/
