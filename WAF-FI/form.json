@@ -355,10 +355,7 @@
 						]
 					}
 				]
-			}
-
-
-
+			},
 
 
 			{ "type": "SelectColor",	"name": "designButtonBackGroundColorCB",	"caption": "Farbe vom Buttonhintergrund" },
