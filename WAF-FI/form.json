@@ -20,7 +20,10 @@
 			{ "type": "CheckBox",		"name": "useBouquet",		"caption": "Datei ist ein Bouquet" },
 			{ "type": "Button",						"caption": "Was ist ein Bouquet (Externer Link)", "onClick": "echo 'https://de.wikipedia.org/wiki/Bouquet_(digitales_Fernsehen)';" },
 			{ "type": "ValidationTextBox",	"name": "pathToImages",		"caption": "Image-Verzeichnis für die Senderlogos" },
-			{ "type": "Label",						"label":   "Info: relativ zum WebFront Verzeichnis oder als komplette URL falls die Bilder extern liegen." }
+			{ "type": "Label",						"label":   "Info: relativ zum WebFront Verzeichnis ohne / am Anfang oder als komplette URL falls die Bilder extern liegen." },
+			{ "type": "Button",						"label":   "Prüfe PATH für Bilder", "onClick": "WAFFI_checkImagePath($id);" },
+			{ "type": "Label",						"label":   "Info: Ein Klick auf \"Prüfe PATH für Bilder\" prüft ob man auf das Verzeichnis zugreifen kann." }
+
 		]
 	},
 
