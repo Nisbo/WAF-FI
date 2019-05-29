@@ -2,7 +2,7 @@
 #################################################################################################################################
 # Addon:	WAF-FI --> WAF Fernseh Interface
 # Version:	1.0
-# Date:		16.05.2019
+# Date:		29.05.2019
 # Autor:	Nisbo
 # Based on an idea by: Fonzo
 # https://www.symcon.de/forum/threads/31582-Tastenfeld-Navigationswippe-dynamische-Webseiten-im-Webfront-darstellen
@@ -21,7 +21,7 @@ if (isset($_GET["kanal"]))	{
 	$config = explode("_", $_GET["kanal"]);
 
 	// Single Digits, should be the standard
-	if($config[2] == "1"){
+	if($config[2] == "1" && $config[5] != "" && $config[1] != ""){
 		foreach (str_split($config[1]) as $key=>$val) {
 			if ($key!==3) {
 				LHD_Send($config[5], $val);
@@ -29,7 +29,7 @@ if (isset($_GET["kanal"]))	{
 			}
 		}
 	}else{
-		LHD_Send($config[5], $config[1]);
+		if($config[5] != "" && $config[1] != "") LHD_Send($config[5], $config[1]);
 	}
 
 	// ENTER Button and ENTER Code
@@ -44,9 +44,9 @@ if (isset($_GET["button"]))	{
 
 	// OnOff
 	if($config[0] == "ButtonOO"){
-		HarmonyHub_startActivity($config[2], $config[1]);
+		if($config[2] != "" && $config[1] != "") HarmonyHub_startActivity($config[2], $config[1]);
 	}else{
-		LHD_Send($config[2], $config[1]);
+		if($config[2] != "" && $config[1] != "") LHD_Send($config[2], $config[1]);
 	}
 
 	$xml .= "<action>button</action>";
