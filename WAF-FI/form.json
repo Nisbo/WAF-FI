@@ -11,7 +11,7 @@
 			{ "type": "ValidationTextBox",	"name": "pathToCSV",		"caption": "Path zur Kanalliste.csv" },
 			{ "type": "Button",						"label":   "PATH-Info", "onClick": "WAFFI_getPath($id);" },
 			{ "type": "Label",						"label":   "Info: Ein Klick auf \"PATH-Info\" zeigt den Path zu diesem Modul als Orientierungshilfe." },
-			{ "type": "Button",						"label":   "Prüfe PATH und Dateiname", "onClick": "WAFFI_chekPath($id);" },
+			{ "type": "Button",						"label":   "Prüfe PATH und Dateiname", "onClick": "WAFFI_checkPath($id);" },
 			{ "type": "Label",						"label":   "Info: Ein Klick auf \"Prüfe PATH und Dateiname\" prüft ob die Datei auf Dateiebene erreichbar ist." },
 			{ "type": "SelectFile",		"name": "channelListUploadFile","caption": "ODER Datei hochladen"},
 			{ "type": "Label",						"label":   "Info: wenn eine Datei hochgeladen wird dann wird IMMER die Datei genutzt" },
