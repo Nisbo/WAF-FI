@@ -48,6 +48,8 @@ Alternativ kann man die Datei auch über den Konfigurator hoch laden.
 ## Aufbau der Kanalliste
 #### Format der normalen CSV Datei
 
+Die enzelnen Spalten sind durch ein Semikolon ";" getrennt und es dürfen keine Sonderzeichen bei den Angaben verwendet werden.
+Die Spalten 1 und 2 dürfen nur ganze Zahlen enthalten.
 - sortOrder --> Nach dieser Spalte werden die Sender im WebFront sortiert
 - channelNumber --> Die Kanalnummer die an den Receiver / TV geschickt wird
 - channelName --> Der Name vom Kanal
