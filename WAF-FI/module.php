@@ -89,6 +89,35 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		}
 	}
 
+	public function checkImagePath() {
+		$pathToImages = $this->ReadPropertyString("pathToImages");
+		if(substr($pathToImages, -1, 1) != "/") $pathToImages .= "/"; // to make sure there is a slash at the end
+
+		// only if no http / https
+		if (strpos($pathToImages, 'http://') === 0 || strpos($pathToImages, 'https://') === 0) {
+			echo "Das Verzeichnis " . $pathToImages . " scheint eine externe URL zu sein.";
+		}else{
+            // change 2 folders up if in module folder 
+            $newDir =  "../../webfront/" . $pathToImages;
+
+            $folderContent = "";
+            if(is_dir($newDir)) {
+                if($handle = opendir($newDir)){
+                    while(($file = readdir($handle)) !== false) {
+                        if(filetype($newDir . $file ) == "dir") continue;
+                        $folderContent .= $file . PHP_EOL ;
+                    }
+                    closedir($handle);
+                }else{
+                    echo "Kann das Verzeichnis auf Dateiebene nicht öffnen";
+                }
+                echo "Gefundene Dateien: " . $folderContent;
+            }else{
+                echo "Kein Verzeichnis gefunden";
+            }
+		}
+	}
+
 	/**
 	* This 3 Hook Functions are from the Symcon Demo Code
 	*/
