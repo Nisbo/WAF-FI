@@ -84,7 +84,10 @@ sortOrder;channelNumber;channelName;channelImage
 ```
 
 #### Format einer normalen Bouquet Datei (ohne Kanalangabe)
+Hierbei werden nur die Einträge beachtet welche mit __#SERVICE__ beginnen, 
+alle weiteren Einträge wie z.B. __#NAME__ werden ignoriert.
 
+Die Zeile __#SERVICE__ darf außer der Kennung welche durch ein Leerzeichen getrennt ist keine weiteren Angaben enthalten.
 ```
 #NAME Favourites (TV)
 #SERVICE 1:0:19:283D:3FB:1:C00000:0:0:0:
@@ -114,6 +117,10 @@ sortOrder;channelNumber;channelName;channelImage
 ```
 
 #### Format einer Bouquet mit Kanalangabe
+Hierbei werden nur die Einträge beachtet welche mit __#SERVICE__ beginnen, 
+alle weiteren Einträge wie z.B. __#NAME__ werden ignoriert.
+
+Die Zeile __#SERVICE__ darf nur die Kennung und die Kanalnummer welche jeweils durch ein Leerzeichen getrennt sind enthalten.
 ```
 #NAME Favourites (TV)
 #SERVICE 1:0:19:283D:3FB:1:C00000:0:0:0: 1
