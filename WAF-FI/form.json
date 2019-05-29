@@ -146,7 +146,7 @@
 		"type": "ExpansionPanel",
 		"caption": "Design Allgemeine Buttons (klicken zum öffnen)",
 		"items": [
-			{ "type": "Label", "label": "Design vom Buttonhintergrund" },
+			{ "type": "Label", "label": "Allgemeine Buttons sind alle Buttons außer den Senderbuttons" },
 			{ "type": "Select", "name": "designCBrows", "caption": "Anzahl an Zeilen die angezeigt werden (Links -> Rechts)",
 			    "options": [
 				{ "caption": "1 Zeile", "value": 1 },
@@ -407,6 +407,7 @@
 
 
 			{ "type": "CheckBox",		"name": "designButtonCBshowEmptyBtn",		"caption": "Zeige leere Buttons" },
+			{ "type": "Label",								"label":   "Wenn aktiviert wird in den Zwischenräumen der definierten Buttons ein leerer Button angezeigt." },
 			{ "type": "SelectColor",	"name": "designButtonBackGroundColorCB",	"caption": "Farbe vom Buttonhintergrund" },
 			{ "type": "SelectColor",	"name": "designButtonBackGroundColorHCB",	"caption": "Farbe vom Buttonhintergrund bei MouseOver" },
 			{ "type": "NumberSpinner",	"name": "designButtonWidthCB",			"caption": "Breite vom Buttonhintergrund",			"suffix": "px"},
