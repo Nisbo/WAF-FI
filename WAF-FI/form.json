@@ -9,7 +9,8 @@
 		"items": [
 			{ "type": "ValidationTextBox",	"name": "channelListFileName",	"caption": "Name der CSV Datei mit der Kanalliste" },
 			{ "type": "ValidationTextBox",	"name": "pathToCSV",		"caption": "Path zur Kanalliste.csv" },
-			{ "type": "Button",						"label":   "Path", "onClick": "WAFFI_getPath($id);" },
+			{ "type": "Button",						"label":   "PATH-Info", "onClick": "WAFFI_getPath($id);" },
+			{ "type": "Label",						"label":   "Info: Ein Klick auf PATH-Info zeigt den Path zu diesem Modul" },
 			{ "type": "SelectFile",		"name": "channelListUploadFile","caption": "ODER Datei hochladen"},
 			{ "type": "Label",						"label":   "Info: wenn eine Datei hochgeladen wird dann wird IMMER die Datei genutzt" },
 			{ "type": "CheckBox",		"name": "useBouquet",		"caption": "Datei ist ein Bouquet" },
