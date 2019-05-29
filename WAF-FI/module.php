@@ -84,6 +84,9 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$this->RegisterHook("/hook/waffi");
 	}
 
+	public function getPath() {
+		echo getcwd();
+	}
 
 	/**
 	* The Hook Functions are from the Symcon Demo Code
