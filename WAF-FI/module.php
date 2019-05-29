@@ -524,7 +524,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		<script>		
 		[
 		  '/hook/waffi/js/jquery.js',
-		  '/hook/waffi/js/jquery.ajax-ips-kanalliste.js'
+		  '/hook/waffi/js/channelList.js'
 		].forEach(function(src) {
 		  var script = document.createElement('script');
 		  script.src = src;
