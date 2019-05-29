@@ -15,24 +15,24 @@ $(document).ready(function(){
 	$('.zapbuttons').on('click', 'img', function (){
 		//alert('click!' + $(event.target).attr('id'));
 		//alert('click!');
-		sendToReceiver($(event.target).attr('id'));
+		sendToReceiver($(event.target).attr('id'), $(event.target).attr('objectid'));
 	});
 
 	// there is no logo available, click on an A tag
 	$('.noImageAvailable').on('click', function (){
-		sendToReceiver($(event.target).attr('id'));
+		sendToReceiver($(event.target).attr('id'), $(event.target).attr('objectid'));
 	});
 
 
 	$('.navigationbuttons').on('click', 'img', function (){
-		sendToReceiverButton($(event.target).attr('id'));
+		sendToReceiverButton($(event.target).attr('id'), $(event.target).attr('objectid'));
 	});
 
 
-	function sendToReceiver(channel){
+	function sendToReceiver(channel, objectID){
 		$.ajax({
 			type: "GET",
-			url: "hook/waffi/php/WafFiRequest.php",
+			url: "hook/waffi_" + objectID + "/php/WafFiRequest.php",
 			data: "kanal=" + channel,
 			success: function () {
 				//alert("Test " + channel);
@@ -40,10 +40,10 @@ $(document).ready(function(){
 		});
 	}
 
-	function sendToReceiverButton(buttonCode){
+	function sendToReceiverButton(buttonCode, objectID){
 		$.ajax({
 			type: "GET",
-			url: "hook/waffi/php/WafFiRequest.php",
+			url: "hook/waffi_" + objectID + "/php/WafFiRequest.php",
 			data: "button=" + buttonCode,
 			success: function () {
 				//alert("Test " + buttonCode);
