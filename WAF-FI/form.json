@@ -358,6 +358,7 @@
 			},
 
 
+			{ "type": "CheckBox",		"name": "designButtonCBshowEmptyBtn",		"caption": "Zeige leere Buttons" },
 			{ "type": "SelectColor",	"name": "designButtonBackGroundColorCB",	"caption": "Farbe vom Buttonhintergrund" },
 			{ "type": "SelectColor",	"name": "designButtonBackGroundColorHCB",	"caption": "Farbe vom Buttonhintergrund bei MouseOver" },
 			{ "type": "NumberSpinner",	"name": "designButtonWidthCB",			"caption": "Breite vom Buttonhintergrund",			"suffix": "px"},
