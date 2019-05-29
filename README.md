@@ -12,13 +12,13 @@ Die Logos müssen also selbst besorgt werden und in einen User Ordner geladen we
 Das Verzeichnis zu diesem Ordner kann man im Konfigurator einstellen. 
 
 In diesen Ordner müssen die Logos geladen werden:
-
+```
 /var/lib/symcon/webfront/user/waffi/images
-
+```
 Im Konfigurator ist dann dieser Path einzugeben:
-
+```
 user/waffi/images
-
+```
 so das die Logos im Browser geladen werden können.
 
 Wo bekomme ich jetzt die Logos her ?
@@ -40,16 +40,16 @@ CSV Kanalliste
 --------------
 
 Die Kanalliste.csv muss in diesen Ordner geladen werden
-
+```
 /var/lib/symcon/webfront/user/waffi
-
+```
 welcher allerdings auch im Konfigurator geändert werden kann.
 
 
 Alternativ kann man auch eine Bouquets Datei einspielen und somit auch seine z.b. auf der Dreambox eingespielten Picons nutzen
 Wenn man keinen Enigma Receiver hat kann man das ganze auch "emulieren.
 
-Z.B. die aktuelle Senderliste 8Astra) von hier runter laden
+Z.B. die aktuelle Senderliste (Astra) von hier runter laden
 
 https://enigma2-hilfe.de/
 
