@@ -49,8 +49,16 @@
 			{ "type": "Label",						"label":   "Info: Den Code OHNE die Anführungszeichen eintragen." },
 			
 			{ "type": "ValidationTextBox", "name": "channelUp",		"caption": "Code: Kanal HOCH Taste" },
+			{ "type": "Label",						"label":   "Info: Bitte sinngemäß wie bei Kanal RUNTER verfahren." },
+			{ "type": "Label",						"label":   "Alle weiteren Codes funktionieren nach dem selben Prinzip und werden nicht extra erklärt." },
+
 			{ "type": "CheckBox", "name": "sendSingleDigits",		"caption": "Tastencode einzeln schicken (empfohlen)" },
+			{ "type": "Label",						"label":   "Info: Schickt jede Zahl so als wenn man sie auf der Fernbedienung eintippt, dies sollte bei 99,99 % der Nutzer zutreffen." },
+
 			{ "type": "CheckBox", "name": "sendENTERkey",			"caption": "ENTER bzw SELECT Taste drücken um den Wechsel zu beschleunigen" },
+			{ "type": "Label",						"label":   "Info: Normalerweise wartet der Receiver eine Zeit bis er umschaltet falls der Benutzer noch weitere Zahlen eingeben will" },
+			{ "type": "Label",						"label":   "Wenn der Receiver eine OK, SELECT oder ENTER Taste hat womit man die Eingabe bestätigt so kann man diese Funktion hier aktivieren." },
+
 			{ "type": "ValidationTextBox", "name": "sendENTERkeyCode",	"caption": "Code: SELECT bzw ENTER oder OK Taste" }
 		]
 	},
