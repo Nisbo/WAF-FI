@@ -29,7 +29,10 @@ Hier jetzt einen Rechtsklick auf den Ordner in dem das Modul erstellt werden sol
 
 ![Screenshot_1539](https://user-images.githubusercontent.com/26260572/58563387-4edfb880-822b-11e9-9063-8a14e3cb7aca.jpg)
 
+Im sich öffnenden Fenster beim Schnellfilter __waf__ eintippen. Jetzt sollte nur das __WAF-FI Modul__ angezeigt werden.
+Diesen Eintrag auswählen, ggf den Namen anpassen und auf OK klicken.
 
+![Screenshot_1540](https://user-images.githubusercontent.com/26260572/58563621-c1e92f00-822b-11e9-9735-4d3ec55f47b0.jpg)
 
 
 
