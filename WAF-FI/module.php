@@ -47,34 +47,28 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$this->RegisterPropertyString("volumeMute",						"Mute");
 		$this->RegisterPropertyString("volumeUp",						"VolumeUp");
 		$this->RegisterPropertyBoolean("useBouquet",					false);
-		
-		$this->RegisterPropertyInteger("designButtonBackGroundColor",	13884121); // #D3DAD9
-		$this->RegisterPropertyInteger("designButtonWidth",				120); // 120
-		$this->RegisterPropertyInteger("designButtonHeight",			80); // 80
-		$this->RegisterPropertyInteger("designButtonEdge",				13); // 13
-		$this->RegisterPropertyInteger("designButtonMarginTop",			5); // 5
-		$this->RegisterPropertyInteger("designButtonMarginLeft",		5); // 5
-		$this->RegisterPropertyInteger("designButtonBackGroundColorH",	16776960); // #FFFF00
-		$this->RegisterPropertyInteger("designButtonPerRow",			4); // 4
+		$this->RegisterPropertyInteger("designButtonBackGroundColor",	13884121);	// #D3DAD9
+		$this->RegisterPropertyInteger("designButtonWidth",				120);		// 120
+		$this->RegisterPropertyInteger("designButtonHeight",			80);		// 80
+		$this->RegisterPropertyInteger("designButtonEdge",				13);		// 13
+		$this->RegisterPropertyInteger("designButtonMarginTop",			5);			// 5
+		$this->RegisterPropertyInteger("designButtonMarginLeft",		5);			// 5
+		$this->RegisterPropertyInteger("designButtonBackGroundColorH",	16776960);	// #FFFF00
+		$this->RegisterPropertyInteger("designButtonPerRow",			4);			// 4
 		$this->RegisterPropertyString("configStandardButtons",			"");
-
-		$this->RegisterPropertyInteger("designButtonBackGroundColorCB",	13884121); // #D3DAD9
-		$this->RegisterPropertyInteger("designButtonBackGroundColorHCB",16776960); // #FFFF00
-		$this->RegisterPropertyInteger("designButtonWidthCB",			100); // 120
-		$this->RegisterPropertyInteger("designButtonHeightCB",			100); // 80
-		$this->RegisterPropertyInteger("designButtonEdgeCB",			13); // 13
-		$this->RegisterPropertyInteger("designButtonMarginTopCB",		5); // 5
-		$this->RegisterPropertyInteger("designButtonMarginLeftCB",		5); // 5
-		
-		$this->RegisterPropertyInteger("designCBrows",					5); // 5
-		$this->RegisterPropertyInteger("designCBcols",					5); // 5
-
+		$this->RegisterPropertyInteger("designButtonBackGroundColorCB",	13884121);	// #D3DAD9
+		$this->RegisterPropertyInteger("designButtonBackGroundColorHCB",16776960);	// #FFFF00
+		$this->RegisterPropertyInteger("designButtonWidthCB",			100);		// 120
+		$this->RegisterPropertyInteger("designButtonHeightCB",			100);		// 80
+		$this->RegisterPropertyInteger("designButtonEdgeCB",			13);		// 13
+		$this->RegisterPropertyInteger("designButtonMarginTopCB",		5);			// 5
+		$this->RegisterPropertyInteger("designButtonMarginLeftCB",		5);			// 5
+		$this->RegisterPropertyInteger("designCBrows",					5);			// 5
+		$this->RegisterPropertyInteger("designCBcols",					5);			// 5
 		$this->RegisterPropertyBoolean("designButtonCBshowEmptyBtn",	false);
 		$this->RegisterPropertyString("designOwnCSScode",				"");
-
-		$this->RegisterPropertyString("channelListUploadFile", "");
-
-		$this->RegisterVariableString("channelListHTML",				"Diese Variabel ins FrontEnd einbinden, zum Ändern bitte Config ausführen", "~HTMLBox", 1);
+		$this->RegisterPropertyString("channelListUploadFile",			"");
+		$this->RegisterVariableString("channelListHTML",				"Diese Variabel ins WebFront einbinden ... zum Ändern bitte Config der Instanz ausführen", "~HTMLBox", 1);
 	}
 
 	public function ApplyChanges() {
@@ -89,7 +83,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 	}
 
 	/**
-	* The Hook Functions are from the Symcon Demo Code
+	* This 3 Hook Functions are from the Symcon Demo Code
 	*/
 	private function RegisterHook($WebHook) {
 		$ids = IPS_GetInstanceListByModuleID("{015A6EB8-D6E5-4B93-B496-0D3F77AE9FE1}");
@@ -112,12 +106,10 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		}
 	}
 
-
 	/**
 	* This function will be called by the hook control. Visibility should be protected!
 	*/
 	protected function ProcessHookData() {
-		
 		$root = realpath(__DIR__ . "/www");
 		//reduce any relative paths. this also checks for file existance
 		$path = realpath($root . "/" . substr($_SERVER['SCRIPT_NAME'], strlen("/hook/waffi/")));
@@ -178,6 +170,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 
 		$box = "BoxID " . $boxId. " n.a.";
 
+		// Yes I know, a Switch is the best solution for this case :D
 		// Leerbox
 		if($boxId == 0)     $box = '<div class="buttonMouseOverRE ' . ($designButtonCBshowEmptyBtn == true ? ('zapbuttonR') : ('zapbuttonRE')) . '" id="leer"> </div>';
 
@@ -241,7 +234,6 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$sendENTERkey           = $this->ReadPropertyBoolean("sendENTERkey");
 		$sendENTERkeyCode       = $this->ReadPropertyString("sendENTERkeyCode");
 		$channelListFileName    = $this->ReadPropertyString("channelListFileName");
-						
 		$pathToImages           = $this->ReadPropertyString("pathToImages");
 		$pathToCSV              = $this->ReadPropertyString("pathToCSV");
 		$channelDown            = $this->ReadPropertyString("channelDown");
@@ -250,26 +242,20 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$directionLeft          = $this->ReadPropertyString("directionLeft");
 		$directionRight         = $this->ReadPropertyString("directionRight");
 		$directionUp            = $this->ReadPropertyString("directionUp");
-
 		$volumeDeviceObjectID   = $this->ReadPropertyInteger("volumeDeviceObjectID");// 0 = same than Receiver (idea for next version)
 		$volumeDown             = $this->ReadPropertyString("volumeDown");
 		$volumeMute             = $this->ReadPropertyString("volumeMute");
 		$volumeUp               = $this->ReadPropertyString("volumeUp");
-
 		$colorButtonBlue        = $this->ReadPropertyString("colorButtonBlue");
 		$colorButtonGreen       = $this->ReadPropertyString("colorButtonGreen");
 		$colorButtonRed         = $this->ReadPropertyString("colorButtonRed");
 		$colorButtonYellow      = $this->ReadPropertyString("colorButtonYellow");
-
 		$backButton             = $this->ReadPropertyString("backButton");
 		$okButton               = $this->ReadPropertyString("okButton");
-
-		$harmonyHubObjectID         = $this->ReadPropertyInteger("harmonyHubObjectID");
-		$harmonyHubStartActivityOn  = $this->ReadPropertyInteger("harmonyHubStartActivityOn");
-		$harmonyHubStartActivityOff = $this->ReadPropertyInteger("harmonyHubStartActivityOff");
-
+		$harmonyHubObjectID				= $this->ReadPropertyInteger("harmonyHubObjectID");
+		$harmonyHubStartActivityOn		= $this->ReadPropertyInteger("harmonyHubStartActivityOn");
+		$harmonyHubStartActivityOff		= $this->ReadPropertyInteger("harmonyHubStartActivityOff");
 		$useBouquet						= $this->ReadPropertyBoolean("useBouquet");
-
 		$designButtonBackGroundColor	= $this->ReadPropertyInteger("designButtonBackGroundColor");
 		$designButtonWidth				= $this->ReadPropertyInteger("designButtonWidth");
 		$designButtonHeight				= $this->ReadPropertyInteger("designButtonHeight");
@@ -279,7 +265,6 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$designButtonBackGroundColorH	= $this->ReadPropertyInteger("designButtonBackGroundColorH");
 		$designButtonPerRow				= $this->ReadPropertyInteger("designButtonPerRow");
 		$channelListUploadFile			= $this->ReadPropertyString("channelListUploadFile");
-		
 		$designButtonBackGroundColorCB	= $this->ReadPropertyInteger("designButtonBackGroundColorCB");
 		$designButtonBackGroundColorHCB	= $this->ReadPropertyInteger("designButtonBackGroundColorHCB");
 		$designButtonWidthCB			= $this->ReadPropertyInteger("designButtonWidthCB");
@@ -287,18 +272,13 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$designButtonEdgeCB				= $this->ReadPropertyInteger("designButtonEdgeCB");
 		$designButtonMarginTopCB		= $this->ReadPropertyInteger("designButtonMarginTopCB");
 		$designButtonMarginLeftCB		= $this->ReadPropertyInteger("designButtonMarginLeftCB");
-
 		$designCBrows					= $this->ReadPropertyInteger("designCBrows");
 		$designCBcols					= $this->ReadPropertyInteger("designCBcols");
-
 		$designButtonCBshowEmptyBtn		= $this->ReadPropertyBoolean("designButtonCBshowEmptyBtn");
 		$designOwnCSScode               = $this->ReadPropertyString("designOwnCSScode");
-		
-		$configStandardButtons	= $this->ReadPropertyString("configStandardButtons");
+		$configStandardButtons			= $this->ReadPropertyString("configStandardButtons");
 
-		IPS_LogMessage($_IPS['SELF'], "RechteSeite: ". $configStandardButtons. "");
-
-
+		IPS_LogMessage($_IPS['SELF'], "WAF-FI Button Array: ". $configStandardButtons. "");
 
 		if(substr($pathToImages, -1, 1) != "/") $pathToImages          .= "/"; // to make sure there is a slash at the end
 		if(substr($pathToCSV, -1, 1) != "/")    $pathToCSV             .= "/"; // to make sure there is a slash at the end
@@ -306,20 +286,6 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		if($sendSingleDigits == "")             $sendSingleDigits       = 0;
 		if($volumeDeviceObjectID == 0)          $volumeDeviceObjectID   = $channelDeviceObjectID;
 		$channelListHTML = "";
-
-		/*
-		// /var/lib/symcon/scripts
-		echo getcwd() . "\n";
-		$ipsObject = IPS_GetObject ($kanallisteObjectID);
-		print_r($ipsObject);
-		*/
-
-		#NAME Favourites (TV)
-		#SERVICE 1:0:19:283d:3fb:1:c00000:0:0:0:
-		#SERVICE 1:0:19:2b66:3f3:1:c00000:0:0:0:
-		#SERVICE 1:0:19:ef10:421:1:c00000:0:0:0:
-		#SERVICE 1:0:19:ef74:3f9:1:c00000:0:0:0:
-		#SERVICE 1:0:19:ef75:3f9:1:c00000:0:0:0:
 
 		if($useBouquet){
 			$channelCount = 0;
@@ -342,9 +308,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
                 $image = '<img class="zapimage" src="' . $pathToImages . $image . '" id="' . $imageID . '" alt="Kanal' . $channelCount . '">';
 
 				$channelListHTML .= '<div class="buttonMouseOver zapbutton" id="Kanal' . $channelCount . 'Zap">' . $image . '</div>';
-                //echo '<div class="zapbutton buttonMouseOver zaptab" id="Kanal' . $channelCount . 'Zap">' . $image . '</div>' . PHP_EOL;
 			}
-			echo "Bouquet importiert." . dechex($designButtonBackGroundColor);
 		}else{
 			if($channelListUploadFile == ""){
 				$importer  = new CsvImporter($pathToCSV . $channelListFileName, true); // File on Disk
@@ -356,7 +320,6 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 			asort ($data);
 
 			foreach($data as $key => $val){
-				// Kanal_123_SignleDigits_Enter_EnterCode_channelDeviceObjectID
 				$imageID = 'Kanal_' . $val['channelNumber'] . '_' . $sendSingleDigits . '_' . $sendENTERkey . '_' . $sendENTERkeyCode . '_' . $channelDeviceObjectID;
 
 				if($val['channelImage'] == "") {
@@ -576,9 +539,6 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		</script>
 		";
 
-		// Button_123_Sender
-		// Button_123_' . $volumeDeviceObjectID
-
 		$channelListHTML = $cssInclude . $jsInclude . '
 		<div id="wrapper">
 			<div class="navleft">
@@ -597,8 +557,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		';
 
 		SetValue($this->GetIDForIdent("channelListHTML"), $channelListHTML);
-		//echo $channelListHTML;
+		echo "Code wurde generiert.";
 	}
-
 }
 ?>
