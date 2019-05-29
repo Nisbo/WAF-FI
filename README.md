@@ -149,7 +149,7 @@ Die Zeile __#SERVICE__ darf nur die __Kennung__ und die __Kanalnummer__ welche j
 #SERVICE 1:0:19:2777:409:1:C00000:0:0:0: 99
 ```
 
-
+[Diese 3 Demo Dateien gibt es auch im Repo](WAF-FI/www/demo)
 
 Alternativ kann man auch eine Bouquets Datei einspielen und somit auch seine z.b. auf der Dreambox eingespielten Picons nutzen
 Wenn man keinen Enigma Receiver hat kann man das ganze auch "emulieren.
