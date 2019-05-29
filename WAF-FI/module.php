@@ -416,6 +416,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 	width:				'.$divWidth.'px;
 	border-radius:		13px;
 	display:			block;
+	margin-right:		20px;
 
 	-webkit-box-shadow: 0px 0px 2px 3px;
 	box-shadow:			0px 0px 2px 3px;
@@ -424,7 +425,6 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 .navigationbuttons {
 	clear: left;
 	position:			relative;
-	margin-left:		20px;
 	background-image:	none !important;
 	width:				'.$divWidthR.'px;
 	border-radius:		13px;
