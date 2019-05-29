@@ -66,31 +66,42 @@
 
 	{
 		"type": "ExpansionPanel",
-		"caption": "<b>Navigations/Pfeiltasten</b> (klicken zum öffnen)",
+		"caption": "Navigations/Pfeiltasten (klicken zum öffnen)",
 		"items": [
-			{ "type": "Label", "label": "<u>Navigations/Pfeiltasten</u>" },
+			{ "type": "Label",						"label":   "Info: Die Codes werden an das Gerät zum Kanalwechsel geschickt." },
 			{ "type": "ValidationTextBox", "name": "directionDown",		"caption": "Code: Nach UNTEN Taste" },
 			{ "type": "ValidationTextBox", "name": "directionLeft",		"caption": "Code: Nach LINKS Taste" },
 			{ "type": "ValidationTextBox", "name": "directionRight",	"caption": "Code: Nach RECHTS Taste" },
 			{ "type": "ValidationTextBox", "name": "directionUp",		"caption": "Code: Nach OBEN Taste" },
-			{ "type": "ValidationTextBox", "name": "okButton",		"caption": "Code: OK Taste (die in der Mitte vom Steuerkreuz)" },
-			{ "type": "ValidationTextBox", "name": "backButton",		"caption": "Code: ZURÜCK Taste" }
+			{ "type": "ValidationTextBox", "name": "okButton",		"caption": "Code: OK Taste" },
+			{ "type": "Label",						"label":   "Info: Das ist normalerweise die Taste in der Mitte vom Steuerkreuz" },
+			{ "type": "ValidationTextBox", "name": "backButton",		"caption": "Code: ZURÜCK / BACK Taste" }
 		]
 	},
 
-	{ "type": "Label", "label": "Farbige Tasten" },
-	{ "type": "ValidationTextBox", "name": "colorButtonBlue",	"caption": "Code: Blaue Taste" },
-	{ "type": "ValidationTextBox", "name": "colorButtonYellow",	"caption": "Code: Gelbe Taste" },
-	{ "type": "ValidationTextBox", "name": "colorButtonGreen",	"caption": "Code: Grüne Taste" },
-	{ "type": "ValidationTextBox", "name": "colorButtonRed",	"caption": "Code: Rote Taste" },
+	{
+		"type": "ExpansionPanel",
+		"caption": "Farbige Tasten (klicken zum öffnen)",
+		"items": [
+			{ "type": "Label",						"label":   "Info: Die Codes werden an das Gerät zum Kanalwechsel geschickt." },
+			{ "type": "ValidationTextBox", "name": "colorButtonBlue",	"caption": "Code: Blaue Taste" },
+			{ "type": "ValidationTextBox", "name": "colorButtonYellow",	"caption": "Code: Gelbe Taste" },
+			{ "type": "ValidationTextBox", "name": "colorButtonGreen",	"caption": "Code: Grüne Taste" },
+			{ "type": "ValidationTextBox", "name": "colorButtonRed",	"caption": "Code: Rote Taste" }
+		]
+	},
 
-
-	{ "type": "Label", "label": "Lautstärkeregelung" },
-	{ "type": "SelectObject", "name": "volumeDeviceObjectID",	"caption": "Gerät zur Lautstärkeregelung (Object - grünes Icon auswählen)" },
-	{ "type": "ValidationTextBox", "name": "volumeDown",		"caption": "Code: Leiser Taste" },
-	{ "type": "ValidationTextBox", "name": "volumeUp",		"caption": "Code: Lauter Taste" },
-	{ "type": "ValidationTextBox", "name": "volumeMute",		"caption": "Code: Lautlos Taste" },
-
+	{
+		"type": "ExpansionPanel",
+		"caption": "Lautstärkeregelung (klicken zum öffnen)",
+		"items": [
+			{ "type": "SelectObject", "name": "volumeDeviceObjectID",	"caption": "Gerät zur Lautstärkeregelung (Object - grünes Icon auswählen)" },
+			{ "type": "Label",						"label":   "Info: Die Instanz vom Gerät (nicht die Activity) welches die Lautstärke regelt  (Object - grünes Icon auswählen)" },
+			{ "type": "ValidationTextBox", "name": "volumeDown",		"caption": "Code: Leiser Taste" },
+			{ "type": "ValidationTextBox", "name": "volumeUp",		"caption": "Code: Lauter Taste" },
+			{ "type": "ValidationTextBox", "name": "volumeMute",		"caption": "Code: Lautlos Taste" }
+		]
+	},
 
 	{
 		"type": "ExpansionPanel",
