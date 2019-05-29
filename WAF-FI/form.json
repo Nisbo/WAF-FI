@@ -2,13 +2,20 @@
     "elements":
     [
 	{ "type": "Label", "label": "Bei Änderungen IMMER auf HTML Code generieren klicken." },
-	{ "type": "Label", "label": "Dateien und Verzeichnisse" },
-	{ "type": "ValidationTextBox",	"name": "channelListFileName",	"caption": "Name der CSV Datei mit der Kanalliste" },
-	{ "type": "ValidationTextBox",	"name": "pathToCSV",		"caption": "Path zur Kanalliste.csv" },
-	{ "type": "SelectFile",		"name": "channelListUploadFile","caption": "ODER Datei hochladen (wenn Datei hochgeladen dann wird IMMER die Datei genutzt"},
-	{ "type": "CheckBox",		"name": "useBouquet",		"caption": "Datei ist ein Bouquet" },
-	{ "type": "ValidationTextBox",	"name": "pathToImages",		"caption": "Image-Verzeichnis für die Senderlogos" },
 
+	{
+		"type": "ExpansionPanel",
+		"caption": "Dateien und Verzeichnisse (klicken zum öffnen)",
+		"items": [
+			
+			{ "type": "ValidationTextBox",	"name": "channelListFileName",	"caption": "Name der CSV Datei mit der Kanalliste" },
+			{ "type": "ValidationTextBox",	"name": "pathToCSV",		"caption": "Path zur Kanalliste.csv" },
+			{ "type": "SelectFile",		"name": "channelListUploadFile","caption": "ODER Datei hochladen"},
+			{ "type": "Label",						"label":   "Info: wenn eine Datei hochgeladen wird dann wird IMMER die Datei genutzt" },
+			{ "type": "CheckBox",		"name": "useBouquet",		"caption": "Datei ist ein Bouquet" },
+			{ "type": "ValidationTextBox",	"name": "pathToImages",		"caption": "Image-Verzeichnis für die Senderlogos" }
+		]
+	},
 
 	{ "type": "Label", "label": "EIN/AUS schalten" },
 	{ "type": "SelectObject", "name": "harmonyHubObjectID",	"caption": "Harmony Hub - Splitter Instanz (Object - grünes Icon auswählen)" },
