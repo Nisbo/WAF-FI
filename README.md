@@ -7,19 +7,24 @@ https://www.symcon.de/forum/threads/40811-WAF-FI-Kanallisten-Modul-f%C3%BCr-das-
 
 # Sender Logos
 ------------
-Bisher habe ich noch keine freie Quelle gefunden welches es auch erlaubt die Senderlogos hier anzubieten.
-Die Logos müssen also selbst besorgt werden und in einen User Ordner geladen werden.
-Das Verzeichnis zu diesem Ordner kann man im Konfigurator einstellen. 
+Bisher habe ich noch keine freie Quelle gefunden welches es auch erlaubt die Senderlogos hier anzubieten. Hierbei heißt es nicht das wenn keine Info dabei steht man die Logos einfach so woanders hoch laden darf. Das Urheberrecht liegt immer beim Urheber und man darf es nur weiter veröffentlichen wenn dem direkt durch den Urheber zugestimmt wurde. Aus diesem Grund werde ich hier nie Senderlogos hoch laden.
 
-In diesen Ordner müssen die Logos geladen werden:
+Die Logos müssen also selbst besorgt werden und in den im Konfigurationsformular angegebenen User Ordner geladen werden.
+Das Verzeichnis zu diesem Ordner kann man im Konfigurator einstellen.
+
+Ich empfehle die Senderlogos in diesen Ordner zu laden: (Ordner muss selbst erstellt werden)
 ```
 /var/lib/symcon/webfront/user/waffi/images
 ```
-Im Konfigurator ist dann dieser Path einzugeben:
+Im Konfigurationsformular ist dann dieser Path einzugeben:
 ```
 user/waffi/images
 ```
 so das die Logos im Browser geladen werden können.
+Bitte im Browser an Hand eines Bildes (den Namen ARD.png bitte anpassen) aus dem Ordner testen ob man das Bild öffnen kann
+```
+http://IP-Adresse-von-IPS:3777/user/waffi/images/ARD.png
+```
 
 Wo bekomme ich jetzt die Logos her ?
 
@@ -32,7 +37,7 @@ Order auch in den Receiver Foren:
 
 https://www.opena.tv/forum111/
 
-Als Größe empfehle ich 100x60
+__Als Größe empfehle ich 100x60__
 
 
 # CSV Kanalliste
