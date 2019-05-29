@@ -16,6 +16,13 @@ Im sich öffnenden Module-Editor jetzt unten rechts auf das große __Plus-Zeiche
 
 ![Screenshot_1537](https://user-images.githubusercontent.com/26260572/58562725-1ab7c800-822a-11e9-89e7-7153feb86fb1.jpg)
 
+In das sich öffnende Fenster die folgende URL eintragen
+```
+https://github.com/Nisbo/WAF-FI.git
+```
+und auf __OK__ klicken.
+![Screenshot_1538](https://user-images.githubusercontent.com/26260572/58562903-771ae780-822a-11e9-9b78-faf8795e6d02.jpg)
+
 
 
 # Sender Logos
