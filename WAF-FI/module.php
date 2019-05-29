@@ -97,8 +97,8 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		if (strpos($pathToImages, 'http://') === 0 || strpos($pathToImages, 'https://') === 0) {
 			echo "Das Verzeichnis " . $pathToImages . " scheint eine externe URL zu sein.";
 		}else{
-            // change 2 folders up if in module folder 
-            $newDir =  "../../../webfront/" . $pathToImages;
+			$newDir = explode("/symcon/", dirname(__FILE__));
+			$newDir = $newDir[0] . "/symcon/webfront/" . $pathToImages;
 
             $folderContent = "";
             if(is_dir($newDir)) {
@@ -113,7 +113,8 @@ class IPS_Waf_FernsehInterface extends IPSModule {
                 }
                 echo "Gefundene Dateien: " . $folderContent;
             }else{
-                echo "Kein Verzeichnis gefunden";
+                echo "
+					Kein Verzeichnis gefunden für:" . PHP_EOL . "UserPath:" . PHP_EOL . "" . $newDir . "" . PHP_EOL . PHP_EOL . "Verzeichnis vom Modul:" . PHP_EOL . "getcwd:" . PHP_EOL . "" . getcwd() . "" . PHP_EOL . "dirname:" . PHP_EOL . "" . dirname(__FILE__) . "" . PHP_EOL;
             }
 		}
 	}
