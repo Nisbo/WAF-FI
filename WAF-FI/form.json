@@ -13,6 +13,7 @@
 			{ "type": "Label",						"label":   "Info: Ein Klick auf \"PATH-Info\" zeigt den Path zu diesem Modul als Orientierungshilfe." },
 			{ "type": "Button",						"label":   "Prüfe PATH und Dateiname", "onClick": "WAFFI_checkPath($id);" },
 			{ "type": "Label",						"label":   "Info: Ein Klick auf \"Prüfe PATH und Dateiname\" prüft ob die Datei auf Dateiebene erreichbar ist." },
+			{ "type": "Label",						"label":   "Bei Änderungen am Dateinamen oder am PATH muss das Formular zuerst gespeichert werden damit der Test funktioniert." },
 			{ "type": "SelectFile",		"name": "channelListUploadFile","caption": "ODER Datei hochladen"},
 			{ "type": "Label",						"label":   "Info: wenn eine Datei hochgeladen wird dann wird IMMER die Datei genutzt" },
 			{ "type": "CheckBox",		"name": "useBouquet",		"caption": "Datei ist ein Bouquet" },
