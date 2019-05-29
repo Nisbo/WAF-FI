@@ -98,7 +98,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 			echo "Das Verzeichnis " . $pathToImages . " scheint eine externe URL zu sein.";
 		}else{
             // change 2 folders up if in module folder 
-            $newDir =  "../../webfront/" . $pathToImages;
+            $newDir =  "../../../webfront/" . $pathToImages;
 
             $folderContent = "";
             if(is_dir($newDir)) {
