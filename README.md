@@ -67,4 +67,68 @@ für das Addons brauchen wir aber nur die Funktion um sich eine Favoriten Liste 
 
 Wenn man dann keinen Satreceiver nutzt wo die Kanalnummern in der Reihenfolge vergeben werden wie sie in der ExportDatei sequentiell vorhanden sind so kann man die Kanalnummern in der Exportdatei ergänzen. Hierzu muss man hinter dem jeweils kryptischen Eintrag die Kanalnummer hinzufügen getrennt durch EIN Leerleichen. Die Angabe muss dann bei allen Einträgen erfolgen.
 
+
+Format der normalen CSV Datei
+```
+sortOrder;channelNumber;channelName;channelImage
+1;1;ARD;1_HD.png
+2;2;ZDF;ZDF_HD.png
+3;3;RTL;RTL.png
+4;4;Sat1;Sat1.png
+5;5;PRO7;Pro7.png
+6;6;Vox;Vox.png
+7;7;Kabel1;kabel1.png
+8;8;RTL2;RTL2.png
+9;9;SuperRTL;Super_RTL.png
+10;12;3Sat;3sat_HD.png
+11;13;Welt;
+12;14;NTV;NTV.png
+13;15;Phoenix;phoenix_HD.png
+14;16;Tele5;Tele5.png
+15;17;NeoHD;neo_HD.png
+16;50;Eurosport;Eurosport-HD.png
+17;51;Sport1;Sport1-HD.png
+18;64;DMax;DMAX-HD.png
+19;69;7Maxx;
+20;75;Sixx;SIXX.png
+21;89;K1Doku;kabel_eins_doku.png
+22;90;N24Doku;
+23;93;ZDFInfo;zdfinfo_HD.png
+24;99;MTV;MTV.png
+```
+
+Format einer normalen Bouquet Datei (ohne Kanalangabe)
+
+
+Format einer Bouquet mit Kanalangabe
+```
+#NAME Favourites (TV)
+#SERVICE 1:0:19:283D:3FB:1:C00000:0:0:0: 1
+#SERVICE 1:0:19:2B66:3F3:1:C00000:0:0:0: 2
+#SERVICE 1:0:19:EF10:421:1:C00000:0:0:0: 3
+#SERVICE 1:0:19:EF74:3F9:1:C00000:0:0:0: 4
+#SERVICE 1:0:19:EF75:3F9:1:C00000:0:0:0: 5
+#SERVICE 1:0:19:EF11:421:1:C00000:0:0:0: 6
+#SERVICE 1:0:19:EF76:3F9:1:C00000:0:0:0: 7
+#SERVICE 1:0:19:EF15:421:1:C00000:0:0:0: 8
+#SERVICE 1:0:19:2E9B:411:1:C00000:0:0:0: 9
+#SERVICE 1:0:19:2B8E:3F2:1:C00000:0:0:0: 12
+#SERVICE 1:0:19:5274:41D:1:C00000:0:0:0: 13
+#SERVICE 1:0:19:EF14:421:1:C00000:0:0:0: 14
+#SERVICE 1:0:19:285B:401:1:C00000:0:0:0: 15
+#SERVICE 1:0:19:1519:455:1:C00000:0:0:0: 16
+#SERVICE 1:0:19:2B7A:3F3:1:C00000:0:0:0: 17
+#SERVICE 1:0:19:30D6:413:1:C00000:0:0:0: 50
+#SERVICE 1:0:19:1581:41F:1:C00000:0:0:0: 51
+#SERVICE 1:0:19:151A:455:1:C00000:0:0:0: 64
+#SERVICE 1:0:19:EF78:3F9:1:C00000:0:0:0: 69
+#SERVICE 1:0:19:EF77:3F9:1:C00000:0:0:0: 75
+#SERVICE 1:0:1:4465:453:1:C00000:0:0:0: 89
+#SERVICE 1:0:1:30:5:85:C00000:0:0:0: 90
+#SERVICE 1:0:19:2BA2:3F2:1:C00000:0:0:0: 93
+#SERVICE 1:0:19:2777:409:1:C00000:0:0:0: 99
+```
+
+
+
 PS: das ist nur eine privisorische Anleitung, wird zum Release überarbeitet
