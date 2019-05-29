@@ -45,27 +45,6 @@ Die Kanalliste.csv muss in diesen Ordner geladen werden
 welcher allerdings auch im Konfigurator geändert werden kann.
 
 
-Alternativ kann man auch eine Bouquets Datei einspielen und somit auch seine z.b. auf der Dreambox eingespielten Picons nutzen
-Wenn man keinen Enigma Receiver hat kann man das ganze auch "emulieren.
-
-Z.B. die aktuelle Senderliste (Astra) von hier runter laden
-
-https://enigma2-hilfe.de/
-
-und dann mittels DreamboxEdit
-
-https://dreamboxedit.com/category/download/
-
-sich eigene FavoritenListen erstellen.
-
-Hier gibt es dazu eine Anleitung wie DreamBoxEdit funktioniert
-
-https://enigma2-hilfe.de/2017/04/05/senderliste-bearbeiten-und-auf-den-enigma2-receiver-uebertragen/
-
-für das Addons brauchen wir aber nur die Funktion um sich eine Favoriten Liste zu erstellen und zu exportieren.
-
-Wenn man dann keinen Satreceiver nutzt wo die Kanalnummern in der Reihenfolge vergeben werden wie sie in der ExportDatei sequentiell vorhanden sind so kann man die Kanalnummern in der Exportdatei ergänzen. Hierzu muss man hinter dem jeweils kryptischen Eintrag die Kanalnummer hinzufügen getrennt durch EIN Leerleichen. Die Angabe muss dann bei allen Einträgen erfolgen.
-
 
 #### Format der normalen CSV Datei
 ```
@@ -157,4 +136,26 @@ sortOrder;channelNumber;channelName;channelImage
 
 
 
-PS: das ist nur eine privisorische Anleitung, wird zum Release überarbeitet
+Alternativ kann man auch eine Bouquets Datei einspielen und somit auch seine z.b. auf der Dreambox eingespielten Picons nutzen
+Wenn man keinen Enigma Receiver hat kann man das ganze auch "emulieren.
+
+Z.B. die aktuelle Senderliste (Astra) von hier runter laden
+
+https://enigma2-hilfe.de/
+
+und dann mittels DreamboxEdit
+
+https://dreamboxedit.com/category/download/
+
+sich eigene FavoritenListen erstellen.
+
+Hier gibt es dazu eine Anleitung wie DreamBoxEdit funktioniert
+
+https://enigma2-hilfe.de/2017/04/05/senderliste-bearbeiten-und-auf-den-enigma2-receiver-uebertragen/
+
+für das Addons brauchen wir aber nur die Funktion um sich eine Favoriten Liste zu erstellen und zu exportieren.
+
+Wenn man dann keinen Satreceiver nutzt wo die Kanalnummern in der Reihenfolge vergeben werden wie sie in der ExportDatei sequentiell vorhanden sind so kann man die Kanalnummern in der Exportdatei ergänzen. Hierzu muss man hinter dem jeweils kryptischen Eintrag die Kanalnummer hinzufügen getrennt durch EIN Leerleichen. Die Angabe muss dann bei allen Einträgen erfolgen.
+
+
+PS: das ist nur eine provisorische Anleitung, wird zum Release überarbeitet
