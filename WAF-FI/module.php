@@ -287,7 +287,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$designCBrows					= $this->ReadPropertyInteger("designCBrows");
 		$designCBcols					= $this->ReadPropertyInteger("designCBcols");
 
-		$designButtonCBshowEmptyBtn		= $this->ReadPropertyInteger("designButtonCBshowEmptyBtn");
+		$designButtonCBshowEmptyBtn		= $this->ReadPropertyBoolean("designButtonCBshowEmptyBtn");
 		
 		$configStandardButtons	= $this->ReadPropertyString("configStandardButtons");
 
