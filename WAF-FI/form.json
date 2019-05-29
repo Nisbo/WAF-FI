@@ -63,14 +63,20 @@
 		]
 	},
 
-	{ "type": "Label", "label": "Navigations/Pfeiltasten" },
-	{ "type": "ValidationTextBox", "name": "directionDown",		"caption": "Code: Nach UNTEN Taste" },
-	{ "type": "ValidationTextBox", "name": "directionLeft",		"caption": "Code: Nach LINKS Taste" },
-	{ "type": "ValidationTextBox", "name": "directionRight",	"caption": "Code: Nach RECHTS Taste" },
-	{ "type": "ValidationTextBox", "name": "directionUp",		"caption": "Code: Nach OBEN Taste" },
-	{ "type": "ValidationTextBox", "name": "okButton",		"caption": "Code: OK Taste (die in der Mitte vom Steuerkreuz)" },
-	{ "type": "ValidationTextBox", "name": "backButton",		"caption": "Code: ZURÜCK Taste" },
 
+	{
+		"type": "ExpansionPanel",
+		"caption": "<b>Navigations/Pfeiltasten</b> (klicken zum öffnen)",
+		"items": [
+			{ "type": "Label", "label": "<u>Navigations/Pfeiltasten</u>" },
+			{ "type": "ValidationTextBox", "name": "directionDown",		"caption": "Code: Nach UNTEN Taste" },
+			{ "type": "ValidationTextBox", "name": "directionLeft",		"caption": "Code: Nach LINKS Taste" },
+			{ "type": "ValidationTextBox", "name": "directionRight",	"caption": "Code: Nach RECHTS Taste" },
+			{ "type": "ValidationTextBox", "name": "directionUp",		"caption": "Code: Nach OBEN Taste" },
+			{ "type": "ValidationTextBox", "name": "okButton",		"caption": "Code: OK Taste (die in der Mitte vom Steuerkreuz)" },
+			{ "type": "ValidationTextBox", "name": "backButton",		"caption": "Code: ZURÜCK Taste" }
+		]
+	},
 
 	{ "type": "Label", "label": "Farbige Tasten" },
 	{ "type": "ValidationTextBox", "name": "colorButtonBlue",	"caption": "Code: Blaue Taste" },
