@@ -66,11 +66,20 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$this->RegisterVariableString("channelListHTML",				"Diese Variabel ins WebFront einbinden ... zum Ändern bitte Config der Instanz ausführen", "~HTMLBox", 1);
 	}
 
+    public function Destroy() {
+        if (!IPS_InstanceExists($this->InstanceID)) {
+            $this->UnregisterHook("/hook/waffi_" . $this->InstanceID);
+        }
+        parent::Destroy();
+    }
+
 	public function ApplyChanges() {
 		//Never delete this line!
 		parent::ApplyChanges();
 
-		$this->RegisterHook("/hook/waffi_" . $this->InstanceID);
+		if(IPS_GetKernelRunlevel() == KR_READY) {
+			$this->RegisterHook("/hook/waffi_" . $this->InstanceID);
+		}
 	}
 
 	public function getPath() {
@@ -200,6 +209,26 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		}
 		return "text/plain";
 	}
+
+	/* Thx to Nall-chan */
+    protected function UnregisterHook($WebHook) {
+        $ids = IPS_GetInstanceListByModuleID("{015A6EB8-D6E5-4B93-B496-0D3F77AE9FE1}");
+        if (sizeof($ids) > 0) {
+            $hooks = json_decode(IPS_GetProperty($ids[0], "Hooks"), true);
+            $found = false;
+            foreach ($hooks as $index => $hook) {
+                if ($hook['Hook'] == $WebHook) {
+                    $found = $index;
+                    break;
+                }
+            }
+            if ($found !== false) {
+                array_splice($hooks, $index, 1);
+                IPS_SetProperty($ids[0], "Hooks", json_encode($hooks));
+                IPS_ApplyChanges($ids[0]);
+            }
+        }
+    }
 
 	public function getTheBox($boxId, $volumeUp, $volumeDeviceObjectID, $volumeDown, $volumeMute, $channelUp, $channelDeviceObjectID, $channelDown, $directionLeft,
 		$directionRight, $directionUp, $directionDown, $okButton, $backButton, $harmonyHubStartActivityOn, $harmonyHubStartActivityOff, $harmonyHubObjectID,
