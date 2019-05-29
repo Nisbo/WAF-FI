@@ -289,7 +289,7 @@ EkDjPYUUV6VSnD6lSrJWk5TT31soNfP3mtLaW66jtpcKKKK80QUUUUAFFFFABRRRQAUUUUAFFFFAB
 RRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFF
 FABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUA
 FFFFAH//Z"
-    }
+    },
 			{ "type": "ValidationTextBox", "name": "harmonyHubStartActivityOff",	"caption": "Ausschalten - startActivity OFF ID" },
 			{ "type": "Label",							"label":   "Info: Die startActivity ist NICHT die ObjectID, sie befindet sich im Script eine Zeile unter //ausschalten die rechte Zahl" }
 		]
