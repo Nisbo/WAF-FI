@@ -5,6 +5,14 @@ Thema im IP Symcon Forum
 
 https://www.symcon.de/forum/threads/40811-WAF-FI-Kanallisten-Modul-f%C3%BCr-das-Harmony-Modul-Testversion
 
+
+# Installation
+
+Im Object-Baum vom __NEUEN__ Web Editor (geht nicht im alten Editor) unter __Kern Instanzen__ auf __Modules__ doppelklicken
+
+![Screenshot_1536](https://user-images.githubusercontent.com/26260572/58562438-89485600-8229-11e9-838a-2977141e324d.jpg)
+
+
 # Sender Logos
 ------------
 Bisher habe ich noch keine freie Quelle gefunden welches es auch erlaubt die Senderlogos hier anzubieten. Hierbei heißt es nicht das wenn keine Info dabei steht man die Logos einfach so woanders hoch laden darf. Das Urheberrecht liegt immer beim Urheber und man darf es nur weiter veröffentlichen wenn dem direkt durch den Urheber zugestimmt wurde. Aus diesem Grund werde ich hier nie Senderlogos hoch laden.
