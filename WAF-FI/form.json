@@ -124,6 +124,243 @@
 			},
 
 
+
+
+			{ 
+				"type": "RowLayout",
+				"items": [
+					{
+						"type": "List",	"name": "configStandardButtons",	"caption": "Anordnung der Buttons für Lautstärke, Kanalwechsel usw",	"rowCount": 10,	"add": true,	"delete": true,
+						"sort": {	"column": "sortOrder",	"direction": "ascending"   },
+						"columns": [
+							{
+								"label": "Zeile",	"name": "sortOrder", "width": "100px",
+								"add": 0,
+								"edit": {
+									"type": "Select",
+									"caption": "Mode",
+									"options": [
+										{	"label": "Zeile 1",		"value": 1	},
+										{	"label": "Zeile 2",		"value": 2	},
+										{	"label": "Zeile 3",		"value": 3	},
+										{	"label": "Zeile 4",		"value": 4	},
+										{	"label": "Zeile 5",		"value": 5	},
+										{	"label": "Zeile 6",		"value": 6	},
+										{	"label": "Zeile 7",		"value": 7	},
+										{	"label": "Zeile 8",		"value": 8	},
+										{	"label": "Zeile 9",		"value": 9	},
+										{	"label": "Zeile 10",		"value": 10	}
+									]
+								}
+							},
+							{
+								"label": "Spalte 1",	"name": "column1", "width": "100px",
+								"add": 0,
+								"edit": {
+									"type": "Select",
+									"caption": "Mode",
+									"options": [
+										{	"label": "",			"value": 0	},
+										{	"label": "Lauter",		"value": 1	},
+										{	"label": "Leiser",		"value": 2	},
+										{	"label": "Lautlos",		"value": 3	},
+										{	"label": "Kanal rauf",		"value": 4	},
+										{	"label": "Kanal runter",	"value": 5	},
+										{	"label": "Links",		"value": 6	},
+										{	"label": "Rechts",		"value": 7	},
+										{	"label": "Hoch",		"value": 8	},
+										{	"label": "Runter",		"value": 9	},
+										{	"label": "OK/ENTER",		"value": 10	},
+										{	"label": "Zurück",		"value": 11	},
+										{	"label": "Einschalten",		"value": 12	},
+										{	"label": "Ausschalten",		"value": 13	},
+										{	"label": "Rot",			"value": 14	},
+										{	"label": "Blau",		"value": 15	},
+										{	"label": "Gelb",		"value": 16	},
+										{	"label": "Grün",		"value": 17	}
+									]
+								}
+							},
+
+							{
+								"label": "Spalte 2",	"name": "column2", "width": "100px",
+								"add": 0,
+								"edit": {
+									"type": "Select",
+									"caption": "Mode",
+									"options": [
+										{	"label": "",			"value": 0	},
+										{	"label": "Lauter",		"value": 1	},
+										{	"label": "Leiser",		"value": 2	},
+										{	"label": "Lautlos",		"value": 3	},
+										{	"label": "Kanal rauf",		"value": 4	},
+										{	"label": "Kanal runter",	"value": 5	},
+										{	"label": "Links",		"value": 6	},
+										{	"label": "Rechts",		"value": 7	},
+										{	"label": "Hoch",		"value": 8	},
+										{	"label": "Runter",		"value": 9	},
+										{	"label": "OK/ENTER",		"value": 10	},
+										{	"label": "Zurück",		"value": 11	},
+										{	"label": "Einschalten",		"value": 12	},
+										{	"label": "Ausschalten",		"value": 13	},
+										{	"label": "Rot",			"value": 14	},
+										{	"label": "Blau",		"value": 15	},
+										{	"label": "Gelb",		"value": 16	},
+										{	"label": "Grün",		"value": 17	}
+									]
+								}
+							},
+							{
+								"label": "Spalte 3",	"name": "column3", "width": "100px",
+								"add": 0,
+								"edit": {
+									"type": "Select",
+									"caption": "Mode",
+									"options": [
+										{	"label": "",			"value": 0	},
+										{	"label": "Lauter",		"value": 1	},
+										{	"label": "Leiser",		"value": 2	},
+										{	"label": "Lautlos",		"value": 3	},
+										{	"label": "Kanal rauf",		"value": 4	},
+										{	"label": "Kanal runter",	"value": 5	},
+										{	"label": "Links",		"value": 6	},
+										{	"label": "Rechts",		"value": 7	},
+										{	"label": "Hoch",		"value": 8	},
+										{	"label": "Runter",		"value": 9	},
+										{	"label": "OK/ENTER",		"value": 10	},
+										{	"label": "Zurück",		"value": 11	},
+										{	"label": "Einschalten",		"value": 12	},
+										{	"label": "Ausschalten",		"value": 13	},
+										{	"label": "Rot",			"value": 14	},
+										{	"label": "Blau",		"value": 15	},
+										{	"label": "Gelb",		"value": 16	},
+										{	"label": "Grün",		"value": 17	}
+									]
+								}
+							},
+							{
+								"label": "Spalte 4",	"name": "column4", "width": "100px",
+								"add": 0,
+								"edit": {
+									"type": "Select",
+									"caption": "Mode",
+									"options": [
+										{	"label": "",			"value": 0	},
+										{	"label": "Lauter",		"value": 1	},
+										{	"label": "Leiser",		"value": 2	},
+										{	"label": "Lautlos",		"value": 3	},
+										{	"label": "Kanal rauf",		"value": 4	},
+										{	"label": "Kanal runter",	"value": 5	},
+										{	"label": "Links",		"value": 6	},
+										{	"label": "Rechts",		"value": 7	},
+										{	"label": "Hoch",		"value": 8	},
+										{	"label": "Runter",		"value": 9	},
+										{	"label": "OK/ENTER",		"value": 10	},
+										{	"label": "Zurück",		"value": 11	},
+										{	"label": "Einschalten",		"value": 12	},
+										{	"label": "Ausschalten",		"value": 13	},
+										{	"label": "Rot",			"value": 14	},
+										{	"label": "Blau",		"value": 15	},
+										{	"label": "Gelb",		"value": 16	},
+										{	"label": "Grün",		"value": 17	}
+									]
+								}
+							},
+							{
+								"label": "Spalte 5",	"name": "column5", "width": "100px",
+								"add": 0,
+								"edit": {
+									"type": "Select",
+									"caption": "Mode",
+									"options": [
+										{	"label": "",			"value": 0	},
+										{	"label": "Lauter",		"value": 1	},
+										{	"label": "Leiser",		"value": 2	},
+										{	"label": "Lautlos",		"value": 3	},
+										{	"label": "Kanal rauf",		"value": 4	},
+										{	"label": "Kanal runter",	"value": 5	},
+										{	"label": "Links",		"value": 6	},
+										{	"label": "Rechts",		"value": 7	},
+										{	"label": "Hoch",		"value": 8	},
+										{	"label": "Runter",		"value": 9	},
+										{	"label": "OK/ENTER",		"value": 10	},
+										{	"label": "Zurück",		"value": 11	},
+										{	"label": "Einschalten",		"value": 12	},
+										{	"label": "Ausschalten",		"value": 13	},
+										{	"label": "Rot",			"value": 14	},
+										{	"label": "Blau",		"value": 15	},
+										{	"label": "Gelb",		"value": 16	},
+										{	"label": "Grün",		"value": 17	}
+									]
+								}
+							},
+							{
+								"label": "Spalte 6",	"name": "column6", "width": "100px",
+								"add": 0,
+								"edit": {
+									"type": "Select",
+									"caption": "Mode",
+									"options": [
+										{	"label": "",			"value": 0	},
+										{	"label": "Lauter",		"value": 1	},
+										{	"label": "Leiser",		"value": 2	},
+										{	"label": "Lautlos",		"value": 3	},
+										{	"label": "Kanal rauf",		"value": 4	},
+										{	"label": "Kanal runter",	"value": 5	},
+										{	"label": "Links",		"value": 6	},
+										{	"label": "Rechts",		"value": 7	},
+										{	"label": "Hoch",		"value": 8	},
+										{	"label": "Runter",		"value": 9	},
+										{	"label": "OK/ENTER",		"value": 10	},
+										{	"label": "Zurück",		"value": 11	},
+										{	"label": "Einschalten",		"value": 12	},
+										{	"label": "Ausschalten",		"value": 13	},
+										{	"label": "Rot",			"value": 14	},
+										{	"label": "Blau",		"value": 15	},
+										{	"label": "Gelb",		"value": 16	},
+										{	"label": "Grün",		"value": 17	}
+									]
+								}
+							},
+							{
+								"label": "Spalte 7",	"name": "column7", "width": "100px",
+								"add": 0,
+								"edit": {
+									"type": "Select",
+									"caption": "Mode",
+									"options": [
+										{	"label": "",			"value": 0	},
+										{	"label": "Lauter",		"value": 1	},
+										{	"label": "Leiser",		"value": 2	},
+										{	"label": "Lautlos",		"value": 3	},
+										{	"label": "Kanal rauf",		"value": 4	},
+										{	"label": "Kanal runter",	"value": 5	},
+										{	"label": "Links",		"value": 6	},
+										{	"label": "Rechts",		"value": 7	},
+										{	"label": "Hoch",		"value": 8	},
+										{	"label": "Runter",		"value": 9	},
+										{	"label": "OK/ENTER",		"value": 10	},
+										{	"label": "Zurück",		"value": 11	},
+										{	"label": "Einschalten",		"value": 12	},
+										{	"label": "Ausschalten",		"value": 13	},
+										{	"label": "Rot",			"value": 14	},
+										{	"label": "Blau",		"value": 15	},
+										{	"label": "Gelb",		"value": 16	},
+										{	"label": "Grün",		"value": 17	}
+									]
+								}
+							}
+						],
+						"values": [
+						]
+					}
+				]
+			}
+
+
+
+
+
 			{ "type": "SelectColor",	"name": "designButtonBackGroundColorCB",	"caption": "Farbe vom Buttonhintergrund" },
 			{ "type": "SelectColor",	"name": "designButtonBackGroundColorHCB",	"caption": "Farbe vom Buttonhintergrund bei MouseOver" },
 			{ "type": "NumberSpinner",	"name": "designButtonWidthCB",			"caption": "Breite vom Buttonhintergrund",			"suffix": "px"},
@@ -132,276 +369,11 @@
 			{ "type": "NumberSpinner",	"name": "designButtonMarginTopCB",		"caption": "Abstand nach Oben zu anderen Buttons / Rand",	"suffix": "px"},
 			{ "type": "NumberSpinner",	"name": "designButtonMarginLeftCB",		"caption": "Abstand nach Links zu anderen Buttons / Rand",	"suffix": "px"}
 		]
-	},
+	}
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-    { 
-        "type": "RowLayout",
-        "items": [
-		{
-			"type": "List",	"name": "configStandardButtons",	"caption": "Anordnung der Buttons für Lautstärke usw",	"rowCount": 10,	"add": true,	"delete": true,
-			"sort": {	"column": "sortOrder",	"direction": "ascending"   },
-			"columns": [
-				{
-					"label": "Zeile",	"name": "sortOrder", "width": "100px",
-					"add": 0,
-					"edit": {
-						"type": "Select",
-						"caption": "Mode",
-						"options": [
-							{	"label": "Zeile 1",		"value": 1	},
-							{	"label": "Zeile 2",		"value": 2	},
-							{	"label": "Zeile 3",		"value": 3	},
-							{	"label": "Zeile 4",		"value": 4	},
-							{	"label": "Zeile 5",		"value": 5	},
-							{	"label": "Zeile 6",		"value": 6	},
-							{	"label": "Zeile 7",		"value": 7	},
-							{	"label": "Zeile 8",		"value": 8	},
-							{	"label": "Zeile 9",		"value": 9	},
-							{	"label": "Zeile 10",		"value": 10	}
-						]
-					}
-				},
-				{
-					"label": "Spalte 1",	"name": "column1", "width": "100px",
-					"add": 0,
-					"edit": {
-						"type": "Select",
-						"caption": "Mode",
-						"options": [
-							{	"label": "",			"value": 0	},
-							{	"label": "Lauter",		"value": 1	},
-							{	"label": "Leiser",		"value": 2	},
-							{	"label": "Lautlos",		"value": 3	},
-							{	"label": "Kanal rauf",		"value": 4	},
-							{	"label": "Kanal runter",	"value": 5	},
-							{	"label": "Links",		"value": 6	},
-							{	"label": "Rechts",		"value": 7	},
-							{	"label": "Hoch",		"value": 8	},
-							{	"label": "Runter",		"value": 9	},
-							{	"label": "OK/ENTER",		"value": 10	},
-							{	"label": "Zurück",		"value": 11	},
-							{	"label": "Einschalten",		"value": 12	},
-							{	"label": "Ausschalten",		"value": 13	},
-							{	"label": "Rot",			"value": 14	},
-							{	"label": "Blau",		"value": 15	},
-							{	"label": "Gelb",		"value": 16	},
-							{	"label": "Grün",		"value": 17	}
-						]
-					}
-				},
-
-				{
-					"label": "Spalte 2",	"name": "column2", "width": "100px",
-					"add": 0,
-					"edit": {
-						"type": "Select",
-						"caption": "Mode",
-						"options": [
-							{	"label": "",			"value": 0	},
-							{	"label": "Lauter",		"value": 1	},
-							{	"label": "Leiser",		"value": 2	},
-							{	"label": "Lautlos",		"value": 3	},
-							{	"label": "Kanal rauf",		"value": 4	},
-							{	"label": "Kanal runter",	"value": 5	},
-							{	"label": "Links",		"value": 6	},
-							{	"label": "Rechts",		"value": 7	},
-							{	"label": "Hoch",		"value": 8	},
-							{	"label": "Runter",		"value": 9	},
-							{	"label": "OK/ENTER",		"value": 10	},
-							{	"label": "Zurück",		"value": 11	},
-							{	"label": "Einschalten",		"value": 12	},
-							{	"label": "Ausschalten",		"value": 13	},
-							{	"label": "Rot",			"value": 14	},
-							{	"label": "Blau",		"value": 15	},
-							{	"label": "Gelb",		"value": 16	},
-							{	"label": "Grün",		"value": 17	}
-						]
-					}
-				},
-
-				{
-					"label": "Spalte 3",	"name": "column3", "width": "100px",
-					"add": 0,
-					"edit": {
-						"type": "Select",
-						"caption": "Mode",
-						"options": [
-							{	"label": "",			"value": 0	},
-							{	"label": "Lauter",		"value": 1	},
-							{	"label": "Leiser",		"value": 2	},
-							{	"label": "Lautlos",		"value": 3	},
-							{	"label": "Kanal rauf",		"value": 4	},
-							{	"label": "Kanal runter",	"value": 5	},
-							{	"label": "Links",		"value": 6	},
-							{	"label": "Rechts",		"value": 7	},
-							{	"label": "Hoch",		"value": 8	},
-							{	"label": "Runter",		"value": 9	},
-							{	"label": "OK/ENTER",		"value": 10	},
-							{	"label": "Zurück",		"value": 11	},
-							{	"label": "Einschalten",		"value": 12	},
-							{	"label": "Ausschalten",		"value": 13	},
-							{	"label": "Rot",			"value": 14	},
-							{	"label": "Blau",		"value": 15	},
-							{	"label": "Gelb",		"value": 16	},
-							{	"label": "Grün",		"value": 17	}
-						]
-					}
-				},
-
-				{
-					"label": "Spalte 4",	"name": "column4", "width": "100px",
-					"add": 0,
-					"edit": {
-						"type": "Select",
-						"caption": "Mode",
-						"options": [
-							{	"label": "",			"value": 0	},
-							{	"label": "Lauter",		"value": 1	},
-							{	"label": "Leiser",		"value": 2	},
-							{	"label": "Lautlos",		"value": 3	},
-							{	"label": "Kanal rauf",		"value": 4	},
-							{	"label": "Kanal runter",	"value": 5	},
-							{	"label": "Links",		"value": 6	},
-							{	"label": "Rechts",		"value": 7	},
-							{	"label": "Hoch",		"value": 8	},
-							{	"label": "Runter",		"value": 9	},
-							{	"label": "OK/ENTER",		"value": 10	},
-							{	"label": "Zurück",		"value": 11	},
-							{	"label": "Einschalten",		"value": 12	},
-							{	"label": "Ausschalten",		"value": 13	},
-							{	"label": "Rot",			"value": 14	},
-							{	"label": "Blau",		"value": 15	},
-							{	"label": "Gelb",		"value": 16	},
-							{	"label": "Grün",		"value": 17	}
-						]
-					}
-				},
-
-				{
-					"label": "Spalte 5",	"name": "column5", "width": "100px",
-					"add": 0,
-					"edit": {
-						"type": "Select",
-						"caption": "Mode",
-						"options": [
-							{	"label": "",			"value": 0	},
-							{	"label": "Lauter",		"value": 1	},
-							{	"label": "Leiser",		"value": 2	},
-							{	"label": "Lautlos",		"value": 3	},
-							{	"label": "Kanal rauf",		"value": 4	},
-							{	"label": "Kanal runter",	"value": 5	},
-							{	"label": "Links",		"value": 6	},
-							{	"label": "Rechts",		"value": 7	},
-							{	"label": "Hoch",		"value": 8	},
-							{	"label": "Runter",		"value": 9	},
-							{	"label": "OK/ENTER",		"value": 10	},
-							{	"label": "Zurück",		"value": 11	},
-							{	"label": "Einschalten",		"value": 12	},
-							{	"label": "Ausschalten",		"value": 13	},
-							{	"label": "Rot",			"value": 14	},
-							{	"label": "Blau",		"value": 15	},
-							{	"label": "Gelb",		"value": 16	},
-							{	"label": "Grün",		"value": 17	}
-						]
-					}
-				},
-
-				{
-					"label": "Spalte 6",	"name": "column6", "width": "100px",
-					"add": 0,
-					"edit": {
-						"type": "Select",
-						"caption": "Mode",
-						"options": [
-							{	"label": "",			"value": 0	},
-							{	"label": "Lauter",		"value": 1	},
-							{	"label": "Leiser",		"value": 2	},
-							{	"label": "Lautlos",		"value": 3	},
-							{	"label": "Kanal rauf",		"value": 4	},
-							{	"label": "Kanal runter",	"value": 5	},
-							{	"label": "Links",		"value": 6	},
-							{	"label": "Rechts",		"value": 7	},
-							{	"label": "Hoch",		"value": 8	},
-							{	"label": "Runter",		"value": 9	},
-							{	"label": "OK/ENTER",		"value": 10	},
-							{	"label": "Zurück",		"value": 11	},
-							{	"label": "Einschalten",		"value": 12	},
-							{	"label": "Ausschalten",		"value": 13	},
-							{	"label": "Rot",			"value": 14	},
-							{	"label": "Blau",		"value": 15	},
-							{	"label": "Gelb",		"value": 16	},
-							{	"label": "Grün",		"value": 17	}
-						]
-					}
-				},
-
-				{
-					"label": "Spalte 7",	"name": "column7", "width": "100px",
-					"add": 0,
-					"edit": {
-						"type": "Select",
-						"caption": "Mode",
-						"options": [
-							{	"label": "",			"value": 0	},
-							{	"label": "Lauter",		"value": 1	},
-							{	"label": "Leiser",		"value": 2	},
-							{	"label": "Lautlos",		"value": 3	},
-							{	"label": "Kanal rauf",		"value": 4	},
-							{	"label": "Kanal runter",	"value": 5	},
-							{	"label": "Links",		"value": 6	},
-							{	"label": "Rechts",		"value": 7	},
-							{	"label": "Hoch",		"value": 8	},
-							{	"label": "Runter",		"value": 9	},
-							{	"label": "OK/ENTER",		"value": 10	},
-							{	"label": "Zurück",		"value": 11	},
-							{	"label": "Einschalten",		"value": 12	},
-							{	"label": "Ausschalten",		"value": 13	},
-							{	"label": "Rot",			"value": 14	},
-							{	"label": "Blau",		"value": 15	},
-							{	"label": "Gelb",		"value": 16	},
-							{	"label": "Grün",		"value": 17	}
-						]
-					}
-				}
-			],
-			"values": [
-			]
-		}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        ]
-    }
 
 
 
