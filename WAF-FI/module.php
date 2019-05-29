@@ -85,7 +85,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 	}
 
 	public function getPath() {
-		echo getcwd();
+		echo dirname(__FILE__);
 	}
 
 	/**
