@@ -238,7 +238,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 
 		// Yes I know, a Switch is the best solution for this case :D
 		// Leerbox
-		if($boxId == 0)     $box = '<div class="buttonMouseOverRE ' . ($designButtonCBshowEmptyBtn == true ? ('zapbuttonR') : ('zapbuttonRE')) . '" id="leer"> </div>';
+		if($boxId == 0)     $box = '<div class="' . ($designButtonCBshowEmptyBtn == true ? ('buttonMouseOverR zapbuttonR') : ('buttonMouseOverRE zapbuttonRE')) . '" id="leer"> </div>';
 
 		// Lauter
 		if($boxId == 1)     $box = '<div class="buttonMouseOverR zapbuttonR" id="volumeUp"><img class="zapimage"       src="hook/waffi_' . $this->InstanceID . '/images/volumeUp.png"     objectid="' . $this->InstanceID. '" id="Button_'.$volumeUp.'_'.$volumeDeviceObjectID.'"       alt="volumeUp"></div>';
