@@ -2,13 +2,15 @@
 #################################################################################################################################
 # Addon:	WAF-FI --> WAF Fernseh Interface
 # Version:	1.0
-# Date:		16.05.2019
+# Date:		29.05.2019
 # Autor:	Nisbo
 # Based on an idea by: Fonzo
 # https://www.symcon.de/forum/threads/31582-Tastenfeld-Navigationswippe-dynamische-Webseiten-im-Webfront-darstellen
 #################################################################################################################################
 */
-console.log("Kanalliste.js geladen");
+
+// console.log("channelList.js geladen");
+
 $(document).ready(function(){
 	$('.zapbuttons').on('click', 'img', function (){
 		//alert('click!' + $(event.target).attr('id'));
