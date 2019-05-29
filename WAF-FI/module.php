@@ -2,20 +2,15 @@
 #################################################################################################################################
 # Addon:	WAF-FI --> WAF Fernseh Interface
 # Version:	1.0
-# Date:		27.05.2019
+# Date:		29.05.2019
 # Autor:	Nisbo
 # Based on an idea by: Fonzo
 # https://www.symcon.de/forum/threads/31582-Tastenfeld-Navigationswippe-dynamische-Webseiten-im-Webfront-darstellen
 #################################################################################################################################
-// https://www.iconfinder.com/iconsets/simplicio
-// https://www.iconfinder.com/iconsets/e-commerce-icon-set
-// https://www.iconfinder.com/iconsets/developer-set-3
 
 require_once __DIR__ . '/../libs/WafFiHelper.php';
 
-// Klassendefinition
 class IPS_Waf_FernsehInterface extends IPSModule {
-
 	public function Create() {
 		//Never delete this line!
 		parent::Create();
