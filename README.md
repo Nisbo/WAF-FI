@@ -45,8 +45,14 @@ Die __Kanalliste.csv__ (Beispielname) muss in diesen Ordner geladen werden
 der Name und der PATH der Datei kann im Konfigurator geändert werden.
 Alternativ kann man die Datei auch über den Konfigurator hoch laden.
 
-## Aufbau der Kanallisteä
+## Aufbau der Kanalliste
 #### Format der normalen CSV Datei
+
+- sortOrder --> Nach dieser Spalte werden die Sender im WebFront sortiert
+- channelNumber --> Die Kanalnummer die an den Receiver / TV geschickt wird
+- channelName --> Der Name vom Kanal
+- channelImage --> Das Bild mit dem Senderlogo im IMAGE Verzeichnis welches im Konfigurator ausgewählt wurde
+
 ```
 sortOrder;channelNumber;channelName;channelImage
 1;1;ARD;1_HD.png
