@@ -12,6 +12,11 @@ Im Object-Baum vom __NEUEN__ Web Editor (geht nicht im alten Editor) unter __Ker
 
 ![Screenshot_1536](https://user-images.githubusercontent.com/26260572/58562438-89485600-8229-11e9-838a-2977141e324d.jpg)
 
+Im sich öffnenden Module-Editor jetzt unten rechts auf das große __Plus-Zeichen__ klicken
+
+![Screenshot_1537](https://user-images.githubusercontent.com/26260572/58562725-1ab7c800-822a-11e9-89e7-7153feb86fb1.jpg)
+
+
 
 # Sender Logos
 ------------
