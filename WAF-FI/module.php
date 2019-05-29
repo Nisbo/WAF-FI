@@ -70,7 +70,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		//Never delete this line!
 		parent::ApplyChanges();
 
-		$this->RegisterHook("/hook/waffi_" . $_IPS['SELF']);
+		$this->RegisterHook("/hook/waffi_" . $this->InstanceID);
 	}
 
 	public function getPath() {
@@ -149,7 +149,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 	protected function ProcessHookData() {
 		$root = realpath(__DIR__ . "/www");
 		//reduce any relative paths. this also checks for file existance
-		$path = realpath($root . "/" . substr($_SERVER['SCRIPT_NAME'], strlen("/hook/waffi_" . $_IPS['SELF'] . "/")));
+		$path = realpath($root . "/" . substr($_SERVER['SCRIPT_NAME'], strlen("/hook/waffi_" . $this->InstanceID . "/")));
 		if($path === false) {
 			http_response_code(404);
 			die("File not found!");
@@ -212,55 +212,55 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		if($boxId == 0)     $box = '<div class="buttonMouseOverRE ' . ($designButtonCBshowEmptyBtn == true ? ('zapbuttonR') : ('zapbuttonRE')) . '" id="leer"> </div>';
 
 		// Lauter
-		if($boxId == 1)     $box = '<div class="buttonMouseOverR zapbuttonR" id="volumeUp"><img class="zapimage"       src="hook/waffi_' . $_IPS['SELF'] . '/images/volumeUp.png"     id="Button_'.$volumeUp.'_'.$volumeDeviceObjectID.'"       alt="volumeUp"></div>';
+		if($boxId == 1)     $box = '<div class="buttonMouseOverR zapbuttonR" id="volumeUp"><img class="zapimage"       src="hook/waffi_' . $this->InstanceID . '/images/volumeUp.png"     objectid="' . $this->InstanceID. '" id="Button_'.$volumeUp.'_'.$volumeDeviceObjectID.'"       alt="volumeUp"></div>';
 		
 		// Leiser
-		if($boxId == 2)     $box = '<div class="buttonMouseOverR zapbuttonR" id="volumeDown"><img class="zapimage"     src="hook/waffi_' . $_IPS['SELF'] . '/images/volumeDown.png"   id="Button_'.$volumeDown.'_'.$volumeDeviceObjectID.'"     alt="volumeDown"></div>';
+		if($boxId == 2)     $box = '<div class="buttonMouseOverR zapbuttonR" id="volumeDown"><img class="zapimage"     src="hook/waffi_' . $this->InstanceID . '/images/volumeDown.png"   objectid="' . $this->InstanceID. '" id="Button_'.$volumeDown.'_'.$volumeDeviceObjectID.'"     alt="volumeDown"></div>';
 		
 		// Lautlos
-		if($boxId == 3)     $box = '<div class="buttonMouseOverR zapbuttonR" id="volumeMute"><img class="zapimage"     src="hook/waffi_' . $_IPS['SELF'] . '/images/volumeMute.png"   id="Button_'.$volumeMute.'_'.$volumeDeviceObjectID.'"     alt="volumeMute"></div>';
+		if($boxId == 3)     $box = '<div class="buttonMouseOverR zapbuttonR" id="volumeMute"><img class="zapimage"     src="hook/waffi_' . $this->InstanceID . '/images/volumeMute.png"   objectid="' . $this->InstanceID. '" id="Button_'.$volumeMute.'_'.$volumeDeviceObjectID.'"     alt="volumeMute"></div>';
 		
 		// Kanal rauf
-		if($boxId == 4)     $box = '<div class="buttonMouseOverR zapbuttonR" id="channelUp"><img class="zapimage"      src="hook/waffi_' . $_IPS['SELF'] . '/images/channelUp.png"    id="Button_'.$channelUp.'_'.$channelDeviceObjectID.'"     alt="channelUp"></div>';
+		if($boxId == 4)     $box = '<div class="buttonMouseOverR zapbuttonR" id="channelUp"><img class="zapimage"      src="hook/waffi_' . $this->InstanceID . '/images/channelUp.png"    objectid="' . $this->InstanceID. '" id="Button_'.$channelUp.'_'.$channelDeviceObjectID.'"     alt="channelUp"></div>';
 		
 		// Kanal runter
-		if($boxId == 5)     $box = '<div class="buttonMouseOverR zapbuttonR" id="channelDown"><img class="zapimage"    src="hook/waffi_' . $_IPS['SELF'] . '/images/channelDown.png"  id="Button_'.$channelDown.'_'.$channelDeviceObjectID.'"   alt="channelDown"></div>';
+		if($boxId == 5)     $box = '<div class="buttonMouseOverR zapbuttonR" id="channelDown"><img class="zapimage"    src="hook/waffi_' . $this->InstanceID . '/images/channelDown.png"  objectid="' . $this->InstanceID. '" id="Button_'.$channelDown.'_'.$channelDeviceObjectID.'"   alt="channelDown"></div>';
 		
 		// Links
-		if($boxId == 6)     $box = '<div class="buttonMouseOverR zapbuttonR" id="buttonLeft"><img class="zapimage"     src="hook/waffi_' . $_IPS['SELF'] . '/images/ButtonLeft.png"   id="Button_'.$directionLeft.'_'.$channelDeviceObjectID.'"    alt="left"/></div>';
+		if($boxId == 6)     $box = '<div class="buttonMouseOverR zapbuttonR" id="buttonLeft"><img class="zapimage"     src="hook/waffi_' . $this->InstanceID . '/images/ButtonLeft.png"   objectid="' . $this->InstanceID. '" id="Button_'.$directionLeft.'_'.$channelDeviceObjectID.'"    alt="left"/></div>';
 		
 		// Rechts
-		if($boxId == 7)     $box = '<div class="buttonMouseOverR zapbuttonR" id="buttonRight"><img class="zapimage"    src="hook/waffi_' . $_IPS['SELF'] . '/images/ButtonRight.png"  id="Button_'.$directionRight.'_'.$channelDeviceObjectID.'"   alt="right"/></div>';
+		if($boxId == 7)     $box = '<div class="buttonMouseOverR zapbuttonR" id="buttonRight"><img class="zapimage"    src="hook/waffi_' . $this->InstanceID . '/images/ButtonRight.png"  objectid="' . $this->InstanceID. '" id="Button_'.$directionRight.'_'.$channelDeviceObjectID.'"   alt="right"/></div>';
 		
 		// Hoch
-		if($boxId == 8)     $box = '<div class="buttonMouseOverR zapbuttonR" id="buttonUp"><img class="zapimage"       src="hook/waffi_' . $_IPS['SELF'] . '/images/ButtonUp.png"     id="Button_'.$directionUp.'_'.$channelDeviceObjectID.'"      alt="up"/></div>';
+		if($boxId == 8)     $box = '<div class="buttonMouseOverR zapbuttonR" id="buttonUp"><img class="zapimage"       src="hook/waffi_' . $this->InstanceID . '/images/ButtonUp.png"     objectid="' . $this->InstanceID. '" id="Button_'.$directionUp.'_'.$channelDeviceObjectID.'"      alt="up"/></div>';
 		
 		// Runter
-		if($boxId == 9)     $box = '<div class="buttonMouseOverR zapbuttonR" id="buttonDown"><img class="zapimage"     src="hook/waffi_' . $_IPS['SELF'] . '/images/ButtonDown.png"   id="Button_'.$directionDown.'_'.$channelDeviceObjectID.'"    alt="down"/></div>';
+		if($boxId == 9)     $box = '<div class="buttonMouseOverR zapbuttonR" id="buttonDown"><img class="zapimage"     src="hook/waffi_' . $this->InstanceID . '/images/ButtonDown.png"   objectid="' . $this->InstanceID. '" id="Button_'.$directionDown.'_'.$channelDeviceObjectID.'"    alt="down"/></div>';
 		
 		// OK
-		if($boxId == 10)    $box = '<div class="buttonMouseOverR zapbuttonR" id="buttonOK"><img class="zapimage"       src="hook/waffi_' . $_IPS['SELF'] . '/images/ButtonOK.png"     id="Button_'.$okButton.'_'.$channelDeviceObjectID.'"         alt="enter"/></div>';
+		if($boxId == 10)    $box = '<div class="buttonMouseOverR zapbuttonR" id="buttonOK"><img class="zapimage"       src="hook/waffi_' . $this->InstanceID . '/images/ButtonOK.png"     objectid="' . $this->InstanceID. '" id="Button_'.$okButton.'_'.$channelDeviceObjectID.'"         alt="enter"/></div>';
 		
 		// Zurück
-		if($boxId == 11)    $box = '<div class="buttonMouseOverR zapbuttonR" id="buttonBack"><img class="zapimage"     src="hook/waffi_' . $_IPS['SELF'] . '/images/ButtonBack.png"   id="Button_'.$backButton.'_'.$channelDeviceObjectID.'"    alt="ButtonBack"></div>';
+		if($boxId == 11)    $box = '<div class="buttonMouseOverR zapbuttonR" id="buttonBack"><img class="zapimage"     src="hook/waffi_' . $this->InstanceID . '/images/ButtonBack.png"   objectid="' . $this->InstanceID. '" id="Button_'.$backButton.'_'.$channelDeviceObjectID.'"    alt="ButtonBack"></div>';
 		
 		// Ein
-		if($boxId == 12)    $box = '<div class="buttonMouseOverR zapbuttonR" id="buttonOn"><img class="zapimage"       src="hook/waffi_' . $_IPS['SELF'] . '/images/ButtonOn.png"     id="ButtonOO_'.$harmonyHubStartActivityOn.'_'.$harmonyHubObjectID.'"  alt="On"/></div>';
+		if($boxId == 12)    $box = '<div class="buttonMouseOverR zapbuttonR" id="buttonOn"><img class="zapimage"       src="hook/waffi_' . $this->InstanceID . '/images/ButtonOn.png"     objectid="' . $this->InstanceID. '" id="ButtonOO_'.$harmonyHubStartActivityOn.'_'.$harmonyHubObjectID.'"  alt="On"/></div>';
 		
 		// Aus
-		if($boxId == 13)    $box = '<div class="buttonMouseOverR zapbuttonR" id="buttonOff"><img class="zapimage"      src="hook/waffi_' . $_IPS['SELF'] . '/images/ButtonOff.png"    id="ButtonOO_'.$harmonyHubStartActivityOff.'_'.$harmonyHubObjectID.'" alt="Off"/></div>';
+		if($boxId == 13)    $box = '<div class="buttonMouseOverR zapbuttonR" id="buttonOff"><img class="zapimage"      src="hook/waffi_' . $this->InstanceID . '/images/ButtonOff.png"    objectid="' . $this->InstanceID. '" id="ButtonOO_'.$harmonyHubStartActivityOff.'_'.$harmonyHubObjectID.'" alt="Off"/></div>';
 		
 		// Rot
-		if($boxId == 14)    $box = '<div class="buttonMouseOverR zapbuttonR" id="buttonRed"><img class="zapimage"      src="hook/waffi_' . $_IPS['SELF'] . '/images/ButtonRed.png"    id="Button_'.$colorButtonRed.'_'.$channelDeviceObjectID.'"       alt="red"/></div>';
+		if($boxId == 14)    $box = '<div class="buttonMouseOverR zapbuttonR" id="buttonRed"><img class="zapimage"      src="hook/waffi_' . $this->InstanceID . '/images/ButtonRed.png"    objectid="' . $this->InstanceID. '" id="Button_'.$colorButtonRed.'_'.$channelDeviceObjectID.'"       alt="red"/></div>';
 		
 		// Blau
-		if($boxId == 15)    $box = '<div class="buttonMouseOverR zapbuttonR" id="buttonBlue"><img class="zapimage"     src="hook/waffi_' . $_IPS['SELF'] . '/images/ButtonBlue.png"   id="Button_'.$colorButtonBlue.'_'.$channelDeviceObjectID.'"      alt="blue"/></div>';
+		if($boxId == 15)    $box = '<div class="buttonMouseOverR zapbuttonR" id="buttonBlue"><img class="zapimage"     src="hook/waffi_' . $this->InstanceID . '/images/ButtonBlue.png"   objectid="' . $this->InstanceID. '" id="Button_'.$colorButtonBlue.'_'.$channelDeviceObjectID.'"      alt="blue"/></div>';
 		
 		// Gelb
-		if($boxId == 16)    $box = '<div class="buttonMouseOverR zapbuttonR" id="buttonYellow"><img class="zapimage"   src="hook/waffi_' . $_IPS['SELF'] . '/images/ButtonYellow.png" id="Button_'.$colorButtonYellow.'_'.$channelDeviceObjectID.'"    alt="yellow"/></div>';
+		if($boxId == 16)    $box = '<div class="buttonMouseOverR zapbuttonR" id="buttonYellow"><img class="zapimage"   src="hook/waffi_' . $this->InstanceID . '/images/ButtonYellow.png" objectid="' . $this->InstanceID. '" id="Button_'.$colorButtonYellow.'_'.$channelDeviceObjectID.'"    alt="yellow"/></div>';
 		
 		// Grün
-		if($boxId == 17)    $box = '<div class="buttonMouseOverR zapbuttonR" id="buttonGreen"><img class="zapimage"    src="hook/waffi_' . $_IPS['SELF'] . '/images/ButtonGreen.png"  id="Button_'.$colorButtonGreen.'_'.$channelDeviceObjectID.'"     alt="green"/></div>';
+		if($boxId == 17)    $box = '<div class="buttonMouseOverR zapbuttonR" id="buttonGreen"><img class="zapimage"    src="hook/waffi_' . $this->InstanceID . '/images/ButtonGreen.png"  objectid="' . $this->InstanceID. '" id="Button_'.$colorButtonGreen.'_'.$channelDeviceObjectID.'"     alt="green"/></div>';
 
 		return $box;
 	}
@@ -315,7 +315,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$designOwnCSScode               = $this->ReadPropertyString("designOwnCSScode");
 		$configStandardButtons			= $this->ReadPropertyString("configStandardButtons");
 
-		IPS_LogMessage($_IPS['SELF'], "WAF-FI Button Array: ". $configStandardButtons. "");
+		IPS_LogMessage($this->InstanceID, "WAF-FI Button Array: ". $configStandardButtons. "");
 
 		if(substr($pathToImages, -1, 1) != "/") $pathToImages          .= "/"; // to make sure there is a slash at the end
 		if(substr($pathToCSV, -1, 1) != "/")    $pathToCSV             .= "/"; // to make sure there is a slash at the end
@@ -342,7 +342,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 
 				$imageID = 'Kanal_' . $channelCount . '_' . $sendSingleDigits . '_' . $sendENTERkey . '_' . $sendENTERkeyCode . '_' . $channelDeviceObjectID;
                 $image = strtoupper(str_replace(":", "_", substr($val[1], 0, -1))) . ".png";
-                $image = '<img class="zapimage" src="' . $pathToImages . $image . '" id="' . $imageID . '" alt="Kanal' . $channelCount . '">';
+                $image = '<img class="zapimage" src="' . $pathToImages . $image . '" id="' . $imageID . '" alt="Kanal' . $channelCount . '" objectid="' . $this->InstanceID. '">';
 
 				$channelListHTML .= '<div class="buttonMouseOver zapbutton" id="Kanal' . $channelCount . 'Zap">' . $image . '</div>';
 			}
@@ -360,9 +360,9 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 				$imageID = 'Kanal_' . $val['channelNumber'] . '_' . $sendSingleDigits . '_' . $sendENTERkey . '_' . $sendENTERkeyCode . '_' . $channelDeviceObjectID;
 
 				if($val['channelImage'] == "") {
-					$image = '<div class="noImageAvailable"><br /><a id="' . $imageID . '" >' . $val['channelName'] . '</a></div>';
+					$image = '<div class="noImageAvailable"><br /><a objectid="' . $this->InstanceID. '" id="' . $imageID . '" >' . $val['channelName'] . '</a></div>';
 				} else { 
-					$image = '<img class="zapimage" src="' . $pathToImages . $val['channelImage'] . '" id="' . $imageID . '" alt="' . $val['channelName'] . '">';
+					$image = '<img class="zapimage" src="' . $pathToImages . $val['channelImage'] . '" id="' . $imageID . '" alt="' . $val['channelName'] . '" objectid="' . $this->InstanceID. '">';
 				}
 
 				$channelListHTML .= '<div class="buttonMouseOver zapbutton" id="' . $val['channelName'] . 'Zap">' . $image . '</div>';
@@ -378,7 +378,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$divWidthR = ($designCBcols * ($designButtonWidthCB + $designButtonMarginLeftCB)) + $designButtonMarginLeftCB;
 
 		$cssInclude = '
-<link type="text/css" href="/hook/waffi_' . $_IPS['SELF'] . '/css/waffi.css" rel="stylesheet">
+<link type="text/css" href="/hook/waffi_' . $this->InstanceID . '/css/waffi.css" rel="stylesheet">
 <style>
 
 .zapbuttons {
@@ -530,8 +530,8 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$jsInclude = "
 		<script>		
 		[
-		  '/hook/waffi_" . $_IPS['SELF'] . "/js/jquery.js',
-		  '/hook/waffi_" . $_IPS['SELF'] . "/js/channelList.js'
+		  '/hook/waffi_" . $this->InstanceID . "/js/jquery.js',
+		  '/hook/waffi_" . $this->InstanceID . "/js/channelList.js'
 		].forEach(function(src) {
 		  var script = document.createElement('script');
 		  script.src = src;
