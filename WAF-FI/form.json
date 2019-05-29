@@ -8,6 +8,7 @@
 		"caption": "Dateien und Verzeichnisse (klicken zum öffnen)",
 		"items": [
 			{ "type": "ValidationTextBox",	"name": "channelListFileName",	"caption": "Name der CSV Datei mit der Kanalliste / Bouquet" },
+			{ "type": "Button",						"caption": "Format der CSV / Bouquet (Externer Link)", "onClick": "echo 'https://github.com/Nisbo/WAF-FI/blob/master/README.md#csv-kanalliste';" },
 			{ "type": "ValidationTextBox",	"name": "pathToCSV",		"caption": "Path zur Kanalliste.csv / Bouquet" },
 			{ "type": "Button",						"label":   "PATH-Info", "onClick": "WAFFI_getPath($id);" },
 			{ "type": "Label",						"label":   "Info: Ein Klick auf \"PATH-Info\" zeigt den Path zu diesem Modul als Orientierungshilfe." },
