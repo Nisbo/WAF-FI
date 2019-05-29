@@ -151,8 +151,8 @@ Die Zeile __#SERVICE__ darf nur die __Kennung__ und die __Kanalnummer__ welche j
 
 [Diese 3 Demo Dateien gibt es auch im Repo](WAF-FI/www/demo)
 
-Alternativ kann man auch eine Bouquets Datei einspielen und somit auch seine z.b. auf der Dreambox eingespielten Picons nutzen
-Wenn man keinen Enigma Receiver hat kann man das ganze auch "emulieren.
+Alternativ kann man auch eine Bouquets Datei einspielen (Format siehe oben) und somit auch seine z.b. auf der Dreambox eingespielten Picons nutzen. 
+Wenn man keinen Enigma Receiver hat kann man das Ganze auch "emulieren.
 
 Z.B. die aktuelle Senderliste (Astra) von hier runter laden
 
@@ -170,7 +170,7 @@ https://enigma2-hilfe.de/2017/04/05/senderliste-bearbeiten-und-auf-den-enigma2-r
 
 für das Addons brauchen wir aber nur die Funktion um sich eine Favoriten Liste zu erstellen und zu exportieren.
 
-Wenn man dann keinen Satreceiver nutzt wo die Kanalnummern in der Reihenfolge vergeben werden wie sie in der ExportDatei sequentiell vorhanden sind so kann man die Kanalnummern in der Exportdatei ergänzen. Hierzu muss man hinter dem jeweils kryptischen Eintrag die Kanalnummer hinzufügen getrennt durch EIN Leerleichen. Die Angabe muss dann bei allen Einträgen erfolgen.
+Wenn man dann keinen Satreceiver nutzt wo die Kanalnummern in der Reihenfolge vergeben werden wie sie in der ExportDatei sequentiell vorhanden sind so kann man die Kanalnummern in der Exportdatei ergänzen. (Format siehe oben) Hierzu muss man hinter dem jeweils kryptischen Eintrag die Kanalnummer hinzufügen getrennt durch EIN Leerleichen. Die Angabe muss dann bei allen Einträgen erfolgen.
 
 
 PS: das ist nur eine provisorische Anleitung, wird zum Release überarbeitet
