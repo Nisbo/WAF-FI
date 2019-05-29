@@ -170,7 +170,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 
 	public function getTheBox($boxId, $volumeUp, $volumeDeviceObjectID, $volumeDown, $volumeMute, $channelUp, $channelDeviceObjectID, $channelDown, $directionLeft,
 		$directionRight, $directionUp, $directionDown, $okButton, $backButton, $harmonyHubStartActivityOn, $harmonyHubStartActivityOff, $harmonyHubObjectID,
-		$colorButtonRed, $colorButtonBlue, $colorButtonYellow, $colorButtonGreen){
+		$colorButtonRed, $colorButtonBlue, $colorButtonYellow, $colorButtonGreen, $designButtonCBshowEmptyBtn){
 
 		$box = "BoxID " . $boxId. " n.a.";
 
