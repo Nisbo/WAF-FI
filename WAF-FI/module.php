@@ -70,6 +70,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$this->RegisterPropertyInteger("designCBcols",					5); // 5
 
 		$this->RegisterPropertyBoolean("designButtonCBshowEmptyBtn",	false);
+		$this->RegisterPropertyString("designOwnCSScode",				"");
 
 		$this->RegisterPropertyString("channelListUploadFile", "");
 
@@ -288,6 +289,7 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 		$designCBcols					= $this->ReadPropertyInteger("designCBcols");
 
 		$designButtonCBshowEmptyBtn		= $this->ReadPropertyBoolean("designButtonCBshowEmptyBtn");
+		$designOwnCSScode               = $this->ReadPropertyString("designOwnCSScode");
 		
 		$configStandardButtons	= $this->ReadPropertyString("configStandardButtons");
 
@@ -366,52 +368,39 @@ class IPS_Waf_FernsehInterface extends IPSModule {
 
 		//print_r($data); 
 
-// calculate size
-$divWidth = ($designButtonPerRow * ($designButtonWidth + $designButtonMarginLeft)) + $designButtonMarginLeft;
+		// calculate size
+		$divWidth = ($designButtonPerRow * ($designButtonWidth + $designButtonMarginLeft)) + $designButtonMarginLeft;
 
-// calculate size Rechts
-$divWidthR = ($designCBcols * ($designButtonWidthCB + $designButtonMarginLeftCB)) + $designButtonMarginLeftCB;
+		// calculate size Rechts
+		$divWidthR = ($designCBcols * ($designButtonWidthCB + $designButtonMarginLeftCB)) + $designButtonMarginLeftCB;
 
 		$cssInclude = '
-		<link type="text/css" href="/hook/waffi/css/waffi.css" rel="stylesheet">
-
+<link type="text/css" href="/hook/waffi/css/waffi.css" rel="stylesheet">
 <style>
 
 .zapbuttons {
-	float: left;
-	/*
-	background-image: -webkit-linear-gradient(305deg,rgba(255,255,255,1.00) 0%,rgba(69,57,57,1.00) 100%);
-	background-image: -moz-linear-gradient(305deg,rgba(255,255,255,1.00) 0%,rgba(69,57,57,1.00) 100%);
-	background-image: -o-linear-gradient(305deg,rgba(255,255,255,1.00) 0%,rgba(69,57,57,1.00) 100%);
-	background-image: linear-gradient(145deg,rgba(255,255,255,1.00) 0%,rgba(69,57,57,1.00) 100%);
-	*/
-	background-image:none !important;
-	width: '.$divWidth.'px;
-	border-radius: 13px;
-	display: block;
-	-webkit-box-shadow: 0px 0px 2px 3px;
-	box-shadow: 0px 0px 2px 3px;
-}
+	float:				left;
+	background-image:	none !important;
+	width:				'.$divWidth.'px;
+	border-radius:		13px;
+	display:			block;
 
+	-webkit-box-shadow: 0px 0px 2px 3px;
+	box-shadow:			0px 0px 2px 3px;
+}
 
 .navigationbuttons {
 	clear: left;
-	position: relative;
-	margin-left: 20px;
-	/*
-	background-image: -webkit-linear-gradient(305deg,rgba(255,255,255,1.00) 0%,rgba(69,57,57,1.00) 100%);
-	background-image: -moz-linear-gradient(305deg,rgba(255,255,255,1.00) 0%,rgba(69,57,57,1.00) 100%);
-	background-image: -o-linear-gradient(305deg,rgba(255,255,255,1.00) 0%,rgba(69,57,57,1.00) 100%);
-	background-image: linear-gradient(145deg,rgba(255,255,255,1.00) 0%,rgba(69,57,57,1.00) 100%);
-	*/
-	background-image:none !important;
-	width: '.$divWidthR.'px;
-	border-radius: 13px;
-	display: block;
-	-webkit-box-shadow: 0px 0px 2px 3px;
-	box-shadow: 0px 0px 2px 3px;
-}
+	position:			relative;
+	margin-left:		20px;
+	background-image:	none !important;
+	width:				'.$divWidthR.'px;
+	border-radius:		13px;
+	display:			block;
 
+	-webkit-box-shadow: 0px 0px 2px 3px;
+	box-shadow:			0px 0px 2px 3px;
+}
 
 .zapbutton {
 	border-radius: '.$designButtonEdge.'px;
@@ -433,24 +422,12 @@ $divWidthR = ($designCBcols * ($designButtonWidthCB + $designButtonMarginLeftCB)
 	font-size:		large;
 	text-shadow:	2px 2px 4px #252323;
 
-	width:  '.$designButtonWidth.'px;
-	height: '.$designButtonHeight.'px;
+	width:			'.$designButtonWidth.'px;
+	height:			'.$designButtonHeight.'px;
 
-	margin-top:  '.$designButtonMarginTop.'px;
-	margin-left: '.$designButtonMarginLeft.'px;
+	margin-top:		'.$designButtonMarginTop.'px;
+	margin-left:	'.$designButtonMarginLeft.'px;
 }
-
-
-.zapimage {
-	margin:		auto;
-	position:	absolute;
-	/* yes it makes no sense but it vertically center the image */
-	right:		0;
-	top:		0;
-	bottom:		0;
-	left:		0;
-}
-
 
 .zapbuttonR {
 	border-radius: '.$designButtonEdgeCB.'px;
@@ -472,42 +449,50 @@ $divWidthR = ($designCBcols * ($designButtonWidthCB + $designButtonMarginLeftCB)
 	font-size:		large;
 	text-shadow:	2px 2px 4px #252323;
 
-	width:  '.$designButtonWidthCB.'px;
-	height: '.$designButtonHeightCB.'px;
+	width:			'.$designButtonWidthCB.'px;
+	height:			'.$designButtonHeightCB.'px;
 
-	margin-top:  '.$designButtonMarginTopCB.'px;
-	margin-left: '.$designButtonMarginLeftCB.'px;
+	margin-top:		'.$designButtonMarginTopCB.'px;
+	margin-left:	'.$designButtonMarginLeftCB.'px;
 }
 
 .zapbuttonRE {
-	width:  '.$designButtonWidthCB.'px;
-	height: '.$designButtonHeightCB.'px;
+	width:			'.$designButtonWidthCB.'px;
+	height:			'.$designButtonHeightCB.'px;
 
-	margin-top:  '.$designButtonMarginTopCB.'px;
-	margin-left: '.$designButtonMarginLeftCB.'px;
+	margin-top:		'.$designButtonMarginTopCB.'px;
+	margin-left:	'.$designButtonMarginLeftCB.'px;
 }
 
+.zapimage {
+	margin:			auto;
+	position:		absolute;
+	/* yes it makes no sense but it vertically center the image */
+	right:			0;
+	top:			0;
+	bottom:			0;
+	left:			0;
+}
 
 .buttonMouseOver:hover, .buttonMouseOver:focus, .buttonMouseOver:active {
 	box-shadow: 4px 4px 33px 17px #272424;
 	' . ($designButtonBackGroundColorH != -1 ? ("background-color: #".dechex($designButtonBackGroundColorH).";") : "") . '
 }
 
-
 .buttonMouseOverR {
-	display: inline-block;
-	vertical-align: middle;
-	-webkit-transform: translateZ(0);
-	transform: translateZ(0);
-	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-transition-duration: 0.3s;
-	transition-duration: 0.3s;
-	-webkit-transition-property: box-shadow;
-	transition-property: box-shadow;
-	box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+	display:						inline-block;
+	vertical-align:					middle;
+	-webkit-transform:				translateZ(0);
+	transform:						translateZ(0);
+	box-shadow:						0 0 1px rgba(0, 0, 0, 0);
+	-webkit-backface-visibility:	hidden;
+	backface-visibility:			hidden;
+	-moz-osx-font-smoothing:		grayscale;
+	-webkit-transition-duration:	0.3s;
+	transition-duration:			0.3s;
+	-webkit-transition-property:	box-shadow;
+	transition-property:			box-shadow;
+	box-shadow:						0 0 8px rgba(0, 0, 0, 0.6);
 }
 
 .buttonMouseOverR:hover, .buttonMouseOverR:focus, .buttonMouseOverR:active {
@@ -516,12 +501,12 @@ $divWidthR = ($designCBcols * ($designButtonWidthCB + $designButtonMarginLeftCB)
 }
 
 .buttonMouseOverRE {
-	display: inline-block;
+	display:		inline-block;
     vertical-align: middle;
 }
 
 .buttonMouseOverRE:hover, .buttonMouseOverRE:focus, .buttonMouseOverRE:active {
-
+	/* this is a placeholder */
 }
 
 .zaptabbottom {
@@ -531,13 +516,12 @@ $divWidthR = ($designCBcols * ($designButtonWidthCB + $designButtonMarginLeftCB)
 .zaptabbottomR {
 	height: '.$designButtonMarginTopCB.'px;
 }
+
+' . $designOwnCSScode . '
 </style>
 		';
 		
-
-
-
-		// Rechte Box
+		// Common Button Box
 		$jsd = json_decode($configStandardButtons);
 		asort($jsd);
 
@@ -575,8 +559,6 @@ $divWidthR = ($designCBcols * ($designButtonWidthCB + $designButtonMarginLeftCB)
 				$colorButtonRed, $colorButtonBlue, $colorButtonYellow, $colorButtonGreen, $designButtonCBshowEmptyBtn)) : '');
 		}
 
-
-
 		$jsInclude = "
 		<script>		
 		[
@@ -603,31 +585,9 @@ $divWidthR = ($designCBcols * ($designButtonWidthCB + $designButtonMarginLeftCB)
 				</section>
 			</div>
 			<div class="navright">
-				<section class="navigationbuttons">'.$rechteBox.'
-
-<div class="zaptabbottomR"></div>
-				<!--
-					<div class="zapbuttonR buttonMouseOver" id="volumeUp"><img class="zapimage"       src="hook/waffi/images/volumeUp.png"     id="Button_'.$volumeUp.'_'.$volumeDeviceObjectID.'"       alt="volumeUp"></div>
-					<div class="zapbuttonR buttonMouseOver" id="volumeMute"><img class="zapimage"     src="hook/waffi/images/volumeMute.png"   id="Button_'.$volumeMute.'_'.$volumeDeviceObjectID.'"     alt="volumeMute"></div>
-					<div class="zapbuttonR buttonMouseOver" id="volumeDown"><img class="zapimage"     src="hook/waffi/images/volumeDown.png"   id="Button_'.$volumeDown.'_'.$volumeDeviceObjectID.'"     alt="volumeDown"></div>
-					<div class="zapbuttonR buttonMouseOver" id="channelUp"><img class="zapimage"      src="hook/waffi/images/channelUp.png"    id="Button_'.$channelUp.'_'.$channelDeviceObjectID.'"     alt="channelUp"></div>
-					<div class="zapbuttonR buttonMouseOver" id="channelDown"><img class="zapimage"    src="hook/waffi/images/channelDown.png"  id="Button_'.$channelDown.'_'.$channelDeviceObjectID.'"   alt="channelDown"></div>
-					<div class="zapbuttonR buttonMouseOver" id="buttonBack"><img class="zapimage"     src="hook/waffi/images/ButtonBack.png"   id="Button_'.$backButton.'_'.$channelDeviceObjectID.'"    alt="ButtonBack"></div>
-
-					<div class="zapbuttonR buttonMouseOver" id="buttonLeft"><img class="zapimage"     src="hook/waffi/images/ButtonLeft.png"   id="Button_'.$directionLeft.'_'.$channelDeviceObjectID.'"    alt="left"/></div>
-					<div class="zapbuttonR buttonMouseOver" id="buttonUp"><img class="zapimage"       src="hook/waffi/images/ButtonUp.png"     id="Button_'.$directionUp.'_'.$channelDeviceObjectID.'"      alt="up"/></div>
-					<div class="zapbuttonR buttonMouseOver" id="buttonRight"><img class="zapimage"    src="hook/waffi/images/ButtonRight.png"  id="Button_'.$directionRight.'_'.$channelDeviceObjectID.'"   alt="right"/></div>
-					<div class="zapbuttonR buttonMouseOver" id="buttonOK"><img class="zapimage"       src="hook/waffi/images/ButtonOK.png"     id="Button_'.$okButton.'_'.$channelDeviceObjectID.'"         alt="enter"/></div>
-					<div class="zapbuttonR buttonMouseOver" id="buttonDown"><img class="zapimage"     src="hook/waffi/images/ButtonDown.png"   id="Button_'.$directionDown.'_'.$channelDeviceObjectID.'"    alt="down"/></div>
-
-					<div class="zapbuttonR buttonMouseOver" id="buttonRed"><img class="zapimage"      src="hook/waffi/images/ButtonRed.png"    id="Button_'.$colorButtonRed.'_'.$channelDeviceObjectID.'"       alt="red"/></div>
-					<div class="zapbuttonR buttonMouseOver" id="buttonYellow"><img class="zapimage"   src="hook/waffi/images/ButtonYellow.png" id="Button_'.$colorButtonYellow.'_'.$channelDeviceObjectID.'"    alt="yellow"/></div>
-					<div class="zapbuttonR buttonMouseOver" id="buttonGreen"><img class="zapimage"    src="hook/waffi/images/ButtonGreen.png"  id="Button_'.$colorButtonGreen.'_'.$channelDeviceObjectID.'"     alt="green"/></div>
-					<div class="zapbuttonR buttonMouseOver" id="buttonBlue"><img class="zapimage"     src="hook/waffi/images/ButtonBlue.png"   id="Button_'.$colorButtonBlue.'_'.$channelDeviceObjectID.'"      alt="blue"/></div>
-
-					<div class="zapbuttonR buttonMouseOver" id="buttonOn"><img class="zapimage"       src="hook/waffi/images/ButtonOn.png"     id="ButtonOO_'.$harmonyHubStartActivityOn.'_'.$harmonyHubObjectID.'"  alt="On"/></div>
-					<div class="zapbuttonR buttonMouseOver" id="buttonOff"><img class="zapimage"      src="hook/waffi/images/ButtonOff.png"    id="ButtonOO_'.$harmonyHubStartActivityOff.'_'.$harmonyHubObjectID.'" alt="Off"/></div>
-					-->
+				<section class="navigationbuttons">
+					' . $rechteBox . '
+					<div class="zaptabbottomR"></div>
 				</section>
 			</div>
 		</div>
