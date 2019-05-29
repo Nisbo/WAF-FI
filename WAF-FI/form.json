@@ -17,6 +17,9 @@
 			{ "type": "SelectFile",		"name": "channelListUploadFile","caption": "ODER Datei hochladen"},
 			{ "type": "Label",						"label":   "Info: wenn eine Datei hochgeladen wird dann wird IMMER die Datei genutzt" },
 			{ "type": "CheckBox",		"name": "useBouquet",		"caption": "Datei ist ein Bouquet" },
+
+{ "type": "Button", "caption": "Links: Was ist ein Bouquet", "onClick": "echo 'https://de.wikipedia.org/wiki/Bouquet_(digitales_Fernsehen)';" },
+			
 			{ "type": "ValidationTextBox",	"name": "pathToImages",		"caption": "Image-Verzeichnis für die Senderlogos" },
 			{ "type": "Label",						"label":   "Info: relativ zum WebFront Verzeichnis oder als komplette URL falls die Bilder extern liegen." }
 		]
