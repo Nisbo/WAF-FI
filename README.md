@@ -38,14 +38,14 @@ Als Größe empfehle ich 100x60
 # CSV Kanalliste
 --------------
 
-Die Kanalliste.csv muss in diesen Ordner geladen werden
+Die __Kanalliste.csv__ (Beispielname) muss in diesen Ordner geladen werden
 ```
 /var/lib/symcon/webfront/user/waffi
 ```
-welcher allerdings auch im Konfigurator geändert werden kann.
+der Name und der PATH der Datei kann im Konfigurator geändert werden.
+Alternativ kann man die Datei auch über den Konfigurator hoch laden.
 
-
-
+## Aufbau der Kanallisteä
 #### Format der normalen CSV Datei
 ```
 sortOrder;channelNumber;channelName;channelImage
