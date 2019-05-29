@@ -24,7 +24,9 @@
 			{ "type": "SelectObject", "name": "harmonyHubObjectID",			"caption": "Harmony Hub - Splitter Instanz" },
 			{ "type": "Label",							"label":   "Info: Die Splitter Instanz vom HarmonyHub welcher die Befehle senden soll  (Object - grünes Icon auswählen)" },
 			{ "type": "ValidationTextBox", "name": "harmonyHubStartActivityOn",	"caption": "Einschalten - startActivity ON ID" },
-			{ "type": "ValidationTextBox", "name": "harmonyHubStartActivityOff",	"caption": "Ausschalten - startActivity OFF ID" }
+			{ "type": "Label",							"label":   "Info: Die startActivity ist NICHT die ObjectID, sie befindet sich im Script eine Zeile unter // einschalten die rechte Zahl" },
+			{ "type": "ValidationTextBox", "name": "harmonyHubStartActivityOff",	"caption": "Ausschalten - startActivity OFF ID" },
+			{ "type": "Label",							"label":   "Info: Die startActivity ist NICHT die ObjectID, sie befindet sich im Script eine Zeile unter //ausschalten die rechte Zahl" }
 		]
 	},
 
