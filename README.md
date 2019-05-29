@@ -26,18 +26,20 @@ Bitte im Browser an Hand eines Bildes (den Namen ARD.png bitte anpassen) aus dem
 http://IP-Adresse-von-IPS:3777/user/waffi/images/ARD.png
 ```
 
-Wo bekomme ich jetzt die Logos her ?
+#### Wo bekomme ich jetzt die Logos her ?
 
-Am einfachsten ist es wenn man sich Picons besorgt
+Am einfachsten ist es wenn man sich __Picons__ besorgt
+__Als Größe empfehle ich 100x60__
 
 https://github.com/picons/picons/releases/tag/53 
-die mit der Endung tar.xz, entpacken geht z.HB. mit 7Zip
+
+die mit der Endung tar.xz (entpacken geht z.B. mit 7-Zip)
 
 Order auch in den Receiver Foren:
 
 https://www.opena.tv/forum111/
 
-__Als Größe empfehle ich 100x60__
+
 
 
 # CSV Kanalliste
